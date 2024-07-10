@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-secondary p-4">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-white text-xl">Glass Gecko Games</h1>
         <ul className="flex space-x-4 text-white">
