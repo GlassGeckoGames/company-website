@@ -1,4 +1,4 @@
-/* .nav-link {
+.nav-link {
   position: relative;
   overflow: hidden;
 }
@@ -18,4 +18,4 @@
 .nav-link:hover::before,
 .nav-link-active::before {
   transform: scaleX(1);
-} */
+}
