@@ -14,7 +14,7 @@ import About from './pages/About';
 import News from './pages/News';
 import Zeitghast from './pages/games/Zeitghast';
 import TempGame from './pages/games/TempGame';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer';
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
 

@@ -1,8 +1,8 @@
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-
- const NavLinkItem = ({ to, children, onClick }) => {
+const LinkItem = ({ to, children, onClick }) => {
   return (
     <NavLink
       to={to}
@@ -19,4 +19,4 @@ import { NavLink } from 'react-router-dom';
   );
 };
 
-export default NavLinkItem;
+export default LinkItem;
