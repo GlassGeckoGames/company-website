@@ -4,10 +4,10 @@
  *
  * This CSS code defines the styles for the teamMemberCard component, which is used to display information about a team member.
  * It includes styles for the card layout, image, name, and other details.
- *
- * @version 1.0.0
- * @author Your Name
+
  */
+
+/* TeamMemberCard.css */
 
 .flip-card {
   perspective: 1000px;
@@ -15,8 +15,9 @@
 
 .flip-card-inner {
   position: relative;
-  width: 25rem; /* 64 * 0.25rem (Tailwind size for w-64) */
-  height: 25rem; /* 64 * 0.25rem (Tailwind size for h-64) */
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -30,15 +31,8 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 0.5rem; /* Tailwind rounded-lg equivalent */
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
 }
 
 .flip-card-back {
-
   transform: rotateY(180deg);
 }

@@ -17,13 +17,14 @@ import TempGame from './pages/games/TempGame';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer';
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
+import './cssStyles/Scrollbar.css'; // Import the CSS file here
 
 function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <TailwindBreakPoints/>
+        <TailwindBreakPoints />
         <div className="flex-grow bg-primary">
           <Routes>
             <Route path="/" element={<Home />} />

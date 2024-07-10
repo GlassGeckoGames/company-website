@@ -8,24 +8,21 @@
  */
 
 import React from 'react';
-import '../cssStyles/TeamMemberCard.css'; // Import the CSS file for styling
+import '../cssStyles/TeamMemberCard.css'; // Import the CSS file for 3D flip animation
 
 function TeamMemberCard({ name, role, image, description }) {
-  
   return (
-    <div className="flip-card">
-      <div className="flip-card-inner">
-        <div className="flip-card-front relative">
+    <div className="flip-card w-full h-full">
+      <div className="flip-card-inner relative w-full pb-full">
+        <div className="flip-card-front absolute inset-0 rounded-lg overflow-hidden">
           <img className="absolute inset-0 w-full h-full object-cover" src={process.env.PUBLIC_URL + '/team_photos/' + image} alt={name} />
           <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center">
             <div className="text-white font-bold text-xl">{name}</div>
             <div className="text-white text-base">{role}</div>
           </div>
         </div>
-        <div className="flip-card-back flex flex-col justify-center items-center bg-secondary text-black">
-          <div className="p-4 bg-">
-            <p className="text-base">{description} </p>
-          </div>
+        <div className="flip-card-back absolute inset-0 flex flex-col justify-center items-center bg-secondary text-black rounded-lg p-4 transform rotate-y-180">
+          <p className=" text-xs sm:text-sm md:text-lg lg:text-base xl:text-lg text-primary">{description}</p>
         </div>
       </div>
     </div>

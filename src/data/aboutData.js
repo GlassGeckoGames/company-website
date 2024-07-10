@@ -14,7 +14,7 @@ export const aboutTitle = 'About Us';
  * The description for the about section.
  * @type {string}
  */
-export const aboutDescription = 'Glass Gecko Games';
+export const aboutDescription = `Founded in a small garage in 2010, Glass Gecko Games quickly gained recognition for its innovative and immersive game designs. Led by visionary founder Alice Johnson, the studio's first breakthrough came with the release of "Mystic Realms," which captivated players worldwide. The team, consisting of talented developers like Dave  and Carol , has since grown into a diverse group of creative minds.`;
 
 /**
  * An array of team members.
@@ -26,7 +26,7 @@ export const teamMembers = [
     name: 'Alice Johnson',
     role: 'Project Manager',
     image: 'glass.png',
-    description: 'Alice coordinates the team and ensures projects are on track.'
+    description: 'Alice coordinates the team and ensures projects are on track. She loves to get things done and keep working on this long sentence etc.'
   },
   {
     name: 'Chace Nielson',
