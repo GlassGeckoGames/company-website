@@ -1,3 +1,10 @@
+/**
+ * @file TempGame.jsx is a React component that displays the page for a specific game - TempGame.
+ * Renders the details and information about TempGame.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered TempGame component
+ */
 import React from 'react';
 
 function TempGame() {

@@ -1,6 +1,26 @@
-export const aboutTitle = 'About Us';
-export const aboutDescription = 'Glass Gecko Games'
 
+/**
+ * Data for the about page.
+ * @module aboutData
+ */
+
+/**
+ * The title for the about section.
+ * @type {string}
+ */
+export const aboutTitle = 'About Us';
+
+/**
+ * The description for the about section.
+ * @type {string}
+ */
+export const aboutDescription = 'Glass Gecko Games';
+
+/**
+ * An array of team members.
+ * each team member has a name, role, image, and description as keys
+ * @type {Array<Object>}
+ */
 export const teamMembers = [
   {
     name: 'Alice Johnson',
@@ -9,10 +29,10 @@ export const teamMembers = [
     description: 'Alice coordinates the team and ensures projects are on track.'
   },
   {
-    name: 'Bob Brown',
-    role: 'Lead Developer',
+    name: 'Chace Nielson',
+    role: 'Software Developer',
     image: 'chace_nielson.jpg',
-    description: 'Bob is responsible for leading the development team and writing code.'
+    description: 'Love long walks on the beach.'
   },
   {
     name: 'Carol White',
@@ -23,7 +43,7 @@ export const teamMembers = [
   {
     name: 'David Smith',
     role: 'Backend Developer',
-    image: 'henery.png',
+    image: 'chace_2.jpg',
     description: 'David works on server-side logic and database management.'
   },
   {
@@ -47,7 +67,7 @@ export const teamMembers = [
   {
     name: 'Henry Adams',
     role: 'Graphic Designer',
-    image: 'glass.png',
+    image: 'chace_2.jpg',
     description: 'Henry creates visual content for marketing and product design.'
   },
   {

@@ -1,3 +1,8 @@
+
+/**
+ * Represents the footer component of the website.
+ * @returns {JSX.Element} The rendered footer component.
+ */
 import React from 'react';
 import MediaLinks from './MediaLinks';
 

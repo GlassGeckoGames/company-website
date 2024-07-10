@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const games = [
-  { id: 'Zeitghast', name: 'Zeitghast', description: 'An epic adventure through time.' },
-  { id: 'TempGame', name: 'TempGame', description: 'A temporary game with endless fun.' },
-];
+import { games } from '../data/gameListData';
 
 function GameList() {
   return (

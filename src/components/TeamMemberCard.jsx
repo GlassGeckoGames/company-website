@@ -1,7 +1,14 @@
-// src/Components/TeamMemberCard.jsx
+/**
+ * @file TeamMemberCard.jsx is a React component that represents a card displaying information about a team member.
+ * It has a flip animation that reveals the description on the back of the card.
+ * Renders the details and information about a team member.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered TeamMemberCard component
+ */
+
 import React from 'react';
 import '../cssStyles/TeamMemberCard.css'; // Import the CSS file for styling
-
 
 function TeamMemberCard({ name, role, image, description }) {
   

@@ -1,10 +1,7 @@
 // src/pages/About.js
 import React from 'react';
 import TeamMemberCard from '../components/TeamMemberCard';
-
-
-import { teamMembers } from '../data/aboutData'
-
+import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutData'
 
 function About() {
   return (
@@ -14,8 +11,8 @@ function About() {
           <>
             {index === 5 ? (
               <div className="col-span-2 bg-primary text-black p-4 h-full">
-                <h2 className="text-4xl font-bold mb-2 text-center">Our Team</h2>
-                <p className="text-center">Lorem this is team etc and going forward and making this work he started as a small team and worked really hard to do things etc.</p>
+                <h2 className="text-4xl font-bold mb-2 text-center">{aboutTitle}</h2>
+                <p className="text-center">{aboutDescription}</p>
               </div>
             ) : ( null )}
 

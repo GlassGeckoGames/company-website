@@ -1,3 +1,7 @@
+/**
+ * @file This CSS file contains the setup for Tailwind CSS and regular CSS styles for the entire document.
+ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

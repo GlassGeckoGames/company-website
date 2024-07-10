@@ -1,3 +1,10 @@
+/**
+ * @file News.jsx is a React component that displays the latest news.
+ * Will render the news page with the latest news and updates.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered News component
+ */
 import React from 'react';
 
 function News() {

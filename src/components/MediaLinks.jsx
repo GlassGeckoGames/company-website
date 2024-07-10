@@ -1,3 +1,10 @@
+
+/**
+ * MediaLinks is a React component that renders a list of social media links.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered MediaLinks component
+ */
 import React from 'react'
 
 function MediaLinks() {

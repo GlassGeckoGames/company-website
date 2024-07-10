@@ -1,4 +1,14 @@
-/* src/Components/TeamMemberCard.css */
+/**
+ * CSS styles for the teamMemberCard component.
+ rc/Components/TeamMemberCard.css
+ *
+ * This CSS code defines the styles for the teamMemberCard component, which is used to display information about a team member.
+ * It includes styles for the card layout, image, name, and other details.
+ *
+ * @version 1.0.0
+ * @author Your Name
+ */
+
 .flip-card {
   perspective: 1000px;
 }

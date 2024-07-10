@@ -1,3 +1,10 @@
+/**
+ * @file Contact.jsx is a React component that displays the contact page.
+ * Renders the contact form and contact information.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered Contact component
+ */
 import React from 'react';
 
 function Contact() {
