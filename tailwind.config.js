@@ -7,8 +7,8 @@ module.exports = {
     extend: {
       colors: {
         primary: '#F5F5F5', // soft white
-        secondary: '#1f937f', // teal
-        accent: '#556B2F', // olive - to match the logo and used for buttons/actions
+        secondary: '#556B2F', // olive - match logo
+        accent: '#FF4500', 
       },
     },
   },
