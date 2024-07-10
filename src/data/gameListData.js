@@ -11,6 +11,14 @@
  * @property {string} description - The description of the game.
  */
 export const games = [
-  { id: 'Zeitghast', name: 'Zeitghast', description: 'An epic adventure through time.' },
-  { id: 'TempGame', name: 'TempGame', description: 'A temporary game with endless fun.' },
+  { id: 'Zeitghast', 
+    name: 'Zeitghast', 
+    description: 'An epic adventure through time.',
+    link: 'https://store.steampowered.com/app/2593070/Zeitghast/'
+  },
+  { id: 'TempGame', 
+    name: 'TempGame', 
+    description: 'A temporary game with endless fun.',
+    link: 'https://store.steampowered.com/app/2593070/Zeitghast/' 
+  }
 ];

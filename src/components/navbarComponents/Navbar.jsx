@@ -7,8 +7,8 @@
  * 
  */
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import NavbarItems from './NavbarItems';
+import LogoLink from './LogoLink';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../../cssStyles/Navbar.css'; // Import the CSS file here
 
@@ -29,10 +29,8 @@ function Navbar() {
   return (
     <nav className="bg-secondary p-2">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className='flex gap-2 items-center text-primary'>
-          <img className="w-10 md:w-14" src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} alt="Logo" />
-          <h1 className="text-xl">Glass Gecko Games</h1>
-        </Link>
+
+        <LogoLink/>
 
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />

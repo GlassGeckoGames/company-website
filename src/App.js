@@ -14,7 +14,7 @@ import About from './pages/About';
 import News from './pages/News';
 import Zeitghast from './pages/games/Zeitghast';
 import TempGame from './pages/games/TempGame';
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/navbarComponents/Navbar';
 import Footer from './components/Footer';
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
 import './cssStyles/Scrollbar.css'; // Import the CSS file here
@@ -25,7 +25,7 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <TailwindBreakPoints />
-        <div className="flex-grow bg-primary">
+        <div className="flex-grow bg-primary py-4">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
