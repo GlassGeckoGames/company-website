@@ -9,6 +9,7 @@ module.exports = {
         primary: '#F5F5F5', // soft white
         secondary: '#556B2F', // olive - match logo
         accent: '#FF4500', 
+        'accent-dark': '#E03E00', // darker shade for hover effect
       },
     },
   },

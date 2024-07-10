@@ -22,7 +22,7 @@ function About() {
 
         {/* split the list and add the description in the middle  */}
         <div className="col-span-2 bg-primary text-black p-4 h-full text-center order-first lg:order-none">
-          <h2 className="text-4xl font-bold mb-2">{aboutTitle}</h2>
+          <h2 className="text-4xl font-bold mb-2 text-secondary">{aboutTitle}</h2>
           <p>{aboutDescription}</p>
         </div>
 

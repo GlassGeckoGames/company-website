@@ -1,9 +1,4 @@
-/* Scrollbar.css */
-
-/* Force scrollbar to always be visible */
-html {
-  overflow-y: scroll;
-}
+/* Scrollbar.css
 
 /* Style the scrollbar track */
 ::-webkit-scrollbar {
@@ -28,4 +23,4 @@ html {
 * {
   scrollbar-width: thin;
   scrollbar-color: #556B2F #F5F5F5; /* thumb color, track color */
-}
+} 
