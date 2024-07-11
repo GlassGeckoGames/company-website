@@ -35,7 +35,6 @@ import TempGame from './pages/games/TempGame';
 import Navbar from './components/navbarComponents/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import './styles/scrollbar.css';
 
 // testing component to remove after create responsive design
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';

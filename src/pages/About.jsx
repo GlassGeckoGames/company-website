@@ -7,12 +7,15 @@
  * @component About
  * 
  * @requires react
- * @requires ../components/TeamMemberCard
- * @requires ../data/aboutData
  * @requires react-router-dom
+ * @requires ../components/TeamMemberCard
+ * @requires ../components/AboutPageText
+ * @requires ../data/aboutData
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://reactrouter.com/|React Router Documentation}
+ * 
+ * @returns {JSX.Element} The rendered About component.
  * 
  * @author Chace Nielson
  * @created 2024-07-10
@@ -20,15 +23,19 @@
  */
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import TeamMemberCard from '../components/TeamMemberCard';
 import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutData';
+import AboutPageText from '../components/AboutPageText';
 
 function About() {
+
+  const positionOfTextBox = 5; // determines the position of the text box in the grid formation in the large view 
+  // usuallt this will be 1 or 5 to stay in the center
+
   return (
     <div className="mx-auto">
-      <div className="grid lg:grid-cols-4 ">
-        {teamMembers.slice(0, 5).map((member, index) => (
+      <div className="grid lg:grid-cols-4">
+        {teamMembers.slice(0, positionOfTextBox).map((member, index) => (
           <TeamMemberCard
             key={index}
             name={member.name}
@@ -38,21 +45,11 @@ function About() {
           />
         ))}
 
-        {/* Split the list and add the description in the middle  */}
-        <div className="col-span-2 bg-primary text-black p-4 h-full text-center order-first lg:order-none">
-          <h2 className="text-4xl font-bold mb-2 text-secondary">{aboutTitle}</h2>
-          <p>{aboutDescription}</p>
-          <Link
-            to="/contact"
-            className="button-base mt-4 inline-block"
-          >
-            <span className="button-content">Learn More by Contacting Us</span>
-          </Link>
-        </div>
+        <AboutPageText aboutTitle={aboutTitle} aboutDescription={aboutDescription} />
 
-        {teamMembers.slice(5).map((member, index) => (
+        {teamMembers.slice(positionOfTextBox).map((member, index) => (
           <TeamMemberCard
-            key={index + 5} // ensure unique keys
+            key={index + positionOfTextBox} // ensure unique keys
             name={member.name}
             role={member.role}
             image={member.image}
