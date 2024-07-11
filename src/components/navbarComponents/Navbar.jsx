@@ -1,14 +1,32 @@
 /**
- * Navbar component.
- * 
- * This component represents the navigation bar of the website.
+ * @file Navbar.jsx
+ * @module Navbar
+ * @desc Component that represents the navigation bar of the website.
  * It includes a logo, a title, and a hamburger menu for mobile devices.
+ * 
+ * @component Navbar
+ * 
+ * @requires react
+ * @requires react-icons/fa
+ * @requires ./NavbarItems
+ * @requires ./LogoLink
+ * @requires ../../styles/navbar.css
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * @see {@link https://react-icons.github.io/react-icons/|React Icons Documentation}
+ * 
+ * @returns {JSX.Element} The rendered Navbar component.
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
  */
+
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import LogoLink from './LogoLink';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import '../../styles/Navbar.css'; // Import the CSS file here
+import '../../styles/navbar.css'; // Import the CSS file here
 
 function Navbar() {
   const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);
@@ -27,8 +45,7 @@ function Navbar() {
   return (
     <nav className="bg-secondary p-2">
       <div className="container mx-auto flex justify-between items-center">
-
-        <LogoLink/>
+        <LogoLink />
 
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />

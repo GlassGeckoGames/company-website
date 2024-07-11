@@ -1,9 +1,23 @@
 /**
- * MediaLinks is a React component that renders a list of social media links.
- *
- * @component
+ * @file MediaLinks.jsx
+ * @module MediaLinks
+ * @desc React component that renders a list of social media links.
+ * 
+ * @component MediaLinks
+ * 
+ * @requires react
+ * @requires react-icons/fa
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * @see {@link https://react-icons.github.io/react-icons/|React Icons Documentation}
+ * 
  * @returns {JSX.Element} The rendered MediaLinks component
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
  */
+
 import React from 'react';
 import { FaYoutube, FaInstagram, FaTiktok, FaLinkedin, FaSteam } from 'react-icons/fa';
 

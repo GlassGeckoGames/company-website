@@ -1,4 +1,17 @@
-@keyframes fadeIn {
+/**
+ * @file navbar.css
+ * @module navbar
+ * @desc Contains CSS animations for the navbar component, including fade in and fade out animations.
+ * 
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes|MDN Keyframes Documentation}
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/animation|MDN Animation Documentation}
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
+ */
+
+ @keyframes fadeIn {
   from {
     opacity: 0;
   }

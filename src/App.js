@@ -15,7 +15,7 @@
  * @requires ./components/navbarComponents/Navbar
  * @requires ./components/Footer
  * @requires ./components/ScrollToTop
- * @requires ./styles/Scrollbar.css
+ * @requires ./styles/scrollbar.css
  * 
  * @see {@link https://reactrouter.com/|React Router Documentation}
  * 
@@ -35,7 +35,7 @@ import TempGame from './pages/games/TempGame';
 import Navbar from './components/navbarComponents/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import './styles/Scrollbar.css'; // Import the CSS file here
+import './styles/scrollbar.css'; // Import the CSS file here
 
 // testing component to remove after create responsive design
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';

@@ -1,4 +1,15 @@
-/* Scrollbar.css
+/**
+ * @file scrollbar.css
+ * @module scrollbar
+ * @desc Contains custom styles for the scrollbar, applicable to both WebKit-based browsers and Firefox.
+ * 
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar|MDN WebKit Scrollbar Documentation}
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars|MDN CSS Scrollbars Documentation}
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
+ */
 
 /* Style the scrollbar track */
 ::-webkit-scrollbar {
@@ -23,4 +34,4 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: #556B2F #F5F5F5; /* thumb color, track color */
-} 
+}

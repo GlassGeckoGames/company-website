@@ -1,7 +1,26 @@
 /**
- * Renders the IntroPannel component.
- * This component displays a video background with a title and description overlay.
+ * @file IntroPannel.jsx
+ * @module IntroPannel
+ * @desc Renders the IntroPannel component. This component displays a video background with a title and description overlay.
+ * 
+ * @component IntroPannel
+ * 
+ * @requires react
+ * @requires ../../data/homePageData
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * 
+ * @returns {JSX.Element} The rendered IntroPannel component.
+ * 
+ * @example
+ * // Example usage of IntroPannel component
+ * <IntroPannel />
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
  */
+
 import React from 'react';
 import { title, description } from '../../data/homePageData';
 

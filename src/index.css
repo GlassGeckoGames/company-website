@@ -1,57 +1,66 @@
 /**
- * @file This CSS file contains the setup for Tailwind CSS and regular CSS styles for the entire document.
+ * @file index.css
+ * @module index
+ * @desc This CSS file contains the setup for Tailwind CSS and regular CSS styles for the entire document.
+ * 
+ * @see {@link https://tailwindcss.com/docs|Tailwind CSS Documentation}
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* button style */
-.button-base {
-  @apply inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent;
-
-  position: relative;
-  overflow: hidden;
-}
-
-.button-base::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #E03E00; /* dark accent color */
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s ease;
-  z-index: 0;
-}
-
-.button-base:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-.button-base:hover {
-  color: white;
-}
-
-.button-content {
-  position: relative;
-  z-index: 5;
-}
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+ 
+ body {
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+     sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+     monospace;
+ }
+ 
+ /* button style */
+ .button-base {
+   @apply inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent;
+ 
+   position: relative;
+   overflow: hidden;
+ }
+ 
+ .button-base::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #E03E00; /* dark accent color */
+   transform: scaleX(0);
+   transform-origin: right;
+   transition: transform 0.5s ease;
+   z-index: 0;
+ }
+ 
+ .button-base:hover::before {
+   transform: scaleX(1);
+   transform-origin: left;
+ }
+ 
+ .button-base:hover {
+   color: white;
+ }
+ 
+ .button-content {
+   position: relative;
+   z-index: 5;
+ }
+ 
