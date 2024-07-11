@@ -23,24 +23,24 @@ import { FaYoutube, FaInstagram, FaTiktok, FaLinkedin, FaSteam } from 'react-ico
 
 function MediaLinks() {
   return (
-    <div className="flex justify-center space-x-4">
+    <div className="flex justify-center space-x-4 ">
       <a
         href="https://www.youtube.com/channel/UCltO0yRkVFmApfzuTGgKczg"
-        className="text-white hover:text-accent"
+        className="text-white hover:text-accent "
         aria-label="YouTube"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaYoutube size={30} />
+        <FaYoutube size={32} className='text-primary hover:text-accent' />
       </a>
       <a
         href="https://www.instagram.com/glassgeckogames/reels/"
-        className="text-white hover:text-accent"
+        className="text-white hover:text-accent className='text-primary' "
         aria-label="Instagram"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaInstagram size={28} />
+        <FaInstagram size={30} className='text-primary hover:text-accent' />
       </a>
       <a
         href="https://www.tiktok.com/@glassgeckogames"
@@ -49,7 +49,7 @@ function MediaLinks() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaTiktok size={26} />
+        <FaTiktok size={26} className='text-primary hover:text-accent' />
       </a>
       <a
         href="https://linkedin.com"
@@ -58,7 +58,7 @@ function MediaLinks() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaLinkedin size={28} />
+        <FaLinkedin size={28} className='text-primary hover:text-accent' />
       </a>
       <a
         href="https://store.steampowered.com/search/?developer=Glass%20Gecko%20Games"
@@ -67,7 +67,7 @@ function MediaLinks() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaSteam size={28} />
+        <FaSteam size={28} className='text-primary hover:text-accent' />
       </a>
     </div>
   );
