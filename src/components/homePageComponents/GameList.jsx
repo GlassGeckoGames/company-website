@@ -4,13 +4,11 @@ import GamePannel from './GamePannel';
 
 function GameList() {
   return (
-    <div className="mt-4">
-      <ul>
-        {games.map(game => (
-          <GamePannel game={game} />
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {games.map(game => (
+        <GamePannel game={game} />
+      ))}
+    </ul>
   );
 }
 

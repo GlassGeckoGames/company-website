@@ -7,12 +7,12 @@
  */
 import React from 'react';
 import GameList from '../components/homePageComponents/GameList';
-import Intro from '../components/homePageComponents/Intro';
+import IntroPannel from '../components/homePageComponents/IntroPannel';
 
 function Home() {
   return (
-    <div className="container mx-auto p-4">
-      <Intro/>
+    <div className=" mx-auto ">
+      <IntroPannel/>
       <GameList/>
     </div>
   );

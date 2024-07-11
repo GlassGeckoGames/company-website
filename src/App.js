@@ -25,7 +25,7 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <TailwindBreakPoints />
-        <div className="flex-grow bg-primary py-4">
+        <div className="flex-grow bg-primary">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />

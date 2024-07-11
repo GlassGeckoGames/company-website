@@ -8,7 +8,7 @@ import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutData';
 
 function About() {
   return (
-    <div className="container mx-auto p-4">
+    <div className=" mx-auto p-4">
       <div className="grid lg:grid-cols-4 gap-4">
         {teamMembers.slice(0, 5).map((member, index) => (
           <TeamMemberCard

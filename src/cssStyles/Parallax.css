@@ -1,0 +1,18 @@
+.parallax {
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 100%;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: cover;
+  transform: translateZ(-1px) scale(2);
+}
