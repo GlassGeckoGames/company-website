@@ -6,7 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#F5F5F5', // soft white
+        // primary: '#F5F5F5', // soft white
+        // primary: '#C4D3AE', // tan
+        primary: '#DCE6C7', //lighter tan 
+
         secondary: '#556B2F', // olive - match logo
         accent: '#FF4500', 
         'accent-dark': '#E03E00', // darker shade for hover effect
