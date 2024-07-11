@@ -49,6 +49,13 @@
  * 
  * @created 2024-07-10
  * @updated 2024-07-11
+ * 
+ * 
+ * 
+ * pther primary colour options 
+ * DCE6C7 // a light tan
+ * 
+ * 
  */
 module.exports = {
   content: [
@@ -57,13 +64,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // primary: '#F5F5F5', // soft white
-        // primary: '#C4D3AE', // tan
-        primary: '#DCE6C7', //lighter tan 
+        primary: '#F5F5F5', // soft white
+        'primary-dark': '#E0E0E0', // a darker shade of white
 
         secondary: '#556B2F', // olive - match logo
-        accent: '#FF4500', 
-        'accent-dark': '#E03E00', // darker shade for hover effect
+        "secondary-dark":'#455825', // darker shade of olive
+        
+        accent: '#FF4500',  // burnt orange for button 
+        'accent-dark': '#E03E00', // darker shade for hover effect over the burnt orage
       },
       height: {
         '104': '26rem', // h-104, equivalent to 416px

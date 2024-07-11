@@ -43,7 +43,7 @@
 }
 
 .button-accent::before {
-  background-color: #E03E00; /* dark accent color */
+  @apply bg-accent-dark
 }
 
 /* Secondary button variant */
@@ -52,7 +52,7 @@
 }
 
 .button-secondary::before {
-  background-color: #455825; /* slightly darker olive color */
+  @apply bg-secondary-dark
 }
 
 /* Primary button variant */
@@ -61,5 +61,5 @@
 }
 
 .button-primary::before {
-  background-color: #007BFF; /* dark primary color */
+  @apply bg-primary-dark
 }
