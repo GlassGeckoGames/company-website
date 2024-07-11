@@ -10,7 +10,7 @@
  * @requires react-icons/fa
  * @requires ./NavbarItems
  * @requires ./LogoLink
- * @requires ../../styles/navbar.css
+ * @requires ../../styles/Navbar.css
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://react-icons.github.io/react-icons/|React Icons Documentation}
@@ -26,7 +26,7 @@ import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import LogoLink from './LogoLink';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import '../../styles/navbar.css'; // Import the CSS file here
+import '../../styles/Navbar.css'; // Import the CSS file here
 
 function Navbar() {
   const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);

@@ -8,7 +8,7 @@
  * @component TeamMemberCard
  * 
  * @requires react
- * @requires ../styles/teamMemberCard.css
+ * @requires ../styles/TeamMemberCard.css
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * 
@@ -25,7 +25,7 @@
  */
 
 import React from 'react';
-import '../styles/teamMemberCard.css'; // Import the CSS file for 3D flip animation
+import '../styles/TeamMemberCard.css'; // Import the CSS file for 3D flip animation
 
 function TeamMemberCard({ name, role, image, description }) {
   return (
