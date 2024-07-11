@@ -109,9 +109,9 @@ function Contact() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-              rows="12"
+              // rows="12"
               maxlength="800"
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
+              className="min-h-28 h-40 xl:h-56 2xl:h-80  max-h- mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
             />
           </div>
           <div>
