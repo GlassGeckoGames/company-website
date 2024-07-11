@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import '../cssStyles/TeamMemberCard.css'; // Import the CSS file for 3D flip animation
+import '../styles/TeamMemberCard.css'; // Import the CSS file for 3D flip animation
 
 function TeamMemberCard({ name, role, image, description }) {
   return (

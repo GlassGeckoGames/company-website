@@ -53,12 +53,12 @@ function Contact() {
           />
         </div>
         <div>
-          <button
-            type="submit"
-            className="w-full inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-accent hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
-          >
-            Send
-          </button>
+        <button
+          type="submit"
+          className="button-base w-full"
+        >
+          <span className="button-content">Send</span>
+        </button>
         </div>
       </form>
     </div>

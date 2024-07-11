@@ -1,3 +1,7 @@
+/**
+ * Renders the IntroPannel component.
+ * This component displays a video background with a title and description overlay.
+ */
 import React from 'react';
 import { title, description } from '../../data/homePageData';
 
