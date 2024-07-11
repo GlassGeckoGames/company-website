@@ -30,34 +30,37 @@ code {
     monospace;
 }
 
-/* button style for main clickable button with hover slide effect */
-.button-base {
-  @apply inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent;
+/* Base button style */
+.button-class {
+  @apply inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.button-base, .button-secondary {
+  @apply button-class;
 
   position: relative;
   overflow: hidden;
 }
 
-.button-base::before {
+.button-base::before, .button-secondary::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #E03E00; /* dark accent color */
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s ease;
   z-index: 0;
 }
 
-.button-base:hover::before {
+.button-base:hover::before, .button-secondary:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
 
-.button-base:hover {
+.button-base:hover, .button-secondary:hover {
   color: white;
 }
 
@@ -66,7 +69,23 @@ code {
   z-index: 5;
 }
 
+/* Accent button variant */
+.button-base {
+  @apply bg-accent focus:ring-accent;
+}
 
+.button-base::before {
+  background-color: #E03E00; /* dark accent color */
+}
+
+/* Secondary button variant */
+.button-secondary {
+  @apply bg-secondary focus:ring-secondary;
+}
+
+.button-secondary::before {
+  background-color: #455825; /* slightly darker olive color */
+}
 
 /* scrollbar styles */
 /* Style the scrollbar track */

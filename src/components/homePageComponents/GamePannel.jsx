@@ -35,26 +35,26 @@ import { Link } from 'react-router-dom';
 
 function GamePannel({ game }) {
   return (
-    <li key={game.name} className="relative w-full 
-    
-    h-64 md:h-104 lg:h-128 2xl:h-176
-    
-    
-    overflow-hidden">
+    <li key={game.name} className="relative w-full h-64 md:h-104 lg:h-128 2xl:h-176 overflow-hidden">
       <img className="w-full h-full object-cover" src={process.env.PUBLIC_URL + `/gameMedia/${game.img}`} alt={game.name} />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-20">
-        <Link to={`/games/${game.id}`} className="hover:cursor-pointer ">
-          <h2 className="text-white text-2xl md:text-4xl font-bold mb-2 hover:text-accent">{game.name}</h2>
-        </Link>
-        <p className="text-white text-sm md:text-lg max-w-2xl mb-4 ">{game.description}</p>
-        <a
-          href={game.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button-base text-lg font-semibold px-4 py-2 rounded"
-        >
-          <span className="button-content hover:scale-110">Play Now</span>
-        </a>
+          <h2 className="text-white text-3xl md:text-5xl font-bold mb-2">{game.name}</h2>
+        <p className="text-white text-sm md:text-lg max-w-2xl mb-2 ">{game.description}</p>
+        <div className='flex gap-4'>
+
+          <Link to={`/games/${game.id}`} className="button-secondary text-lg font-semibold px-4 py-2 rounded mt-2">
+            <span className="button-content ">Find Out</span>
+          </Link>
+          <a
+            href={game.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button-base text-lg font-semibold px-4 py-2 rounded mt-2"
+          >
+            <span className="button-content ">Play Now</span>
+          </a>
+          
+        </div>
       </div>
     </li>
   );

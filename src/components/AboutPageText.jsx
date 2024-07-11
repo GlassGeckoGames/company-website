@@ -36,7 +36,7 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
         to="/contact"
         className="button-base mt-4 inline-block"
       >
-        <span className="button-content">Learn More by Contacting Us</span>
+        <span className="button-content">Learn More</span>
       </Link>
     </div>
   );

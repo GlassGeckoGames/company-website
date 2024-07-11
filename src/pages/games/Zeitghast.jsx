@@ -34,7 +34,20 @@ function Zeitghast() {
     <div className="container mx-auto p-4 bg-primary">
       <h1 className="text-4xl font-bold text-secondary mb-4">{zeitghastInfo.title}</h1>
       <div className="mb-6">
-        <p className="text-lg text-black mb-2">{zeitghastInfo.description}</p>
+        <p className="text-lg text-black ">{zeitghastInfo.description}</p>
+        <div className="mb-6">
+        <a
+          href={zeitghastInfo.playLink.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button-base text-lg font-semibold px-4 py-2 rounded my-2"
+        >
+          <span className="button-content ">          
+            {zeitghastInfo.playLink.name}
+          </span>
+        </a>
+
+
         <div className="flex flex-wrap gap-4 mb-4">
           {zeitghastInfo.images.map((image, index) => (
             <img
@@ -108,15 +121,7 @@ function Zeitghast() {
         </div>
       </div>
       
-      <div className="mb-6">
-        <a
-          href={zeitghastInfo.playLink.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button-base text-lg font-semibold px-4 py-2 rounded bg-accent text-white hover:bg-accent-dark"
-        >
-          {zeitghastInfo.playLink.name}
-        </a>
+
       </div>
     </div>
   );
