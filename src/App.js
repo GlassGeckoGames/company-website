@@ -1,11 +1,14 @@
 /**
  * @file App.js
  * @module App
- * @desc Main application component that sets up routing and renders the application.
+ * @desc Main application component that sets up routing and renders the application. 
+ * Also initializes EmailJS for email functionality.
+ * 
  * @component App
  * 
  * @requires react
  * @requires react-router-dom
+ * @requires emailjs-com
  * @requires ./pages/Home
  * @requires ./pages/Contact
  * @requires ./pages/About
@@ -18,12 +21,20 @@
  * @requires ./styles/scrollbar.css
  * 
  * @see {@link https://reactrouter.com/|React Router Documentation}
+ * @see {@link https://www.emailjs.com/docs/|EmailJS Documentation}
  * 
- * @author John Smith
- * @created 2024-07-12
+ * @returns {JSX.Element} The main application component.
+ * 
+ * @example
+ * // Example usage of App component
+ * <App />
+ * 
+ * @created 2024-07-10
  * @updated 2024-07-12
+ * 
+ * @function
+ * Initializes EmailJS with the user ID from environment variables.
  */
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
@@ -38,6 +49,10 @@ import ScrollToTop from './components/ScrollToTop';
 
 // testing component to remove after create responsive design
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
+
+// Initialize EmailJS with the user ID from environment variables
+import emailjs from 'emailjs-com';
+emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 
 function App() {
   return (
