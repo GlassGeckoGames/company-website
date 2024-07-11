@@ -1,15 +1,33 @@
-// src/pages/About.js
-
-
+/**
+ * @file About.jsx
+ * @module About
+ * @desc React component that displays the about page.
+ * Renders information about the team and a description with a link to contact us.
+ * 
+ * @component About
+ * 
+ * @requires react
+ * @requires ../components/TeamMemberCard
+ * @requires ../data/aboutData
+ * @requires react-router-dom
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * @see {@link https://reactrouter.com/|React Router Documentation}
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
+ */
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import TeamMemberCard from '../components/TeamMemberCard';
 import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutData';
 
 function About() {
   return (
-    <div className="container mx-auto p-4">
-      <div className="grid lg:grid-cols-4 gap-4">
+    <div className="mx-auto">
+      <div className="grid lg:grid-cols-4 ">
         {teamMembers.slice(0, 5).map((member, index) => (
           <TeamMemberCard
             key={index}
@@ -20,10 +38,16 @@ function About() {
           />
         ))}
 
-        {/* split the list and add the description in the middle  */}
+        {/* Split the list and add the description in the middle  */}
         <div className="col-span-2 bg-primary text-black p-4 h-full text-center order-first lg:order-none">
           <h2 className="text-4xl font-bold mb-2 text-secondary">{aboutTitle}</h2>
           <p>{aboutDescription}</p>
+          <Link
+            to="/contact"
+            className="button-base mt-4 inline-block"
+          >
+            <span className="button-content">Learn More by Contacting Us</span>
+          </Link>
         </div>
 
         {teamMembers.slice(5).map((member, index) => (
@@ -41,161 +65,3 @@ function About() {
 }
 
 export default About;
-
-// import React from 'react';
-// import TeamMemberCard from '../components/TeamMemberCard';
-// import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutData';
-
-// function About() {
-//   return (
-//     <div className="container mx-auto p-4">
-//       <div className="grid lg:grid-cols-4 gap-4">
-//         {teamMembers.slice(0, 5).map((member, index) => (
-//           <TeamMemberCard
-//             key={index}
-//             name={member.name}
-//             role={member.role}
-//             image={member.image}
-//             description={member.description}
-//           />
-//         ))}
-
-//         <div className="col-span-2 bg-primary text-black p-4 h-full text-center order-first lg:order-none">
-//           <h2 className="text-4xl font-bold mb-2">{aboutTitle}</h2>
-//           <p>{aboutDescription}</p>
-//         </div>
-
-//         {teamMembers.slice(5).map((member, index) => (
-//           <TeamMemberCard
-//             key={index + 5} // ensure unique keys
-//             name={member.name}
-//             role={member.role}
-//             image={member.image}
-//             description={member.description}
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default About;
-
-// import React from 'react';
-// import TeamMemberCard from '../components/TeamMemberCard';
-// import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutData';
-
-// function About() {
-//   return (
-//     <div className="container mx-auto p-4">
-//       <div className="grid lg:grid-cols-4 gap-2">
-
-
-//         <TeamMemberCard
-//           name={"Alice Johnson"}
-//           role={"Project Manager"}
-//           image={"chace_nielson.jpg"}
-//           description={"Alice coordinates the team and ensures projects are on track."}
-//         />
-//         <TeamMemberCard
-//           name={"Chace Nielson"}
-//           role={"Software Developer"}
-//           image={"glass.png"}
-//           description={"Chace loves long walks on the beach."}
-//         />
-//         <TeamMemberCard
-//           name={"Carol White"}
-//           role={"UX Designer"}
-//           image={"chace_2.jpg"}
-//           description={"Carol designs user interfaces and improves user experience."}
-//         />
-//         <TeamMemberCard
-//           name={"Carol White"}
-//           role={"UX Designer"}
-//           image={"henery.png"}
-//           description={"Carol designs user interfaces and improves user experience."}
-//         />
-//         <TeamMemberCard
-//           name={"Carol White"}
-//           role={"UX Designer"}
-//           image={"henery.png"}
-//           description={"Carol designs user interfaces and improves user experience."}
-//         />
-
-//         <div className="col-span-2 bg-primary text-black p-4 h-full text-center order-first lg:order-none">
-//           <h2 className="text-4xl font-bold mb-2">{aboutTitle}</h2>
-//           <p>{aboutDescription}</p>
-//         </div>
-
-//         <TeamMemberCard
-//           name={"Carol White"}
-//           role={"UX Designer"}
-//           image={"henery.png"}
-//           description={"Carol designs user interfaces and improves user experience."}
-//         />
-//         <TeamMemberCard
-//           name={"Alice Johnson"}
-//           role={"Project Manager"}
-//           image={"chace_nielson.jpg"}
-//           description={"Alice coordinates the team and ensures projects are on track."}
-//         />
-//         <TeamMemberCard
-//           name={"Chace Nielson"}
-//           role={"Software Developer"}
-//           image={"glass.png"}
-//           description={"Chace loves long walks on the beach."}
-//         />
-//         <TeamMemberCard
-//           name={"Carol White"}
-//           role={"UX Designer"}
-//           image={"chace_2.jpg"}
-//           description={"Carol designs user interfaces and improves user experience."}
-//         />
-//         <TeamMemberCard
-//           name={"Carol White"}
-//           role={"UX Designer"}
-//           image={"henery.png"}
-//           description={"Carol designs user interfaces and improves user experience."}
-//         />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default About;
-
-
-
-
-
-// import React from 'react';
-// import TeamMemberCard from '../components/TeamMemberCard';
-// import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutData'
-
-// function About() {
-//   return (
-//     <div className="container mx-auto p-4">
-//       <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 m-1 ">
-//       {teamMembers.map((member, index) => (
-//           <>
-//             {index === 5 ? (
-//               <div className="col-span-2 bg-primary text-black p-4 h-full">
-//                 <h2 className="text-4xl font-bold mb-2 text-center">{aboutTitle}</h2>
-//                 <p className="text-center">{aboutDescription}</p>
-//               </div>
-//             ) : ( null )}
-
-//             <TeamMemberCard
-//               name={member.name}
-//               role={member.role}
-//               image={member.image}
-//               description={member.description}
-//             />
-//           </>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default About;

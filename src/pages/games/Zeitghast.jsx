@@ -1,10 +1,26 @@
 /**
- * @file Zeitghast.jsx is a React component that displays the page for a specific game - Zeitghast.
+ * @file Zeitghast.jsx
+ * @module Zeitghast
+ * @desc React component that displays the page for a specific game - Zeitghast.
  * Renders the details and information about Zeitghast.
- *
- * @component
- * @returns {JSX.Element} The rendered Zeitghast component
+ * 
+ * @component Zeitghast
+ * 
+ * @requires react
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * 
+ * @returns {JSX.Element} The rendered Zeitghast component.
+ * 
+ * @example
+ * // Example usage of Zeitghast component
+ * <Zeitghast />
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
  */
+
 import React from 'react';
 
 function Zeitghast() {

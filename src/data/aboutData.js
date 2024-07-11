@@ -1,31 +1,41 @@
-
 /**
- * Data for the about page.
+ * @file aboutData.js
  * @module aboutData
+ * @desc Data structures used in the application for the about page.
+ * 
+ * @exports aboutTitle
+ * @exports aboutDescription
+ * @exports teamMembers
+ * 
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export|MDN Export Documentation}
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
  */
 
 /**
  * The title for the about section.
  * @type {string}
  */
-export const aboutTitle = 'About Us';
+export const aboutTitle = 'Our Team';
 
 /**
  * The description for the about section.
  * @type {string}
  */
-export const aboutDescription = `Founded in a small garage in 2010, Glass Gecko Games quickly gained recognition for its innovative and immersive game designs. Led by visionary founder Alice Johnson, the studio's first breakthrough came with the release of "Mystic Realms," which captivated players worldwide. The team, consisting of talented developers like Dave  and Carol , has since grown into a diverse group of creative minds.`;
+export const aboutDescription = `Founded in a small garage in 2010, Glass Gecko Games quickly gained recognition for its innovative and immersive game designs. Led by visionary founder Alice Johnson, the studio's first breakthrough came with the release of "Mystic Realms," which captivated players worldwide. The team, consisting of talented developers like Dave and Carol, has since grown into a diverse group of creative minds.`;
 
 /**
  * An array of team members.
- * each team member has a name, role, image, and description as keys
+ * Each team member has a name, role, image, and description as keys.
  * @type {Array<Object>}
  */
 export const teamMembers = [
   {
     name: 'Alice Johnson',
     role: 'Project Manager',
-    image: 'glass.png',
+    image: 'person1.png',
     description: 'Alice coordinates the team and ensures projects are on track. She loves to get things done and keep working on this long sentence etc.'
   },
   {
@@ -37,7 +47,7 @@ export const teamMembers = [
   {
     name: 'Carol White',
     role: 'UX Designer',
-    image: 'glass.png',
+    image: 'person1.png',
     description: 'Carol designs user interfaces and improves user experience.'
   },
   {
@@ -55,7 +65,7 @@ export const teamMembers = [
   {
     name: 'Frank Miller',
     role: 'DevOps Engineer',
-    image: 'glass.png',
+    image: 'person1.png',
     description: 'Frank ensures continuous integration and deployment pipelines are running smoothly.'
   },
   {

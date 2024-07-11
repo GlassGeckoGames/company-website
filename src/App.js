@@ -1,13 +1,31 @@
 /**
- * @file App.js is the root component for the application.
- * Entry point component for the application.
- * Handles routing and displays the navigation bar and footer along with the rest of the content.
- *
- * @component
- * @returns {JSX.Element} The rendered App component
+ * @file App.js
+ * @module App
+ * @desc Main application component that sets up routing and renders the application.
+ * @component App
+ * 
+ * @requires react
+ * @requires react-router-dom
+ * @requires ./pages/Home
+ * @requires ./pages/Contact
+ * @requires ./pages/About
+ * @requires ./pages/News
+ * @requires ./pages/games/Zeitghast
+ * @requires ./pages/games/TempGame
+ * @requires ./components/navbarComponents/Navbar
+ * @requires ./components/Footer
+ * @requires ./components/ScrollToTop
+ * @requires ./styles/scrollbar.css
+ * 
+ * @see {@link https://reactrouter.com/|React Router Documentation}
+ * 
+ * @author John Smith
+ * @created 2024-07-12
+ * @updated 2024-07-12
  */
+
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
@@ -16,8 +34,11 @@ import Zeitghast from './pages/games/Zeitghast';
 import TempGame from './pages/games/TempGame';
 import Navbar from './components/navbarComponents/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import './styles/scrollbar.css'; // Import the CSS file here
+
+// testing component to remove after create responsive design
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
-import './cssStyles/Scrollbar.css'; // Import the CSS file here
 
 function App() {
   return (
@@ -25,7 +46,8 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <TailwindBreakPoints />
-        <div className="flex-grow bg-primary py-4">
+        <ScrollToTop />
+        <div className="flex-grow bg-primary">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
@@ -33,6 +55,7 @@ function App() {
             <Route path="/news" element={<News />} />
             <Route path="/games/Zeitghast" element={<Zeitghast />} />
             <Route path="/games/TempGame" element={<TempGame />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
         <Footer />

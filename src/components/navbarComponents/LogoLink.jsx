@@ -1,14 +1,29 @@
-
 /**
- * Renders a logo link component.
- * main logo in left of navbar and footer
- *
- * @component
+ * @file LogoLink.jsx
+ * @module LogoLink
+ * @desc Renders a logo link component. Main logo in left of navbar and footer.
+ * 
+ * @component LogoLink
+ * 
  * @example
+ * // Example usage of LogoLink component
  * return (
  *   <LogoLink />
  * )
+ * 
+ * @requires react
+ * @requires react-router-dom
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * @see {@link https://reactrouter.com/|React Router Documentation}
+ * 
+ * @returns {JSX.Element} The rendered LogoLink component.
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
  */
+
 import React from 'react'
 import { Link } from 'react-router-dom';
 
@@ -21,4 +36,4 @@ function LogoLink() {
   )
 }
 
-export default LogoLink
+export default LogoLink;

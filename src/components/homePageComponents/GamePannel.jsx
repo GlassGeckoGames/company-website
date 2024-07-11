@@ -1,15 +1,58 @@
-import React from 'react'
+/**
+ * @file GamePannel.jsx
+ * @module GamePannel
+ * @desc Renders a game panel component.
+ * 
+ * @component GamePannel
+ * 
+ * @param {Object} props - The component props.
+ * @param {Object} props.game - The game object containing game details.
+ * @param {string} props.game.name - The name of the game.
+ * @param {string} props.game.id - The ID of the game.
+ * @param {string} props.game.img - The image URL of the game.
+ * @param {string} props.game.description - The description of the game.
+ * @param {string} props.game.link - The external link to play the game.
+ * 
+ * @requires react
+ * @requires react-router-dom
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * @see {@link https://reactrouter.com/|React Router Documentation}
+ * 
+ * @returns {JSX.Element} The game panel component.
+ * 
+ * @example
+ * // Example usage of GamePannel component
+ * <GamePannel game={{ name: 'Game Name', id: 'game-id', img: 'image.jpg', description: 'Game Description', link: 'https://example.com' }} />
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
+ */
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-function GamePannel({game}) {
+function GamePannel({ game }) {
   return (
-    <li key={game.name} className="mb-4 bg-red-100">
-    <Link to={`/games/${game.id}`} className="text-blue-500 text-xl font-semibold">{game.name}</Link>
-    <p>{game.description}</p>
-    <a href={game.link} target="_blank" rel="noopener noreferrer" className='hover:text-accent'>Play Game</a>
-  </li>
-  )
+    <li key={game.name} className="relative w-full h-72 md:h-96 overflow-hidden">
+      <Link to={`/games/${game.id}`} className="hover:cursor-pointer hover:opacity-90">
+        <img className="w-full h-full object-cover" src={process.env.PUBLIC_URL + `/gameMedia/${game.img}`} alt={game.name} />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-20">
+          <h2 className="text-white text-2xl md:text-4xl font-bold mb-2">{game.name}</h2>
+          <p className="text-white text-sm md:text-lg max-w-2xl mb-4">{game.description}</p>
+          <a
+            href={game.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button-base text-lg font-semibold px-4 py-2 rounded"
+          >
+            <span className="button-content hover:scale-110">Play Now</span>
+          </a>
+        </div>
+      </Link>
+    </li>
+  );
 }
 
-export default GamePannel
+export default GamePannel;

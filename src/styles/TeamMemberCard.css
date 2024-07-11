@@ -1,0 +1,43 @@
+/**
+ * @file teamMemberCard.css
+ * @module teamMemberCard
+ * @desc CSS styles for the TeamMemberCard component.
+ * This CSS code defines the styles for the TeamMemberCard component, which is used to display information about a team member.
+ * It includes styles for the card layout, image, name, and other details.
+ * 
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms|MDN CSS Transforms Documentation}
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
+ */
+
+/* TeamMemberCard.css */
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}

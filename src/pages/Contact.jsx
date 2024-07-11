@@ -1,10 +1,22 @@
 /**
- * @file Contact.jsx is a React component that displays the contact page.
+ * @file Contact.jsx
+ * @module Contact
+ * @desc React component that displays the contact page.
  * Renders the contact form and contact information.
- *
- * @component
- * @returns {JSX.Element} The rendered Contact component
+ * 
+ * @component Contact
+ * 
+ * @requires react
+ * @requires react-hot-toast
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * @see {@link https://react-hot-toast.com/|React Hot Toast Documentation}
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-10
+ * @updated 2024-07-10
  */
+
 import React, { useState } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 
@@ -55,9 +67,9 @@ function Contact() {
         <div>
           <button
             type="submit"
-            className="w-full inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-accent hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
+            className="button-base w-full"
           >
-            Send
+            <span className="button-content">Send</span>
           </button>
         </div>
       </form>
