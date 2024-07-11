@@ -35,6 +35,8 @@
 .button-content {
   position: relative;
   z-index: 5;
+  @apply text-lg
+
 }
 
 /* Accent button variant */

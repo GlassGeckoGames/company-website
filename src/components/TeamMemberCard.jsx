@@ -34,8 +34,8 @@ function TeamMemberCard({ name, role, image, description }) {
         <div className="flip-card-front absolute inset-0 overflow-hidden">
           <img className="absolute inset-0 w-full h-full object-cover" src={process.env.PUBLIC_URL + '/teamPhotos/' + image} alt={name} />
           <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center">
-            <div className="text-white font-bold text-xl">{name}</div>
-            <div className="text-white text-base">{role}</div>
+            <div className="text-white font-bold text-xl text-outline">{name}</div>
+            <div className="text-white text-base text-outline">{role}</div>
           </div>
         </div>
         <div className="flip-card-back absolute inset-0 flex flex-col justify-center items-center bg-secondary text-black  p-4 transform rotate-y-180">

@@ -38,9 +38,9 @@ function GamePannel({ game }) {
     <li key={game.name} className="relative w-full h-64 md:h-104 lg:h-128 2xl:h-176 overflow-hidden">
       <img className="w-full h-full object-cover" src={process.env.PUBLIC_URL + `/gameMedia/${game.img}`} alt={game.name} />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-20">
-          <h2 className="text-white text-3xl md:text-5xl font-bold mb-2">{game.name}</h2>
-        <p className="text-white text-sm md:text-lg max-w-2xl mb-2 ">{game.description}</p>
-        <div className='flex gap-4'>
+          <h2 className="text-white text-3xl md:text-5xl font-bold mb-2 text-outline">{game.name}</h2>
+        <p className="text-white text-sm md:text-lg max-w-2xl mb-2 text-outline">{game.description}</p>
+        <div className='flex gap-4 pt-4'>
           <Button type="secondary" as="link" to={`/games/${game.id}`}>Find Out</Button>
           <Button type="accent" as="a" href={game.link}>Play Now</Button>
         </div>
