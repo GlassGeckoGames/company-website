@@ -14,7 +14,7 @@
  * @param {string} props.game.link - The external link to play the game.
  * 
  * @requires react
- * @requires react-router-dom
+ * @requires Button ?????
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://reactrouter.com/|React Router Documentation}
@@ -31,7 +31,7 @@
  */
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Button from '../Button';
 
 function GamePannel({ game }) {
   return (
@@ -41,19 +41,8 @@ function GamePannel({ game }) {
           <h2 className="text-white text-3xl md:text-5xl font-bold mb-2">{game.name}</h2>
         <p className="text-white text-sm md:text-lg max-w-2xl mb-2 ">{game.description}</p>
         <div className='flex gap-4'>
-
-          <Link to={`/games/${game.id}`} className="button-secondary text-lg font-semibold px-4 py-2 rounded mt-2">
-            <span className="button-content ">Find Out</span>
-          </Link>
-          <a
-            href={game.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button-base text-lg font-semibold px-4 py-2 rounded mt-2"
-          >
-            <span className="button-content ">Play Now</span>
-          </a>
-          
+          <Button type="secondary" as="link" to={`/games/${game.id}`}>Find Out</Button>
+          <Button type="accent" as="a" href={game.link}>Play Now</Button>
         </div>
       </div>
     </li>

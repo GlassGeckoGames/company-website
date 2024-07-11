@@ -8,6 +8,7 @@
  * 
  * @requires react
  * @requires ../../data/gameData
+ * @requires ../../components/Button
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * 
@@ -23,6 +24,7 @@
  */
 import React from 'react';
 import { zeitghastInfo } from '../../data/gameData';
+import Button from '../../components/Button';
 
 function Zeitghast() {
   const getEmbedUrl = (url) => {
@@ -33,38 +35,32 @@ function Zeitghast() {
   return (
     <div className="container mx-auto p-4 bg-primary">
       <h1 className="text-4xl font-bold text-secondary mb-4">{zeitghastInfo.title}</h1>
-      <div className="mb-6">
-        <p className="text-lg text-black ">{zeitghastInfo.description}</p>
-        <div className="mb-6">
-        <a
-          href={zeitghastInfo.playLink.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button-base text-lg font-semibold px-4 py-2 rounded my-2"
-        >
-          <span className="button-content ">          
-            {zeitghastInfo.playLink.name}
-          </span>
-        </a>
-
-
-        <div className="flex flex-wrap gap-4 mb-4">
-          {zeitghastInfo.images.map((image, index) => (
-            <img
-              key={index}
-              src={process.env.PUBLIC_URL + image}
-              alt={`${zeitghastInfo.title} screenshot ${index + 1}`}
-              className="w-full md:w-1/3 h-auto rounded shadow-lg"
-            />
-          ))}
-        </div>
-        <p className="text-lg text-black mb-2"><strong>Genre:</strong> {zeitghastInfo.genre}</p>
-        <p className="text-lg text-black mb-2"><strong>Platforms:</strong> {zeitghastInfo.platforms.join(', ')}</p>
-        <p className="text-lg text-black mb-2"><strong>Release Date:</strong> {zeitghastInfo.releaseDate}</p>
+      <div className="mb-4">
+        <p className="text-lg text-black mb-2">{zeitghastInfo.description}</p>
+        <Button type="accent" as="a" href={zeitghastInfo.playLink.url}>
+          {zeitghastInfo.playLink.name}
+        </Button>
       </div>
-      
-      <div className='md:flex gap-10'>
-
+      <div className="flex flex-wrap gap-4 mb-4">
+        {zeitghastInfo.images.map((image, index) => (
+          <img
+            key={index}
+            src={process.env.PUBLIC_URL + image}
+            alt={`${zeitghastInfo.title} screenshot ${index + 1}`}
+            className="w-full md:w-1/3 h-auto rounded shadow-lg"
+          />
+        ))}
+      </div>
+      <p className="text-lg text-black mb-2">
+        <strong>Genre:</strong> {zeitghastInfo.genre}
+      </p>
+      <p className="text-lg text-black mb-2">
+        <strong>Platforms:</strong> {zeitghastInfo.platforms.join(', ')}
+      </p>
+      <p className="text-lg text-black mb-2">
+        <strong>Release Date:</strong> {zeitghastInfo.releaseDate}
+      </p>
+      <div className="md:flex gap-10">
         <div className="mb-6 w-full">
           <h2 className="text-3xl font-bold text-secondary mb-4">Features</h2>
           <ul className="list-disc list-inside text-lg text-black">
@@ -73,14 +69,15 @@ function Zeitghast() {
             ))}
           </ul>
         </div>
-        
         <div className="mb-6 w-full">
           <h2 className="text-3xl font-bold text-secondary mb-4">System Requirements</h2>
           <div className="text-lg text-black mb-2">
             <h3 className="text-2xl font-semibold">Minimum:</h3>
             <ul className="list-disc list-inside">
               {Object.entries(zeitghastInfo.systemRequirements.minimum).map(([key, value], index) => (
-                <li key={index} className="mb-1"><strong>{key}:</strong> {value}</li>
+                <li key={index} className="mb-1">
+                  <strong>{key}:</strong> {value}
+                </li>
               ))}
             </ul>
           </div>
@@ -88,13 +85,14 @@ function Zeitghast() {
             <h3 className="text-2xl font-semibold">Recommended:</h3>
             <ul className="list-disc list-inside">
               {Object.entries(zeitghastInfo.systemRequirements.recommended).map(([key, value], index) => (
-                <li key={index} className="mb-1"><strong>{key}:</strong> {value}</li>
+                <li key={index} className="mb-1">
+                  <strong>{key}:</strong> {value}
+                </li>
               ))}
             </ul>
           </div>
         </div>
       </div>
-      
       <div className="mb-6">
         <h2 className="text-3xl font-bold text-secondary mb-4">Trailer</h2>
         <div className="aspect-w-16 aspect-h-9">
@@ -108,7 +106,6 @@ function Zeitghast() {
           ></iframe>
         </div>
       </div>
-      
       <div className="mb-6">
         <h2 className="text-3xl font-bold text-secondary mb-4">Reviews</h2>
         <div className="text-lg text-black">
@@ -119,9 +116,6 @@ function Zeitghast() {
             </div>
           ))}
         </div>
-      </div>
-      
-
       </div>
     </div>
   );

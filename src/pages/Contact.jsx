@@ -8,17 +8,24 @@
  * 
  * @requires react
  * @requires react-hot-toast
+ * @requires ../components/Button
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://react-hot-toast.com/|React Hot Toast Documentation}
  * 
- * @author Chace Nielson
+ * @returns {JSX.Element} The rendered Contact component.
+ * 
+ * @example
+ * // Example usage of Contact component
+ * <Contact />
+ * 
  * @created 2024-07-10
- * @updated 2024-07-10
+ * @updated 2024-07-11
  */
 
 import React, { useState } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
+import Button from '../components/Button';
 
 function Contact() {
   const [email, setEmail] = useState('');
@@ -37,7 +44,7 @@ function Contact() {
       toast.custom((t) => (
         <div
           className={`${
-            t.visible ? 'animate-enter' : 'animate-leave'
+            t.visible ? 'animate-toast-in' : 'animate-toast-out'
           } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5 transition duration-300 ease-in-out`}
         >
           <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-secondary text-white rounded-full ml-4 mt-4 mb-4">
@@ -84,11 +91,10 @@ function Contact() {
   return (
     <div className="container mx-auto p-4 flex flex-col lg:flex-row gap-20">
       <Toaster />
-      <div className='w-full'>
-
+      <div className="w-full">
         <h1 className="text-3xl font-bold text-secondary">Contact Us</h1>
         <p className="mt-4">Send us an email at <a href="mailto:glassgeckogames@gmail.com" className="text-accent">glassgeckogames@gmail.com</a></p>
-        <form onSubmit={handleSubmit} className="mt-8 space-y-6 ">
+        <form onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div>
             <label htmlFor="email" className="block text-base font-medium text-black">Email</label>
             <input
@@ -109,29 +115,19 @@ function Contact() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-              // rows="12"
-              maxlength="800"
-              className="min-h-28 h-40 xl:h-56 2xl:h-80  max-h- mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
+              maxLength="800"
+              className="min-h-28 h-40 xl:h-56 2xl:h-80 max-h- mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
             />
           </div>
           <div>
-            <button
-              type="submit"
-              className="button-base w-full"
-            >
-              <span className="button-content">Send</span>
-            </button>
+            <Button type="accent" buttonType="submit">Submit Message</Button>
           </div>
-
           <p className="mt-4">We'd love to hear from you! Your feedback helps us make our games better. Whether you have questions, suggestions, or ideas, please share them with us. We are committed to creating the best gaming experience possible and appreciate your input.</p>
-          </form>
+        </form>
       </div>
-
-      <div className='w-full h-full flex items-center justify-center'>
-        <img className="max-w-full h-auto rounded-xl" src={process.env.PUBLIC_URL + `/logos/Glass_Gecko_Games_Icon.png`} alt={"contact page"} />
-
+      <div className="w-full h-full flex items-center justify-center">
+        <img className="max-w-full h-auto rounded-xl" src={process.env.PUBLIC_URL + `/logos/Glass_Gecko_Games_Icon.png`} alt="contact page" />
       </div>
-
     </div>
   );
 }
