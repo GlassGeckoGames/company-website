@@ -18,7 +18,7 @@
  * The title for the about section.
  * @type {string}
  */
-export const aboutTitle = 'About Us';
+export const aboutTitle = 'Our Team';
 
 /**
  * The description for the about section.
@@ -35,7 +35,7 @@ export const teamMembers = [
   {
     name: 'Alice Johnson',
     role: 'Project Manager',
-    image: 'glass.png',
+    image: 'person1.png',
     description: 'Alice coordinates the team and ensures projects are on track. She loves to get things done and keep working on this long sentence etc.'
   },
   {
@@ -47,7 +47,7 @@ export const teamMembers = [
   {
     name: 'Carol White',
     role: 'UX Designer',
-    image: 'glass.png',
+    image: 'person1.png',
     description: 'Carol designs user interfaces and improves user experience.'
   },
   {
@@ -65,7 +65,7 @@ export const teamMembers = [
   {
     name: 'Frank Miller',
     role: 'DevOps Engineer',
-    image: 'glass.png',
+    image: 'person1.png',
     description: 'Frank ensures continuous integration and deployment pipelines are running smoothly.'
   },
   {

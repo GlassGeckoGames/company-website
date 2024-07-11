@@ -22,7 +22,7 @@
  * @example
  * // Example usage of LinkItem component
  * <LinkItem to="/about" onClick={handleClick}>
- *   About Us
+ *   Our Team
  * </LinkItem>
  * 
  * @author Chace Nielson
