@@ -51,8 +51,8 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center col-span-2 bg-primary text-black p-4 h-full text-center order-first lg:order-none">
-      <h2 className="text-4xl font-bold mb-2 text-secondary">{aboutTitle}</h2>
+    <div className="flex flex-col justify-center items-center col-span-2 bg-primary text-black p-5 lg:px-20 h-full text-center order-first lg:order-none">
+      <h2 className="text-2xl xl:text-4xl font-bold mb-2 text-secondary">{aboutTitle}</h2>
       <p className="text-base lg:text-sm xl:text-base pb-4">{aboutDescription}</p>
       <Button onClickFunc={handleClick} type="accent" as="link" to="/contact">Learn More</Button>
     </div>
