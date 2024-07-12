@@ -58,13 +58,15 @@ export function recordGAPage(path) {
  * @param {number} [value] - The value associated with the event.
  * @param {Object} [additionalParams] - Additional parameters to be included with the event.
  */
-export function recordGAEvent(name ) {
+export function recordGAEvent( name ) {
   if (typeof category !== 'string' || typeof action !== 'string') {
       console.error('Category and action must be strings');
       return;
   }
 
   ReactGA.event({
+    category: name,
     action: name,
+    label: name,
   });
 }
