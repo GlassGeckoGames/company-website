@@ -10,6 +10,7 @@
  * @requires react-hot-toast
  * @requires emailjs-com
  * @requires ../components/Button
+ * @requires ../analytics
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://react-hot-toast.com/|React Hot Toast Documentation}
@@ -29,6 +30,7 @@ import React, { useState } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
 import Button from '../components/Button';
+import { recordGAEvent } from '../analytics';
 
 const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
 const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -65,6 +67,9 @@ function Contact() {
       setName('');
       setEmail('');
       setMessage('');
+
+      recordGAEvent({ category: 'Contact', action: 'Submit Button Click', label: "Send a message to email service"});
+
     }, (error) => {
       console.log('FAILED...', error);
       displayErrorToast();

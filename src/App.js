@@ -2,7 +2,7 @@
  * @file App.js
  * @module App
  * @desc Main application component that sets up routing and renders the application. 
- * Also initializes EmailJS for email functionality.
+ * Also initializes EmailJS for email functionality and Google Analytics for tracking.
  * 
  * @component App
  * 
@@ -19,6 +19,8 @@
  * @requires ./components/Footer
  * @requires ./components/ScrollToTop
  * @requires ./styles/scrollbar.css
+ * @requires ./testingComponents/TailwindBreakPoints
+ * @requires ./analytics
  * 
  * @see {@link https://reactrouter.com/|React Router Documentation}
  * @see {@link https://www.emailjs.com/docs/|EmailJS Documentation}
@@ -30,13 +32,14 @@
  * <App />
  * 
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-11
  * 
  * @function
  * Initializes EmailJS with the user ID from environment variables.
  */
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+
+import React, { useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
@@ -50,13 +53,36 @@ import ScrollToTop from './components/ScrollToTop';
 // testing component to remove after create responsive design
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
 
+// Google Analytics
+import { initializeGA, recordGAPage } from "./analytics";
+
 // Initialize EmailJS with the user ID from environment variables
 import emailjs from 'emailjs-com';
 emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 
+// Initialize Google Analytics
+initializeGA();
+
+// Component to track page views when the page changes after the first page load
+function AnalyticsTracker() {
+  const location = useLocation();
+  const isFirstLoad = useRef(true);
+
+  useEffect(() => {
+    if (isFirstLoad.current) {
+      isFirstLoad.current = false;
+    } else {
+      recordGAPage(location.pathname + location.search);
+    }
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <AnalyticsTracker />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <TailwindBreakPoints />

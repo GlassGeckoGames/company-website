@@ -9,6 +9,7 @@
  * @requires react
  * @requires ../../data/gameData
  * @requires ../../components/Button
+ * @requires ../../analytics
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * 
@@ -25,6 +26,7 @@
 import React from 'react';
 import { zeitghastInfo } from '../../data/gameData';
 import Button from '../../components/Button';
+import { recordGAEvent } from '../../analytics';
 
 function Zeitghast() {
   const getEmbedUrl = (url) => {
@@ -32,12 +34,19 @@ function Zeitghast() {
     return `https://www.youtube.com/embed/${videoId}`;
   };
 
+    /**
+   * Handles the click event for the "Learn More" button.
+   */
+    const handleClick = () => {
+      recordGAEvent({ category: 'Zeitghast', action: 'Button Click', label: 'Headed to Steam page for Zeitghast' });
+    };
+
   return (
     <div className="container mx-auto p-4 bg-primary">
       <h1 className="text-4xl font-bold text-secondary mb-4">{zeitghastInfo.title}</h1>
       <div className="mb-4">
         <p className="text-lg text-black mb-2">{zeitghastInfo.description}</p>
-        <Button type="accent" as="a" href={zeitghastInfo.playLink.url}>
+        <Button onClickFunc={handleClick} type="accent" as="a" href={zeitghastInfo.playLink.url}>
           {zeitghastInfo.playLink.name}
         </Button>
       </div>
