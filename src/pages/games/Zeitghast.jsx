@@ -24,7 +24,7 @@
  * @updated 2024-07-11
  */
 import React from 'react';
-import { zeitghastInfo } from '../../data/gameData';
+import { zeitghastInfo } from '../../data/gamesData';
 import Button from '../../components/Button';
 import { recordGAEvent } from '../../analytics';
 

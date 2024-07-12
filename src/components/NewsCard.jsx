@@ -38,7 +38,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-11
- * @updated 2024-07-11
+ * @updated 2024-07-12
  */
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
@@ -51,18 +51,18 @@ function NewsCard({ news, isHeadline }) {
           <FaStar color='#FFD700' size={30}/>
         </div>
       )}
-      <img src={news.image} alt={news.title} className={`w-full ${isHeadline ? 'h-104' : 'h-44'} object-cover`} />
+      <img src={"newsImages/"+news.image} alt={news.title} className={`w-full ${isHeadline ? 'h-104' : 'h-44'} object-cover`} />
       <div className="p-4">
         <h2 className={`text-xl font-bold ${isHeadline ? 'text-2xl' : ''}`}>
           {news.category ? <span className="text-secondary">{news.category}:</span> : ''}
           {news.title}
         </h2>
         <p className="text-sm">{news.description}</p>
-        <p className="text-sm">Date: {news.date}</p>
+        <p className="text-sm">Date: {news.datePosted}</p>
         {news.externalLinks && (
           <div className="mt-2">
             {news.externalLinks.map((link, linkIndex) => (
-              <a key={linkIndex} href={link.url} className="block text-sm text-accent">
+              <a key={linkIndex} href={link.url} className="block text-sm text-accent hover:text-accent-dark hover:underline">
                 {link.name}
               </a>
             ))}

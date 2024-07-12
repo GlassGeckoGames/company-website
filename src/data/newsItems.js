@@ -28,9 +28,24 @@
  *   console.log(news.title);
  * });
  * 
+ * 
+ * @exampleNewsItems - all the things that could be included in a new items object within the list 
+ * the top objects in the list is at the top of the list 
+ *  
+ *  title: "Patch 1.1 for Zeitghast",
+ *  description: "We've released Patch 1.1 for Zeitghast, featuring new levels, bug fixes, and performance improvements.",
+ *  datePosted: "2024-07-09",
+ *  category: "Update",
+ *  externalLinks: [
+ *    {name: "Official Announcement", url: "https://glassgeckogames.com/official-announcement"},
+ *    {name: "Play on Steam", url: "https://store.steampowered.com/app/2593070/Zeitghast/"}
+ *  ],
+ *  image: "zeitghast_release.jpg",
+ *  featured: false
+ * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-11
+ * @updated 2024-07-12
  */
 
 /**
@@ -39,52 +54,49 @@
  */
 export const newsItems = [
   {
-    title: "Monster Mash Coming Soon",
-    description: "Get ready for some monstrous fun with Monster Mash, our upcoming game set to release next month.",
-    date: "2024-07-10",
-    tags: ["release", "new game", "Zeitghast"],
-    category: "Announcement",
-    image: "newsImages/monstorMashAnouncment.png",
+    title: 'Sample News 1',
+    description: 'This is a sample news description 1.',
+    image: 'dec15_zeitghast_release.jpg',
+    category: 'News',
+    datePosted: 'July 9th, 2024',
+    externalLinks: [
+      { name: 'Play on Steam', url: 'https://example.com' },
+      { name: 'Link 2', url: 'https://example.com' }
+    ],
     featured: true
   },
   {
-    title: "Patch 1.1 for Zeitghast",
-    description: "We've released Patch 1.1 for Zeitghast, featuring new levels, bug fixes, and performance improvements.",
-    date: "2024-07-09",
-    category: "Update",
+    title: 'Sample News 2',
+    description: 'This is a sample news description 2.',
+    image: 'jul12_monstorMashAnouncment.png',
+    category: 'Announcement',
+    datePosted: 'August 15th, 2024',
     externalLinks: [
-      {name: "Official Announcement", url: "https://glassgeckogames.com/official-announcement"},
-      {name: "Play on Steam", url: "https://store.steampowered.com/app/2593070/Zeitghast/"}
+      { name: 'Link 1', url: 'https://example.com' }
     ],
-    image: "newsImages/zeitghast_release.jpg",
     featured: false
   },
   {
-    title: "Zeitghast Released on Steam",
-    description: "Our highly anticipated game Zeitghast is now available on Steam. Explore the epic adventure through time.",
-    date: "2024-07-10",
-    category: "Game Release",
-    image: "newsImages/zeitghast_release.jpg",
-  },
-  {
-    title: "Glass Gecko Games at GDC 2024",
-    description: "Join us at the Game Developers Conference 2024 where we will showcase our latest projects and upcoming games.",
-    date: "2024-07-08",
-    category: "Event",
-    image: "newsImages/gdc2024.jpg",
-    tags: ["event", "GDC", "conference"],
+    title: 'Sample News 3',
+    description: 'This is a sample news description 3.',
+    image: 'sample3.jpg',
+    category: 'Event',
+    datePosted: 'September 21st, 2024',
+    externalLinks: [
+      { name: 'Link 1', url: 'https://example.com' },
+      { name: 'Link 2', url: 'https://example.com' }
+    ],
     featured: false
   },
   {
-    title: "Developer Q&A Session",
-    description: "Our lead developers will be hosting a Q&A session next week. Get your questions ready and join us live!",
-    date: "2024-07-05",
-    category: "Community",
+    title: 'Sample News 4',
+    description: 'This is a sample news description 4.',
+    image: 'sample4.jpg',
+    category: 'Update',
+    datePosted: 'October 30th, 2024',
     externalLinks: [
-      {name: "Join the Q&A", url: "https://glassgeckogames.com/qa-session"}
+      { name: 'Link 1', url: 'https://example.com' }
     ],
-    image: "newsImages/qa_session.jpg",
-    tags: ["community", "Q&A", "live"],
     featured: true
-  },
+  }
 ];

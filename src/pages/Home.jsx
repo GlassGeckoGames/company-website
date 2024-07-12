@@ -21,7 +21,7 @@ import IntroPannel from '../components/homePageComponents/IntroPannel';
 import GamePannel from '../components/homePageComponents/GamePannel';
 
 // list of games to display in panels
-import { games } from '../data/gameListData';
+import { games } from '../data/gamePannelsData';
 
 function Home() {
   return (
