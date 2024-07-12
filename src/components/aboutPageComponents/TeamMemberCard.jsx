@@ -47,8 +47,8 @@ function TeamMemberCard({ name, role, image, description }) {
           />
           <div className="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center">
             <div className='hidden-visibility h-10'> </div>
-            <div className="text-white font-bold text-xl xl:text-2xl text-outline text-center">{name}</div>
-            <div className="text-white text-base xl:text-lg text-outline">{role}</div>
+            <div className="text-white font-bold text-xl xl:text-2xl text-outline-large text-center">{name}</div>
+            <div className="text-white text-base xl:text-lg text-outline-small">{role}</div>
           </div>
         </div>
         <div className="flip-card-back absolute inset-0 flex flex-col justify-center items-center bg-secondary text-black p-1 md:p-4 overflow-auto transform rotate-y-180 border-4 border-primary">

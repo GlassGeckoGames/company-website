@@ -13,8 +13,7 @@
  * @requires ./pages/Contact
  * @requires ./pages/About
  * @requires ./pages/News
- * @requires ./pages/games/Zeitghast
- * @requires ./pages/games/TempGame
+ * @requires ./pages/GamePage
  * @requires ./components/navbarComponents/Navbar
  * @requires ./components/Footer
  * @requires ./components/ScrollToTop
@@ -32,7 +31,7 @@
  * <App />
  * 
  * @created 2024-07-10
- * @updated 2024-07-11
+ * @updated 2024-07-12
  * 
  * @function
  * Initializes EmailJS with the user ID from environment variables.
@@ -44,8 +43,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import News from './pages/News';
-import Zeitghast from './pages/games/Zeitghast';
-import TempGame from './pages/games/TempGame';
+import GamePage from './pages/GamePage';
 import Navbar from './components/navbarComponents/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -93,8 +91,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/news" element={<News />} />
-            <Route path="/games/Zeitghast" element={<Zeitghast />} />
-            <Route path="/games/TempGame" element={<TempGame />} />
+            <Route path="/games/:gameId" element={<GamePage />} /> {/* Use GamePage component with dynamic gameId */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

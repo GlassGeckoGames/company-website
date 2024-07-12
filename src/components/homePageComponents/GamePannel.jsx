@@ -27,7 +27,7 @@
  * <GamePannel game={{ name: 'Game Name', id: 'game-id', img: 'image.jpg', description: 'Game Description', link: 'https://example.com' }} />
  * 
  * @created 2024-07-10
- * @updated 2024-07-11
+ * @updated 2024-07-12
  */
 
 import React from 'react';
@@ -51,22 +51,22 @@ function GamePannel({ game }) {
 
   // google analytics event tracking for buttons
   const handleFindOutClick = () => {
-    recordGAEvent("Clicked 'Find Out' for " +game.name);
+    recordGAEvent("Clicked 'Find Out' for " +game.title);
   };
 
   const handlePlayNowClick = () => {
-    recordGAEvent("Clicked 'Play Now' for " +game.name);
+    recordGAEvent("Clicked 'Play Now' for " +game.title);
   };
 
   return (
-    <li key={game.name} className="relative w-full h-64 md:h-104 lg:h-128 2xl:h-176 overflow-hidden">
-      <img className="w-full h-full object-cover" src={process.env.PUBLIC_URL + `/gameMedia/${game.img}`} alt={game.name} />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-20">
-        <h2 className="text-white text-3xl md:text-5xl font-bold mb-2 text-outline">{game.name}</h2>
-        <p className="text-white text-sm md:text-lg max-w-2xl mb-2 text-outline">{game.description}</p>
+    <li key={game.title} className="relative w-full h-64 md:h-104 lg:h-128 2xl:h-176 overflow-hidden">
+      <img className="w-full h-full object-cover" src={process.env.PUBLIC_URL + `/gameMedia/${game.id}/${game.pannelImg}`} alt={game.title} />
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-30">
+        <h2 className="text-white text-3xl md:text-5xl font-bold mb-2 text-outline-large line-clamp-3 break-words">{game.title}</h2>
+        <p className="text-white text-sm md:text-lg max-w-2xl mb-2 text-outline-small line-clamp-4 break-words">{game.pannelDescription}</p>
         <div className='flex gap-4 pt-4'>
           <Button onClickFunc={handleFindOutClick} type="secondary" as="link" to={`/games/${game.id}`}>Find Out</Button>
-          <Button onClickFunc={handlePlayNowClick} type="accent" as="a" href={game.link}>Play Now</Button>
+          <Button onClickFunc={handlePlayNowClick} type="accent" as="a" href={game.pannelLink}>Play Now</Button>
         </div>
       </div>
     </li>

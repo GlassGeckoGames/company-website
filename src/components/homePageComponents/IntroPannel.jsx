@@ -29,8 +29,8 @@ function IntroPannel() {
     <div className="relative w-full h-80 md:h-112 lg:h-160 2xl:h-208 overflow-hidden">
       <video className="w-full h-full object-cover" src={process.env.PUBLIC_URL + '/videos/homeBackdropVideo.mp4'} autoPlay loop muted />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-20">
-        <h1 className="text-white text-4xl md:text-6xl font-bold mb-4 text-outline">{title}</h1>
-        <p className="text-white text-lg md:text-xl max-w-2xl text-outline">{description}</p>
+        <h1 className="text-white text-4xl md:text-6xl font-bold mb-4 text-outline-large">{title}</h1>
+        <p className="text-white text-lg md:text-xl max-w-2xl text-outline-small">{description}</p>
       </div>
     </div>
   );
