@@ -19,13 +19,14 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-10
+ * @updated 2024-07-12
  */
 
 import React from 'react';
-import TeamMemberCard from '../components/TeamMemberCard';
-import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutData';
-import AboutPageText from '../components/AboutPageText';
+import TeamMemberCard from '../components/aboutPageComponents/TeamMemberCard';
+import AboutPageText from '../components/aboutPageComponents/AboutPageText';
+// page data
+import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutPageData';
 
 function About() {
 

@@ -15,7 +15,7 @@
  * @param {string} name - The name of the team member.
  * @param {string} role - The role of the team member.
  * @param {string} image - The image of the team member.
- * @param {string} description - The description of the team member.
+ * @param {Array<string>} description - The description of the team member split into paragraphs. (max 3 paragraphs are used)
  * 
  * @returns {JSX.Element} The rendered TeamMemberCard component.
  * 
@@ -23,9 +23,8 @@
  * @created 2024-07-10
  * @updated 2024-07-12
  */
-
 import React from 'react';
-import '../styles/TeamMemberCard.css'; // Import the CSS file for 3D flip animation
+import '../../styles/TeamMemberCard.css'; // Import the CSS file for 3D flip animation
 
 function TeamMemberCard({ name, role, image, description }) {
   // Set the default image path
@@ -42,18 +41,21 @@ function TeamMemberCard({ name, role, image, description }) {
         <div className="flip-card-front absolute inset-0 overflow-hidden">
           <img
             className="absolute inset-0 w-full h-full object-cover"
-            src={process.env.PUBLIC_URL + '/teamPhotos/' + image}
+            src={process.env.PUBLIC_URL + '/teamPhotos/' + image} // uses the images in the  teamPhotos folder
             alt={name}
             onError={handleImageError}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-20 flex flex-col justify-center items-center">
+          <div className="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center">
             <div className='hidden-visibility h-10'> </div>
-            <div className="text-white font-bold text-xl xl:text-2xl text-outline">{name}</div>
+            <div className="text-white font-bold text-xl xl:text-2xl text-outline text-center">{name}</div>
             <div className="text-white text-base xl:text-lg text-outline">{role}</div>
           </div>
         </div>
-        <div className="flip-card-back absolute inset-0 flex flex-col justify-center items-center bg-secondary text-black p-4 transform rotate-y-180 border-4 border-primary">
-          <p className="text-xs sm:text-sm md:text-lg lg:text-base xl:text-lg text-primary">{description}</p>
+        <div className="flip-card-back absolute inset-0 flex flex-col justify-center items-center bg-secondary text-black p-1 md:p-4 overflow-auto transform rotate-y-180 border-4 border-primary">
+          <div className="text-xs sm:text-sm md:text-lg lg:text-base xl:text-lg text-primary">
+            {description[0] && <p className="py-1">{description[0]}</p>}
+            {description[1] && <p >{description[1]}</p>}
+          </div>
         </div>
       </div>
     </div>

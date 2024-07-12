@@ -28,8 +28,8 @@
  */
 
 import React from 'react';
-import Button from './Button';
-import { recordGAEvent } from '../analytics';
+import Button from '../Button';
+import { recordGAEvent } from '../../analytics';
 
 /**
  * A functional React component that renders the text section for the About page.
@@ -43,9 +43,7 @@ import { recordGAEvent } from '../analytics';
  */
 function AboutPageText({ aboutTitle, aboutDescription }) {
 
-  /**
-   * Handles the click event for the "Learn More" button.
-   */
+  //Handles the click event for the "Learn More" button.
   const handleClick = () => {
     recordGAEvent('Click learn more on About Page' );
   };
@@ -54,7 +52,7 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
     <div className="flex flex-col justify-center items-center col-span-2 bg-primary text-black p-5 lg:px-20 h-full text-center order-first lg:order-none">
       <h2 className="text-2xl xl:text-4xl font-bold mb-2 text-secondary">{aboutTitle}</h2>
       <p className="text-base lg:text-sm xl:text-base pb-4">{aboutDescription}</p>
-      <Button onClickFunc={handleClick} type="accent" as="link" to="/contact">Learn More</Button>
+      <Button onClickFunc={handleClick} type="accent" as="link" to="/contact">Learn More About Us</Button>
     </div>
   );
 }
