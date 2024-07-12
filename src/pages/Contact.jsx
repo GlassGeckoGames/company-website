@@ -68,7 +68,7 @@ function Contact() {
       setEmail('');
       setMessage('');
 
-      recordGAEvent({ category: 'Contact', action: 'Submit Button Click', label: "Send a message to email service"});
+      recordGAEvent("Sent a message via 'Contact Us' form");
 
     }, (error) => {
       console.log('FAILED...', error);

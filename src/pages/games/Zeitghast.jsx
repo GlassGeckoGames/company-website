@@ -38,7 +38,7 @@ function Zeitghast() {
    * Handles the click event for the "Learn More" button.
    */
     const handleClick = () => {
-      recordGAEvent({ category: 'Zeitghast', action: 'Button Click', label: 'Headed to Steam page for Zeitghast' });
+      recordGAEvent("Cliked Steam Link for Zeitghast");
     };
 
   return (

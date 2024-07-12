@@ -47,7 +47,7 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
    * Handles the click event for the "Learn More" button.
    */
   const handleClick = () => {
-    recordGAEvent({ category: 'About', action: 'Button Click', label: 'Click Learn More on About Page' });
+    recordGAEvent('Click learn more on About Page' );
   };
 
   return (

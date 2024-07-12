@@ -51,11 +51,11 @@ function GamePannel({ game }) {
 
   // google analytics event tracking for buttons
   const handleFindOutClick = () => {
-    recordGAEvent({ category: 'Game', action: 'Find Out', label: "Clicked Find Out" +game.name });
+    recordGAEvent("Clicked 'Find Out' for " +game.name);
   };
 
   const handlePlayNowClick = () => {
-    recordGAEvent({ category: 'Game', action: 'Play Now', label: "Clicked Play Now " + game.name });
+    recordGAEvent("Clicked 'Play Now' for " +game.name);
   };
 
   return (
