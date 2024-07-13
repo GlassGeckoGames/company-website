@@ -48,6 +48,11 @@ function GameDetails({ game }) {
           <strong>Release Date:</strong> {game.releaseDate}
         </p>
       )}
+      {game.price && (
+        <p className="text-lg text-black mb-2">
+          <strong>Price:</strong> {game.price}
+        </p>
+      )}
     </div>
   );
 }

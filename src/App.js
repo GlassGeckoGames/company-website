@@ -48,8 +48,8 @@ import Navbar from './components/navbarComponents/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
-// testing component to remove after create responsive design
-import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
+// testing component to remove after create responsive design - will be commented out until needed for development
+// import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
 
 // Google Analytics
 import { initializeGA, recordGAPage } from "./analytics";
@@ -83,7 +83,7 @@ function App() {
       <AnalyticsTracker />
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <TailwindBreakPoints />
+        {/* <TailwindBreakPoints /> */}
         <ScrollToTop />
         <div className="flex-grow bg-primary">
           <Routes>

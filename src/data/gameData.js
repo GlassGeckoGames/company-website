@@ -26,7 +26,7 @@
  */
 
 export const games = [
-  { //Zeitghast
+  { // Zeitghast
     id: 'zeitghast',  // for routing !!!!
     title: 'Zeitghast',
 
@@ -51,6 +51,7 @@ export const games = [
     genre: 'Adventure, Indie, Action',
     platforms: ['PC'],
     releaseDate: '15 Dec, 2023',
+    price: 'Free',
     features: [
       'Unique time-travel mechanics',
       'Beautiful hand-drawn art',
@@ -74,14 +75,10 @@ export const games = [
         Storage: '2 GB available space'
       }
     },
-    price: 'Free',
     trailer: 'https://www.youtube.com/watch?v=r8PjadkBUMY',
     reviews: [
-      { source: 'IGN', score: '9/10', quote: 'A time-bending masterpiece!' },
-      { source: 'GameSpot', score: '8.5/10', quote: 'Engaging and innovative puzzle mechanics.' }
+      { source: 'Steam', score: '85% Positive',  }
     ],
-    tags: ['Adventure', 'Action', 'Female Protagonist', '3D Platformer', 'Exploration', 'Third Person', 'Controller Support', 'Atmospheric', 'Linear', 'Cartoony', 'Action-Adventure', 'Colorful', 'Stylized', 'Sci-fi', 'Platformer', '3D', 'Emotional', 'Mystery', 'Singleplayer', 'Puzzle Platformer'],
-
   },
   { // I am a Monster Saving the Princess I Captured While Trying Not to Let My Boss Dragon Notice Because They Are Unpleasant
     id:'iamamonstersavingtheprincessicapturedwhiletryingnottoletmybossdragonnnoticebecausetheyareunpleasant', // for routing !!!!
@@ -100,11 +97,9 @@ export const games = [
     images: [
       'princessGameBackdrop.png',
       'princessGame3.png',
-      // 'princessGame1.png',
       'princessGame2.png',
       'princessGame3.png',
       'princessGame2.png',
-      'princessGameBackdrop.png',
       'princessGameBackdrop.png',
       'princessGameBackdrop.png',
       'princessGameBackdrop.png',
@@ -124,28 +119,22 @@ export const games = [
     genre: 'Adventure, Comedy, Puzzle',
     platforms: ['PC'],
     releaseDate: '2023',
+    price: 'Free',
     features: [
       'Humorous storyline',
       'Engaging puzzles and challenges',
-      'Colorful, cartoon-style graphics',
-      'Unique character interactions',
-      'Multiple endings',
-      'Single-player mode',
-      'Controller Support'
+      'Unique day/night mechanic',
+      'Avoid drawing the dragon’s suspicion',
+      'Colorful, cartoon-style graphics'
     ],
     systemRequirements: {
       minimum: {
-        OS: 'Windows 10',
-
-      },
-
+        OS: 'Windows',
+      }
     },
-    price: 'Free',
     trailer: 'https://www.youtube.com/watch?v=fake_trailer_link',
     reviews: [
-      { source: 'Kotaku', score: '8/10', quote: 'A hilarious and heartwarming adventure.' },
-      { source: 'Polygon', score: '7.5/10', quote: 'Charming and delightful with clever puzzles.' }
+      { source: 'Steam', score: '85% Positive',  }
     ],
-    tags: ['Comedy', 'Adventure', 'Puzzle', 'Colorful', 'Cartoon', 'Singleplayer', 'Controller Support', 'Lighthearted', 'Fantasy', 'Humor'],
   },
 ];

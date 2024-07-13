@@ -39,7 +39,7 @@ function GameReviews({ reviews }) {
             {reviews.map((review, index) => (
               <div key={index} className="mb-4">
                 <p className="font-semibold">{review.source}: {review.score}</p>
-                <p className="italic">"{review.quote}"</p>
+                {review.quote && <p className="italic">"{review.quote}"</p>}
               </div>
             ))}
           </div>
