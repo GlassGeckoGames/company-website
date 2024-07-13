@@ -12,12 +12,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend");
+
+/* fonts */
+body{
+  @apply font-montserrat
+}
+.titleFont{
+  @apply font-lato
+}
  
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @apply bg-primary;
@@ -28,6 +36,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* for the home page setup */
+.home-page-container {
+  @apply relative w-full overflow-hidden;
+}
+.home-page-box {
+  @apply absolute inset-0 
+  flex flex-col items-center justify-center 
+  text-center 
+  bg-black bg-opacity-20
+  px-6 md:px-8 lg:px-12 2xl:px-16
+  ;
+}
+
+.intro-size{
+  @apply h-80 md:h-112 lg:h-160 2xl:h-208;
+}
+.pannel-size{
+  @apply h-72 md:h-104 lg:h-128 2xl:h-160;
+}
+
+.home-page-title {
+  @apply text-white text-2xl sm:text-4xl md:text-6xl font-bold mb-4 text-outline-large titleFont;
+}
+.home-page-description {
+  @apply text-white text-base sm:text-lg md:text-xl max-w-2xl text-outline-small;
+}
+.break-line-clamp {
+  @apply line-clamp-3 break-words ;
+}
+
+
 
 /* for outlining text over images */
 .text-outline-large {

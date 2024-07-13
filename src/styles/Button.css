@@ -35,7 +35,7 @@
 .button-content {
   position: relative;
   z-index: 5;
-  @apply text-lg
+  @apply text-xs sm:text-base md:text-lg
 
 }
 

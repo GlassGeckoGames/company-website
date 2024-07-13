@@ -101,6 +101,15 @@ module.exports = {
         'toast-in': 'toast-in 0.3s ease-out forwards',
         'toast-out': 'toast-out 0.3s ease-in forwards',
       },
+      fontFamily: {
+        'open-sans': ['Open Sans', 'sans'],
+        'roboto': ['Roboto', 'sans'],
+        'lato': ['Lato', 'sans'],
+        'montserrat': ['Montserrat', 'sans'],
+        'nunito': ['Nunito', 'sans'],
+        'chalkduster': ['Chalkduster', 'cursive'],
+        'wingdings': ['Wingdings'], 
+      },
     },
   },
   plugins: [

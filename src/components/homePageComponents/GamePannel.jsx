@@ -90,14 +90,14 @@ function GamePannel({ game }) {
   };
 
   return (
-    <li key={game.title} className="relative w-full h-64 md:h-104 lg:h-128 2xl:h-176 overflow-hidden">
+    <li key={game.title} className="home-page-container pannel-size">
       <img className="w-full h-full object-cover" src={process.env.PUBLIC_URL + `/gameMedia/${game.id}/${game.pannelImg}`} alt={game.title} />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-30">
+      <div className="home-page-box">
        
         {/* Animate these elements slide in from the left with delay */}
         <motion.h2
           ref={titleRef}
-          className="text-white text-3xl md:text-5xl font-bold mb-2 text-outline-large line-clamp-3 break-words mx-6 md:mx-10 lg:mx-20 xl:mx-28 2xl:mx-40"
+          className="home-page-title break-line-clamp"
           initial="hidden"
           animate={(titleInView || titleHasAnimated) ? 'visible' : 'hidden'}
           variants={slideInLeft}
@@ -106,7 +106,7 @@ function GamePannel({ game }) {
         </motion.h2>
         <motion.p
           ref={descriptionRef}
-          className="text-white text-sm md:text-lg max-w-2xl mb-2 text-outline-small line-clamp-4 break-words mx-6 md:mx-10 lg:mx-20 xl:mx-28 2xl:mx-40"
+          className="home-page-description break-line-clamp"
           initial="hidden"
           animate={(descriptionInView || descriptionHasAnimated) ? 'visible' : 'hidden'}
           variants={slideInLeft}

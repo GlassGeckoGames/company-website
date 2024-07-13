@@ -24,7 +24,7 @@ function News() {
 
   return (
     <div className="container mx-auto p-4 h-full">
-      <h1 className="text-3xl font-bold text-secondary mb-4">Latest Updates</h1>
+      <h1 className="text-3xl font-bold text-secondary mb-4 titleFont">Latest Updates</h1>
 
       {/* Headline news item */}
       <div>
