@@ -49,8 +49,8 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
 // animation 
-import { addVisibilityClassOnScroll } from './animations';
-import './styles/FadeAnimation.css';
+// import { addVisibilityClassOnScroll } from './animations';
+// import './styles/FadeAnimation.css';
 
 // testing component to remove after create responsive design - will be commented out until needed for development
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
@@ -79,9 +79,6 @@ function AnalyticsTracker() {
   }, [location]);
 
 
-  useEffect(() => {
-    addVisibilityClassOnScroll();
-  }, [location]);
 
   return null;
 }
