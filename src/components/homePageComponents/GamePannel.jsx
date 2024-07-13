@@ -97,7 +97,7 @@ function GamePannel({ game }) {
         {/* Animate these elements slide in from the left with delay */}
         <motion.h2
           ref={titleRef}
-          className="home-page-title break-line-clamp"
+          className="home-page-title break-line-clamp "
           initial="hidden"
           animate={(titleInView || titleHasAnimated) ? 'visible' : 'hidden'}
           variants={slideInLeft}

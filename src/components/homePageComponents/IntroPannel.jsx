@@ -51,6 +51,8 @@ function IntroPannel() {
         autoPlay
         loop
         muted
+        playsInline
+        controlsList="nodownload nofullscreen noremoteplayback"
       />
       <div className="home-page-box ">
 

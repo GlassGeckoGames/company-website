@@ -59,7 +59,10 @@ code {
 }
 
 .home-page-title {
-  @apply text-white text-2xl sm:text-4xl md:text-6xl font-bold mb-4 text-outline-large titleFont;
+  @apply text-white text-2xl sm:text-4xl md:text-6xl 
+  font-bold text-outline-large titleFont
+  mb-4 pb-1
+  ;
 }
 .home-page-description {
   @apply text-white text-base sm:text-lg md:text-xl max-w-2xl text-outline-small;
@@ -73,10 +76,10 @@ code {
 /* for outlining text over images */
 .text-outline-large {
   text-shadow: 
-    -2px -2px 0 #000,  
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000; /* Black outline */
+    -1.5px -1.5px 0 #000,  
+    1.5px -1.5px 0 #000,
+    -1.5px 1.5px 0 #000,
+    1.5px 1.5px 0 #000; /* Black outline */
 }
 /* a smaller outline version */
 .text-outline-small {
