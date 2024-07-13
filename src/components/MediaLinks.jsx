@@ -15,7 +15,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-10
+ * @updated 2024-07-12
  */
 
 import React from 'react';
@@ -52,7 +52,7 @@ function MediaLinks() {
         <FaTiktok size={26} className='text-primary hover:text-accent' />
       </a>
       <a
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/company/glass-gecko-games/"
         className="text-white hover:text-accent"
         aria-label="LinkedIn"
         target="_blank"

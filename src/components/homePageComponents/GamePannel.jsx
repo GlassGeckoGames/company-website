@@ -65,8 +65,13 @@ function GamePannel({ game }) {
         <h2 className="text-white text-3xl md:text-5xl font-bold mb-2 text-outline-large line-clamp-3 break-words">{game.title}</h2>
         <p className="text-white text-sm md:text-lg max-w-2xl mb-2 text-outline-small line-clamp-4 break-words">{game.pannelDescription}</p>
         <div className='flex gap-4 pt-4'>
-          <Button onClickFunc={handleFindOutClick} type="secondary" as="link" to={`/games/${game.id}`}>Find Out</Button>
-          <Button onClickFunc={handlePlayNowClick} type="accent" as="a" href={game.pannelLink}>Play Now</Button>
+          {game.id && (
+            <Button onClickFunc={handleFindOutClick} type="secondary" as="link" to={`/games/${game.id}`}>Find Out</Button>
+          )}
+
+          {game.playLink && game.playLink.url && (
+            <Button onClickFunc={handlePlayNowClick} type="accent" as="a" href={game.playLink.url}>Play Now</Button>
+          )}
         </div>
       </div>
     </li>
