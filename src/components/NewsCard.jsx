@@ -45,7 +45,7 @@ import { FaStar } from 'react-icons/fa';
 
 function NewsCard({ news, isHeadline }) {
   return (
-    <div className={`relative border rounded-lg shadow-lg overflow-hidden ${isHeadline ? 'col-span-1 md:col-span-2 lg:col-span-3' : ''}`}>
+    <div className={`vis-fade-in  relative border rounded-lg shadow-lg overflow-hidden ${isHeadline ? 'col-span-1 md:col-span-2 lg:col-span-3' : ''}`}>
       {news.featured && (
         <div className="absolute top-2 right-2 text-yellow-500">
           <FaStar color='#FFD700' size={30}/>

@@ -61,10 +61,10 @@ function GamePannel({ game }) {
   return (
     <li key={game.title} className="relative w-full h-64 md:h-104 lg:h-128 2xl:h-176 overflow-hidden">
       <img className="w-full h-full object-cover" src={process.env.PUBLIC_URL + `/gameMedia/${game.id}/${game.pannelImg}`} alt={game.title} />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-30">
-        <h2 className="text-white text-3xl md:text-5xl font-bold mb-2 text-outline-large line-clamp-3 break-words">{game.title}</h2>
-        <p className="text-white text-sm md:text-lg max-w-2xl mb-2 text-outline-small line-clamp-4 break-words">{game.pannelDescription}</p>
-        <div className='flex gap-4 pt-4'>
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-black bg-opacity-30 ">
+        <h2 className="text-white text-3xl md:text-5xl font-bold mb-2 text-outline-large line-clamp-3 break-words mx-10 sm:mx-20 md:mx-32 lg:mx-40 vis-fade-in fade-delay">{game.title}</h2>
+        <p className="text-white text-sm md:text-lg max-w-2xl mb-2 text-outline-small line-clamp-4 break-words mx-10 sm:mx-20 md:mx-32 lg:mx-40 vis-fade-in fade-delay">{game.pannelDescription}</p>
+        <div className='flex gap-4 pt-4 vis-fade-in fade-delay'>
           {game.id && (
             <Button onClickFunc={handleFindOutClick} type="secondary" as="link" to={`/games/${game.id}`}>Find Out</Button>
           )}
