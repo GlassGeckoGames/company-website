@@ -9,7 +9,7 @@
  * 
  * @requires react
  * 
- * @returns {JSX.Element} The rendered TailwindBreakPoints component
+ * @returns {JSX.Element|null} The rendered TailwindBreakPoints component or null in production
  * 
  * @author Chace Nielson
  * @created 2024-07-10
@@ -19,6 +19,13 @@
 import React from 'react'
 
 function TailwindBreakPoints() {
+  // Check if the environment variable indicates development mode
+  const isDevelopment = process.env.REACT_APP_ENVIRONMENT === 'development';
+
+  if (!isDevelopment) {
+    return null; // Do not render in production
+  }
+
   return (
     <div className="opacity-60 fixed top-0 left-0 m-1 p-1 z-50 font-mono text-white h-10 w-10 rounded-full flex items-center justify-center bg-gray-700 sm:bg-pink-500 md:bg-orange-500 lg:bg-green-500 xl:bg-blue-500 2xl:bg-black">
       <div className="block sm:hidden md:hidden lg:hidden xl:hidden">al</div>

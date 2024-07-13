@@ -32,6 +32,7 @@ function News() {
           key={-1}
           news={newsItems[0]}
           isHeadline={true}
+          animate={true}
         />
       </div>
 

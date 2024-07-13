@@ -8,6 +8,7 @@
  * 
  * @requires react
  * @requires react-router-dom
+ * @requires framer-motion
  * @requires emailjs-com
  * @requires ./pages/Home
  * @requires ./pages/Contact
@@ -17,11 +18,12 @@
  * @requires ./components/navbarComponents/Navbar
  * @requires ./components/Footer
  * @requires ./components/ScrollToTop
- * @requires ./styles/scrollbar.css
  * @requires ./testingComponents/TailwindBreakPoints
  * @requires ./analytics
  * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://reactrouter.com/|React Router Documentation}
+ * @see {@link https://www.framer.com/motion/|Framer Motion Documentation}
  * @see {@link https://www.emailjs.com/docs/|EmailJS Documentation}
  * 
  * @returns {JSX.Element} The main application component.
@@ -47,23 +49,23 @@ import GamePage from './pages/GamePage';
 import Navbar from './components/navbarComponents/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-
-// animation 
-// import { addVisibilityClassOnScroll } from './animations';
-// import './styles/FadeAnimation.css';
-
-// testing component to remove after create responsive design - will be commented out until needed for development
-import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
-
-// Google Analytics
+import TailwindBreakPoints from './testingComponents/TailwindBreakPoints'; // only for development
 import { initializeGA, recordGAPage } from "./analytics";
+import emailjs from 'emailjs-com';
+import { AnimatePresence, motion } from 'framer-motion';
 
 // Initialize EmailJS with the user ID from environment variables
-import emailjs from 'emailjs-com';
 emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 
 // Initialize Google Analytics
 initializeGA();
+
+// Define animation variants for route transitions
+const routeVariants = {
+  initial: { opacity: 0 },
+  final: { opacity: 1, transition: { duration: 0.3 } },
+  exit: { opacity: 0, transition: { duration: 0.3 } }
+};
 
 // Component to track page views when the page changes after the first page load
 function AnalyticsTracker() {
@@ -78,9 +80,42 @@ function AnalyticsTracker() {
     }
   }, [location]);
 
-
-
   return null;
+}
+
+// LocationProvider Component to wrap children with AnimatePresence
+function LocationProvider({ children }) {
+  return <AnimatePresence mode='wait'>{children}</AnimatePresence>;
+}
+
+// RoutesWithAnimation Component to handle route animations
+function RoutesWithAnimation() {
+  const location = useLocation();
+
+  return (
+    <Routes location={location} key={location.pathname}>
+      <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+      <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+      <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+      <Route path="/news" element={<PageWrapper><News /></PageWrapper>} />
+      <Route path="/games/:gameId" element={<PageWrapper><GamePage /></PageWrapper>} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
+}
+
+// PageWrapper Component for route animations
+function PageWrapper({ children }) {
+  return (
+    <motion.div
+      variants={routeVariants}
+      initial="initial"
+      animate="final"
+      exit="exit"
+    >
+      {children}
+    </motion.div>
+  );
 }
 
 function App() {
@@ -89,19 +124,14 @@ function App() {
       <AnalyticsTracker />
       <div className="flex flex-col min-h-screen">
         <Navbar />
-        <TailwindBreakPoints />
         <ScrollToTop />
-        <div className="flex-grow bg-primary">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/games/:gameId" element={<GamePage />} /> {/* Use GamePage component with dynamic gameId */}
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+        <div className="flex-grow">
+          <LocationProvider>
+            <RoutesWithAnimation />
+          </LocationProvider>
         </div>
         <Footer />
+        <TailwindBreakPoints />
       </div>
     </Router>
   );

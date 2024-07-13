@@ -1,4 +1,3 @@
-
 /**
  * @file NewsCard.jsx
  * @module NewsCard
@@ -10,13 +9,16 @@
  * 
  * @requires react
  * @requires react-icons/fa
+ * @requires framer-motion
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://react-icons.github.io/react-icons|React Icons Documentation}
+ * @see {@link https://www.framer.com/motion/|Framer Motion Documentation}
  * 
  * @param {Object} props - The properties object.
  * @param {Object} props.news - The news item to display.
  * @param {boolean} props.isHeadline - Flag to indicate if the news item is a headline.
+ * @param {boolean} props.animate - Flag to indicate if the card should animate on view. - set to true by default. but set up for easy changeing
  * 
  * @example
  * // Example usage of NewsCard
@@ -28,7 +30,7 @@
  *   return (
  *     <div>
  *       {newsItems.map((news, index) => (
- *         <NewsCard key={index} news={news} isHeadline={index === 0} />
+ *         <NewsCard key={index} news={news} isHeadline={index === 0} animate={true} />
  *       ))}
  *     </div>
  *   );
@@ -40,12 +42,35 @@
  * @created 2024-07-11
  * @updated 2024-07-12
  */
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
+import { motion, useInView } from 'framer-motion';
 
-function NewsCard({ news, isHeadline }) {
+function NewsCard({ news, isHeadline, animate = false }) {
+  const ref = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const inView = useInView(ref, { triggerOnce: true });
+
+  // Animation variants for the slide-in effect
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -200 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
+  };
+
+  // Set hasAnimated to true when the element comes into view
+  if (inView && !hasAnimated) {
+    setHasAnimated(true);
+  }
+
   return (
-    <div className={`relative border rounded-lg shadow-lg overflow-hidden ${isHeadline ? 'col-span-1 md:col-span-2 lg:col-span-3' : ''}`}>
+    // Apply the motion.div to animate the card
+    <motion.div
+      ref={ref}
+      className={`relative border rounded-lg shadow-lg overflow-hidden ${isHeadline ? 'col-span-1 md:col-span-2 lg:col-span-3' : ''}`}
+      initial="hidden"
+      animate={animate && (inView || hasAnimated) ? 'visible' : 'hidden'}
+      variants={animate ? slideInLeft : {}}
+    >
       {news.featured && (
         <div className="absolute top-2 right-2 text-yellow-500">
           <FaStar color='#FFD700' size={30}/>
@@ -60,7 +85,7 @@ function NewsCard({ news, isHeadline }) {
         <p className="text-sm">{news.description}</p>
         <p className="text-sm">Date: {news.datePosted}</p>
         {news.externalLinks && (
-          <div className="mt-2">
+          <div className="mt-2 w-fit">
             {news.externalLinks.map((link, linkIndex) => (
               <a key={linkIndex} href={link.url} className="block text-sm text-accent hover:text-accent-dark hover:underline">
                 {link.name}
@@ -69,7 +94,7 @@ function NewsCard({ news, isHeadline }) {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

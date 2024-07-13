@@ -77,7 +77,7 @@ export const games = [
     },
     trailer: 'https://www.youtube.com/watch?v=r8PjadkBUMY',
     reviews: [
-      { source: 'Steam', score: '85% Positive',  }
+      { source: 'Steam', score: '85% Positive Ratings', quote: "Cute and solid speedrun-oriented platformer. Here's your dash, choose 2 weapons and off you go." }
     ],
   },
   { // I am a Monster Saving the Princess I Captured While Trying Not to Let My Boss Dragon Notice Because They Are Unpleasant
@@ -133,8 +133,6 @@ export const games = [
       }
     },
     trailer: 'https://www.youtube.com/watch?v=fake_trailer_link',
-    reviews: [
-      { source: 'Steam', score: '85% Positive',  }
-    ],
+
   },
 ];

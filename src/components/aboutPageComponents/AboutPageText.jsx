@@ -11,11 +11,13 @@
  * @param {string} props.aboutDescription - The description for the about section.
  * 
  * @requires react
+ * @requires framer-motion
  * @requires ./Button
  * @requires ../analytics
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://reactrouter.com/|React Router Documentation}
+ * @see {@link https://www.framer.com/motion/|Framer Motion Documentation}
  * 
  * @returns {JSX.Element} The rendered AboutPageText component.
  * 
@@ -28,6 +30,7 @@
  */
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import Button from '../Button';
 import { recordGAEvent } from '../../analytics';
 
@@ -45,18 +48,44 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
 
   //Handles the click event for the "Learn More" button.
   const handleClick = () => {
-    recordGAEvent('Click learn more on About Page' );
+    recordGAEvent('Click learn more on About Page');
+  };
+
+  // Animation variants for the title and description
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
   };
 
   return (
     <div className="flex flex-col justify-center items-center col-span-2 bg-primary text-black p-5 lg:px-20 h-full text-center order-first lg:order-none ">
 
-      {/* these 2 lines should slide in from the left */}
-      <h2 className="text-2xl xl:text-4xl font-bold mb-2 text-secondary">{aboutTitle}</h2>
-      <p className="text-base lg:text-sm xl:text-base pb-4">{aboutDescription}</p>
-      <Button  onClickFunc={handleClick} type="accent" as="link" to="/contact">Learn More About Us</Button>
-
-
+      <motion.h2
+        className="text-2xl xl:text-4xl font-bold mb-2 text-secondary"
+        initial="hidden"
+        animate="visible"
+        variants={slideInLeft}
+      >
+        {aboutTitle}
+      </motion.h2>
+      <motion.p
+        className="text-base lg:text-sm xl:text-base pb-4"
+        initial="hidden"
+        animate="visible"
+        variants={slideInLeft}
+      >
+        {aboutDescription}
+      </motion.p>
+      <motion.div
+        className="text-base lg:text-sm xl:text-base pb-4"
+        initial="hidden"
+        animate="visible"
+        variants={slideInLeft}
+      >
+        <Button onClickFunc={handleClick} type="accent" as="link" to="/contact">
+          Learn More About Us
+        </Button>
+      </motion.div>
     </div>
   );
 }
