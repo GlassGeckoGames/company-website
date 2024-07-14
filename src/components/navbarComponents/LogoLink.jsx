@@ -37,7 +37,7 @@ function LogoLink() {
         src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
         alt="Logo" 
       />
-      <h1 className="text-xl">Glass Gecko Games</h1>
+      <h1 className="text-xl whitespace-nowrap">Glass Gecko Games</h1>
     </Link>
   )
 }

@@ -78,11 +78,13 @@ function NewsCard({ news, isHeadline, animate = false }) {
           <FaStar color='#FFD700' size={30}/>
         </div>
       )}
-      <ImageComponent
-        className={`w-full ${isHeadline ? 'h-104' : 'h-44'} object-cover`}
-        src={"newsImages/"+news.image} 
-        alt={news.title} 
-      />
+      <div className={`w-full ${isHeadline ? 'h-104' : 'h-44'}`}>
+        <ImageComponent
+          className="w-full h-full object-cover"
+          src={`newsImages/${news.image}`} 
+          alt={news.title} 
+        />
+      </div>
       <div className="p-4">
         <h2 className={`text-xl font-bold ${isHeadline ? 'text-2xl' : ''}`}>
           {news.category ? <span className="text-secondary">{news.category}:</span> : ''}
