@@ -9,6 +9,7 @@
  * 
  * @requires react
  * @requires ../styles/TeamMemberCard.css
+ * @requires ../ImageComponent
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * 
@@ -21,12 +22,13 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-14
  */
 import React from 'react';
 import '../../styles/TeamMemberCard.css'; // Import the CSS file for 3D flip animation
+import ImageComponent from '../ImageComponent';
 
-function TeamMemberCard({ name, role, image, description }) {
+function TeamMemberCard({ name, role, image, description, blurHash }) {
   // Set the default image path
   const defaultImage = process.env.PUBLIC_URL + '/teamPhotos/default.png';
 
@@ -39,11 +41,12 @@ function TeamMemberCard({ name, role, image, description }) {
     <div className="flip-card w-full h-full">
       <div className="flip-card-inner relative w-full pb-full">
         <div className="flip-card-front absolute inset-0 overflow-hidden">
-          <img
-            className="absolute inset-0 w-full h-full object-cover"
-            src={process.env.PUBLIC_URL + '/teamPhotos/' + image} // uses the images in the  teamPhotos folder
-            alt={name}
+          <ImageComponent 
+            className="absolute inset-0 w-full h-full object-cover" 
+            src={process.env.PUBLIC_URL + '/teamPhotos/' + image} 
+            alt={name} 
             onError={handleImageError}
+            blurHash={blurHash}
           />
           <div className="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center">
             <div className='hidden-visibility h-10'> </div>

@@ -56,7 +56,8 @@ export const newsItems = [
   {
     title: 'Sample News 1',
     description: 'This is a sample news description 1.',
-    image: 'dec15_zeitghast_release.jpg',
+    image: 'zeitghastRelease.png',
+    blurHash: 'q8E:x+2~*q4m4TMcKlreI88wrVQ,?]Tbn9ks3[zNIjv..7x@r#SvX-Q^yWN|ggRhQ:rrk;%4Z}HrtQX-M}NHKHjJxvnRnNf#sFSd',
     category: 'News',
     datePosted: 'July 9th, 2024',
     externalLinks: [
@@ -68,7 +69,8 @@ export const newsItems = [
   {
     title: 'Sample News 2',
     description: 'This is a sample news description 2.',
-    image: 'jul12_monstorMashAnouncment.png',
+    image: 'monstorMashAnouncment.png',
+    blurHash: 'qbLN0rs+PXIp?GWVxZxtpIxv-7WBIXjXNHRko}W@V[aeR*s*offP%0WBIpWBocxWt7Rm%KRjR-xYxVflM}fl%1RkNLxZjYWYR+fk',
     category: 'Announcement',
     datePosted: 'August 15th, 2024',
     externalLinks: [
@@ -76,27 +78,5 @@ export const newsItems = [
     ],
     featured: false
   },
-  {
-    title: 'Sample News 3',
-    description: 'This is a sample news description 3.',
-    image: 'sample3.jpg',
-    category: 'Event',
-    datePosted: 'September 21st, 2024',
-    externalLinks: [
-      { name: 'Link 1', url: 'https://example.com' },
-      { name: 'Link 2', url: 'https://example.com' }
-    ],
-    featured: false
-  },
-  {
-    title: 'Sample News 4',
-    description: 'This is a sample news description 4.',
-    image: 'sample4.jpg',
-    category: 'Update',
-    datePosted: 'October 30th, 2024',
-    externalLinks: [
-      { name: 'Link 1', url: 'https://example.com' }
-    ],
-    featured: true
-  }
+ 
 ];

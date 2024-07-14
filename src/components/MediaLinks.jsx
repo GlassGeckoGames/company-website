@@ -34,7 +34,7 @@ function MediaLinks() {
         <FaYoutube size={32} className='text-primary hover:text-accent' />
       </a>
       <a
-        href="https://www.instagram.com/glassgeckogames/reels/"
+        href="https://www.instagram.com/glassgeckogames/"
         className="text-white hover:text-accent className='text-primary' "
         aria-label="Instagram"
         target="_blank"
