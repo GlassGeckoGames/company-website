@@ -97,6 +97,7 @@ function GamePannel({ game }) {
         className="w-full h-full object-cover"
         src={process.env.PUBLIC_URL + `/gameMedia/${game.id}/${game.pannelImg}`}
         alt={game.title}
+        blurHash={game.pannelBlurHash}
       />
       <div className="home-page-box">
        

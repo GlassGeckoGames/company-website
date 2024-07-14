@@ -44,7 +44,7 @@ function Navbar() {
 
   return (
     <nav className="bg-secondary p-2 ">
-      <div className="container mx-auto flex justify-between items-center min-h-16">
+      <div className="container mx-auto flex justify-between items-center">
         <LogoLink />
 
         <div className="hidden md:flex">

@@ -31,15 +31,17 @@ import ImageComponent from '../ImageComponent';
 
 function LogoLink() {
   return (
-    <Link to="/" className='flex gap-2 items-center text-primary'>
+    <Link to="/" className='flex gap-1 items-center text-primary h-12 md:h-16'>
       <ImageComponent
-        className="w-12 md:w-16" 
+        className="h-full" 
         src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
         alt="Logo" 
       />
-      <h1 className="text-xl whitespace-nowrap">Glass Gecko Games</h1>
+      <h1 className="sm:text-lg md:text-xl whitespace-nowrap">
+        Glass Gecko Games
+      </h1>
     </Link>
-  )
+  );
 }
 
 export default LogoLink;

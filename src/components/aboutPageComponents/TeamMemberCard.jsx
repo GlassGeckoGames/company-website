@@ -28,7 +28,7 @@ import React from 'react';
 import '../../styles/TeamMemberCard.css'; // Import the CSS file for 3D flip animation
 import ImageComponent from '../ImageComponent';
 
-function TeamMemberCard({ name, role, image, description }) {
+function TeamMemberCard({ name, role, image, description, blurHash }) {
   // Set the default image path
   const defaultImage = process.env.PUBLIC_URL + '/teamPhotos/default.png';
 
@@ -46,6 +46,7 @@ function TeamMemberCard({ name, role, image, description }) {
             src={process.env.PUBLIC_URL + '/teamPhotos/' + image} 
             alt={name} 
             onError={handleImageError}
+            blurHash={blurHash}
           />
           <div className="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center">
             <div className='hidden-visibility h-10'> </div>

@@ -31,6 +31,7 @@ export const aboutDescription = `Lorem ipsum dolor sit, amet consectetur adipisi
  * Each team member has a name, role, image, and description as keys.
  * The image key is the filename of the image in the public folder under "teamPhotos".
  * descriptions are split into paragraphs by the array (up to a max of 2 paragraphs can be used).
+ * blurHash is a placeholder image for the image that is used as a placeholder until the image is loaded
  * 
  * when making additions to this component, ensure that the image is added to the public/teamPhotos folder and use the image name here
  * 
@@ -38,36 +39,40 @@ export const aboutDescription = `Lorem ipsum dolor sit, amet consectetur adipisi
  */
 export const teamMembers = [
   {
-    name: 'Firstname Lastname',
-    role: 'Role',
-    image: '',
+    name: 'Emmanuel Omari-Osei ',
+    role: 'Code',
+    image: 'emmanual.png',
+    blurHash: 'qQJZfY~70xIpE0ENR6R.5KIu-VxrS|s+ozS20vElrgM}=zxZShxVxYxUk:f*v-N2VujdM}RP#?%1Xeo{t5X9-AkDR+V{IqWUSvoa',
     description: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
     ]
   },
   {
-    name: 'Firstname Lastname',
-    role: 'Role',
-    image: '',
+    name: 'Toni',
+    role: 'Code',
+    image: 'toni.png',
+    blurHash: 'qABfX~J800-V_3rXM{OXoZwJJWOX,;SeWCsp00of~VIVE1%2s:WBtTbvwHsnOERkWVWA9tr?xvt7v}Egogr?Z%J7xZv~JU%2oJSg',
     description: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
     ]
   },
   {
-    name: 'Firstname Lastname',
-    role: 'Role',
+    name: 'Henry',
+    role: 'Art',
     image: '',
+    blurHash: 'qIIF6Z%QWagZ5jRD-UsD=j%4k=yCKOxv-VnmG*xY%znXkEx@RkR*VhyTwdD-n%XMI:tQ%2wzMyNr%LoOo#xuTBv-W?pEtQIWoKo1',
     description: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
     ]
   },
   {
-    name: 'Firstname Lastname',
+    name: 'Frank',
     role: 'Role',
     image: '',
+    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
     description: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
@@ -77,51 +82,57 @@ export const teamMembers = [
     name: 'Chace Nielson',
     role: 'Software Developer',
     image: 'chace_nielson.jpg',
+    blurHash: 'qEDcL6Vau5F1Io%2ixxF.AIpD*xaxaogbvR*BrI:-B$jxaNGNaX8Dj-UoeT0T0NGwJwd.8n$%gS$NIr?r=WCTKNGVss:aexabbSh',
     description: [
       "Hi, I'm Chace Nielson, a software engineer specializing in web development. I also enjoy using Unity to make games in my free time.",
       "Aside from software development, I enjoy backpacking, rock climbing, swimming, and playing guitar."
     ]
   },
   {
-    name: 'Firstname Lastname',
-    role: 'Role',
+    name: 'Kelly',
+    role: 'Art',
     image: '',
+    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
     description: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
     ]
   },
   {
-    name: 'Firstname Lastname',
+    name: 'Michael',
     role: 'Role',
     image: '',
+    blurHash: 'qIIF6Z%QWagZ5jRD-UsD=j%4k=yCKOxv-VnmG*xY%znXkEx@RkR*VhyTwdD-n%XMI:tQ%2wzMyNr%LoOo#xuTBv-W?pEtQIWoKo1',
     description: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
     ]
   },
   {
-    name: 'Firstname Lastname',
+    name: 'Mason',
     role: 'Role',
     image: '',
+    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
     description: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
     ]
   },
   {
-    name: 'Firstname Lastname',
+    name: 'Theo',
     role: 'Role',
     image: '',
+    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
     description: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
     ]
   },
   {
-    name: 'Firstname Lastname',
+    name: 'Joshua',
     role: 'Role',
     image: '',
+    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
     description: [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'

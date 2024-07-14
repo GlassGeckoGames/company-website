@@ -83,6 +83,7 @@ function NewsCard({ news, isHeadline, animate = false }) {
           className="w-full h-full object-cover"
           src={`newsImages/${news.image}`} 
           alt={news.title} 
+          blurHash={news.blurHash}
         />
       </div>
       <div className="p-4">

@@ -18,11 +18,13 @@
  * // id, title, description, images, genre, platforms, releaseDate, features,
  * // systemRequirements, price, trailer, reviews, tags, playLink
  * 
+ * pannelBlurHash is a string that represents the blurhash of the pannel image
+ * 
  * 
  * images is a list of images related to this game 
  * 
  * @created 2024-07-12
- * @updated 2024-07-12
+ * @updated 2024-07-14
  */
 
 export const games = [
@@ -32,6 +34,7 @@ export const games = [
 
     // info for the pannel on the home page
     pannelImg: "zeitghastBackdrop.png",
+    pannelBlurHash: "q8E:x+2~*q4m4TMcKlreI88wrVQ,?]Tbn9ks3[zNIjv..7x@r#SvX-Q^yWN|ggRhQ:rrk;%4Z}HrtQX-M}NHKHjJxvnRnNf#sFSd",
     pannelDescription: 'An epic adventure through time.',
 
     // info for the main page 
@@ -41,12 +44,13 @@ export const games = [
       url: 'https://store.steampowered.com/app/2593070/Zeitghast/'
     },
     images: [
-      'zeitghastBackdrop.png', 
-      'character.png', 
-      '../../logos/Glass_Gecko_Games_Icon.png',
-      '../../logos/Glass_Gecko_Games_Icon_clear.png',
-      '../../teamPhotos/chace_nielson.jpg',
-      '../../newsImages/jul12_monstorMashAnouncment.png'
+      "zeitghast1.jpg",
+      "zeitghast2.jpg",
+      "zeitghast3.jpg",
+      "zeitghast4.jpg",
+      "zeitghast5.jpg",
+      "zeitghast6.jpg",
+      "zeitghast7.jpg",
     ],
     genre: 'Adventure, Indie, Action',
     platforms: ['PC'],
@@ -86,6 +90,7 @@ export const games = [
     
     // info for the pannel on the home page
     pannelImg: "princessGameBackdrop.png",
+    pannelBlurHash: "qAEe*{IBDk~Bsq?aofM{owD*4:tQM{Ipt7n%0fkC_2tlR*IUt7of$%r?w]xaIVxat7S2xaWYV[WBWXs.s:RjI;E1ozSeM|xaM|WC",
     pannelDescription: 'A puzzle game made for the GMTK Game Jam 2023 all about role reversal.',
    
     // info for the main page
@@ -95,25 +100,7 @@ export const games = [
       url: 'https://serpexnessie.itch.io/this-time-the-monsters-save-the-princess',
     },
     images: [
-      'princessGameBackdrop.png',
-      'princessGame3.png',
-      'princessGame2.png',
-      'princessGame3.png',
-      'princessGame2.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
-      'princessGameBackdrop.png',
+      'princessGame1.png',
       'princessGameBackdrop.png',
     ],
     genre: 'Adventure, Comedy, Puzzle',
@@ -132,7 +119,7 @@ export const games = [
         OS: 'Windows',
       }
     },
-    trailer: 'https://www.youtube.com/watch?v=fake_trailer_link',
+    // trailer: '',
 
   },
 ];

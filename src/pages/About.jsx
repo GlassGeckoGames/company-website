@@ -43,6 +43,7 @@ function About() {
             role={member.role}
             image={member.image}
             description={member.description}
+            blurHash={member.blurHash}
           />
         ))}
 

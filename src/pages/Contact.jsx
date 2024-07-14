@@ -1,32 +1,3 @@
-/**
- * @file Contact.jsx
- * @module Contact
- * @desc React component that displays the contact page.
- * Renders the contact form and contact information.
- * 
- * @component Contact
- * 
- * @requires react
- * @requires react-hot-toast
- * @requires emailjs-com
- * @requires ../components/Button
- * @requires ../analytics
- * @requires ../components/ImageComponent
- * 
- * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
- * @see {@link https://react-hot-toast.com/|React Hot Toast Documentation}
- * @see {@link https://www.emailjs.com/docs/|EmailJS Documentation}
- * 
- * @returns {JSX.Element} The rendered Contact component.
- * 
- * @example
- * // Example usage of Contact component
- * <Contact />
- * 
- * @created 2024-07-10
- * @updated 2024-07-14
- */
-
 import React, { useState } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
@@ -130,7 +101,7 @@ function Contact() {
   };
 
   return (
-    <div className="container mx-auto p-4 flex flex-col lg:flex-row gap-20">
+    <div className="container mx-auto p-4 flex flex-col lg:flex-row gap-10">
       <Toaster />
       <div className="w-full">
         <h1 className="text-3xl font-bold text-secondary titleFont">Contact Us</h1>
@@ -178,11 +149,13 @@ function Contact() {
           <p className="mt-4">We'd love to hear from you! Your feedback helps us make our games better. Whether you have questions, suggestions, or ideas, please share them with us. We are committed to creating the best gaming experience possible and appreciate your input.</p>
         </form>
       </div>
-      <div className="w-full h-full flex items-center justify-center">
+
+      <div className='flex flex-col justify-center w-full min-h-full border-4 border-black rounded-lg overflow-hidden'>
         <ImageComponent
-          className="max-w-full h-auto rounded-xl" 
-          src={process.env.PUBLIC_URL + `/logos/Glass_Gecko_Games_Icon.png`} 
+          className="rounded-" 
+          src={process.env.PUBLIC_URL + '/gameMedia/zeitghast/zeitghastBackdrop.png'} 
           alt="contact page"
+          blurHash='q8E:x+2~*q4m4TMcKlreI88wrVQ,?]Tbn9ks3[zNIjv..7x@r#SvX-Q^yWN|ggRhQ:rrk;%4Z}HrtQX-M}NHKHjJxvnRnNf#sFSd'
         />
       </div>
     </div>

@@ -25,7 +25,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { title, description } from '../../data/homePageData';
+import { title, description, videoData } from '../../data/homePageData';
 import VideoComponent from '../VideoComponent';
 
 function IntroPannel() {
@@ -49,7 +49,8 @@ function IntroPannel() {
     <div className="home-page-container intro-size" ref={ref}>
       <VideoComponent
         className="w-full h-full object-cover pointer-events-none"
-        src={process.env.PUBLIC_URL + '/videos/homeBackdropVideo.mp4'}
+        src={videoData.src}
+        blurHash={videoData.blurHash}
       />
       <div className="home-page-box ">
         <motion.h1
