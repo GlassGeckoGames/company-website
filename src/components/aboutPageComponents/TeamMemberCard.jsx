@@ -27,6 +27,7 @@
 import React from 'react';
 import '../../styles/TeamMemberCard.css'; // Import the CSS file for 3D flip animation
 import ImageComponent from '../ImageComponent';
+import BackCardText from './BackCardText';
 
 function TeamMemberCard({ name, role, image, description, link, blurHash }) {
   // Set the default image path
@@ -54,13 +55,7 @@ function TeamMemberCard({ name, role, image, description, link, blurHash }) {
             <div className="text-white text-base xl:text-lg text-outline-small">{role}</div>
           </div>
         </div>
-        <div className="flip-card-back absolute inset-0 flex flex-col justify-center items-center bg-secondary text-black p-1 md:p-4 overflow-auto transform rotate-y-180 border-4 border-primary">
-          <div className="text-xs sm:text-sm md:text-lg lg:text-base xl:text-lg text-primary">
-            {description[0] && <p className="py-1">{description[0]}</p>}
-            {description[1] && <p >{description[1]}</p>}
-            {link &&  <a href={link.url} className='text-accent hover:text-accent-dark' target="_blank" rel="noopener noreferrer">{link.description}</a>}
-          </div>
-        </div>
+        <BackCardText description={description} link={link} />
       </div>
     </div>
   );

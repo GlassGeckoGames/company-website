@@ -24,7 +24,8 @@ export const aboutTitle = 'The Glass Gecko Team';
  * The description for the about section.
  * @type {string}
  */
-export const aboutDescription = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, consequatur adipisci in asperiores accusantium natus vel dolores libero accusamus saepe aperiam quas et exercitationem beatae eius perferendis nemo ab optio porro aliquam qui a autem nobis temporibus. Nobis, architecto accusantium?.`;
+export const aboutDescription = `We are a group of passionate individuals dedicated to bringing joy and creativity into the world through innovative game development. Learn more about each of our talented team members. We began as a group of friends with a shared passion for making games, and have since grown into a dedicated team committed to creating fun and engaging experiences for players of all ages.`;
+
 
 /**
  * An array of team members.
@@ -84,11 +85,13 @@ export const teamMembers = [
     image: 'chace_nielson.jpg',
     blurHash: 'qEDcL6Vau5F1Io%2ixxF.AIpD*xaxaogbvR*BrI:-B$jxaNGNaX8Dj-UoeT0T0NGwJwd.8n$%gS$NIr?r=WCTKNGVss:aexabbSh',
     description: [
-      "Hi, I'm Chace Nielson, a software engineer specializing in web development. I also enjoy using Unity to make games in my free time.",
-      "Aside from software development, I enjoy backpacking, rock climbing, swimming, and playing guitar."
+      "Hi, I'm Chace Nielson, a software engineer specializing in web development.",
+      "In my free time I love making Unity games. Aside from software development, I enjoy backpacking, rock climbing, swimming, and playing guitar."
     ],
-    link:{description:"Learn More", url:"https://chacenielson.com"}
-  
+    link: {
+      description: "Learn More About Me",
+      url: "https://chacenielson.com"
+    }
   },
   {
     name: 'Kelly',

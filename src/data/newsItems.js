@@ -54,29 +54,24 @@
  */
 export const newsItems = [
   {
-    title: 'Sample News 1',
-    description: 'This is a sample news description 1.',
+    title: 'Zeitghast',
+    description: 'We are pleased to anncounce the release of Zeitghast, a new game that will take you on an adventure through time.',
     image: 'zeitghastRelease.png',
     blurHash: 'q8E:x+2~*q4m4TMcKlreI88wrVQ,?]Tbn9ks3[zNIjv..7x@r#SvX-Q^yWN|ggRhQ:rrk;%4Z}HrtQX-M}NHKHjJxvnRnNf#sFSd',
-    category: 'News',
-    datePosted: 'July 9th, 2024',
+    category: 'Release',
+    datePosted: 'Dec 15th, 2023',
     externalLinks: [
-      { name: 'Play on Steam', url: 'https://example.com' },
-      { name: 'Link 2', url: 'https://example.com' }
+      { name: 'Play on Steam', url: 'https://store.steampowered.com/app/2593070/Zeitghast/' },
     ],
     featured: true
   },
   {
-    title: 'Sample News 2',
-    description: 'This is a sample news description 2.',
+    title: 'New Game Coming Soon',
+    description: 'We are excited to announce that we are developing a new multiplayer party game experience.',
     image: 'monstorMashAnouncment.png',
     blurHash: 'qbLN0rs+PXIp?GWVxZxtpIxv-7WBIXjXNHRko}W@V[aeR*s*offP%0WBIpWBocxWt7Rm%KRjR-xYxVflM}fl%1RkNLxZjYWYR+fk',
     category: 'Announcement',
-    datePosted: 'August 15th, 2024',
-    externalLinks: [
-      { name: 'Link 1', url: 'https://example.com' }
-    ],
+    datePosted: 'July 14th, 2024',
     featured: false
-  },
- 
+  }, 
 ];

@@ -89,7 +89,7 @@ function NewsCard({ news, isHeadline, animate = false }) {
       <div className="p-4">
         <h2 className={`text-xl font-bold ${isHeadline ? 'text-2xl' : ''}`}>
           {news.category ? <span className="text-secondary">{news.category}:</span> : ''}
-          {news.title}
+          {" " + news.title}
         </h2>
         <p className="text-sm">{news.description}</p>
         <p className="text-sm">Date: {news.datePosted}</p>

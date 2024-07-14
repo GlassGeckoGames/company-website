@@ -31,7 +31,7 @@ export const title = 'Welcome to Glass Gecko Games';
  * The description to be displayed on the homepage.
  * @type {string}
  */
-export const description = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus omnis ullam nobis inventore qui.';
+export const description = 'Making the world a little more fun, one game at a time';
 
 
 /**

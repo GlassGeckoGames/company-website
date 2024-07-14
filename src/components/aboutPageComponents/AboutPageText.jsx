@@ -58,7 +58,7 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center col-span-2 bg-primary text-black p-5 lg:px-20 h-full text-center order-first lg:order-none ">
+    <div className="flex flex-col justify-center items-center col-span-2 bg-primary text-black p-4 lg:px-2 xl:px-20 h-full text-center order-first lg:order-none ">
 
       <motion.h2
         className="text-2xl xl:text-4xl font-bold mb-2 text-secondary titleFont"
