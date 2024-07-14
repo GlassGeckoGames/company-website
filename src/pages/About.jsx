@@ -44,6 +44,7 @@ function About() {
             image={member.image}
             description={member.description}
             blurHash={member.blurHash}
+            link={member.link}
           />
         ))}
 
@@ -56,6 +57,8 @@ function About() {
             role={member.role}
             image={member.image}
             description={member.description}
+            blurHash={member.blurHash}
+            link={member.link}
           />
         ))}
       </div>

@@ -86,7 +86,9 @@ export const teamMembers = [
     description: [
       "Hi, I'm Chace Nielson, a software engineer specializing in web development. I also enjoy using Unity to make games in my free time.",
       "Aside from software development, I enjoy backpacking, rock climbing, swimming, and playing guitar."
-    ]
+    ],
+    link:{description:"Learn More", url:"https://chacenielson.com"}
+  
   },
   {
     name: 'Kelly',
