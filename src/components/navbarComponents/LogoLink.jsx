@@ -26,24 +26,19 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ImageComponent from '../ImageComponent';
 
 function LogoLink() {
   return (
-    <Link to="/" className='flex gap-1 items-center text-primary h-12 md:h-16'>
-      <div className="h-full w-12 md:w-16">
-        <ImageComponent
-          className="h-full w-full object-contain" 
-          src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
-          alt="Logo" 
-          blurHash='L09*n%tPfQtPx?fQfQfQfQfQfQfQ'
-        />
-      </div>
-      <h1 className="text-sm sm:text-base md:text-lg lg:text-xl whitespace-nowrap">
-        Glass Gecko Games
-      </h1>
+    <Link to="/" className='flex gap-2 items-center text-primary'>
+      <img 
+        className="w-12 md:w-16 object-contain" 
+        src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
+        alt="Logo" 
+        blurHash='L09*n%tPfQtPx?fQfQfQfQfQfQfQ'
+      />
+      <h1 className="text-xl">Glass Gecko Games</h1>
     </Link>
-  );
+  )
 }
 
 export default LogoLink;
