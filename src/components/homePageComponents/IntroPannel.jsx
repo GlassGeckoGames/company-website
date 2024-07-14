@@ -8,6 +8,7 @@
  * @requires react
  * @requires framer-motion
  * @requires ../../data/homePageData
+ * @requires ../VideoComponent
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * 
@@ -19,12 +20,13 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-14
  */
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { title, description } from '../../data/homePageData';
+import VideoComponent from '../VideoComponent';
 
 function IntroPannel() {
   const ref = useRef(null);
@@ -45,17 +47,11 @@ function IntroPannel() {
 
   return (
     <div className="home-page-container intro-size" ref={ref}>
-      <video
+      <VideoComponent
         className="w-full h-full object-cover pointer-events-none"
         src={process.env.PUBLIC_URL + '/videos/homeBackdropVideo.mp4'}
-        autoPlay
-        loop
-        muted
-        playsInline
-        controlsList="nodownload nofullscreen noremoteplayback"
       />
       <div className="home-page-box ">
-
         <motion.h1
           className="home-page-title"
           initial="hidden"

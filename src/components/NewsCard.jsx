@@ -10,6 +10,7 @@
  * @requires react
  * @requires react-icons/fa
  * @requires framer-motion
+ * @requires ../ImageComponent
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://react-icons.github.io/react-icons|React Icons Documentation}
@@ -40,11 +41,12 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-11
- * @updated 2024-07-12
+ * @updated 2024-07-14
  */
 import React, { useRef, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { motion, useInView } from 'framer-motion';
+import ImageComponent from './ImageComponent';
 
 function NewsCard({ news, isHeadline, animate = false }) {
   const ref = useRef(null);
@@ -76,7 +78,11 @@ function NewsCard({ news, isHeadline, animate = false }) {
           <FaStar color='#FFD700' size={30}/>
         </div>
       )}
-      <img src={"newsImages/"+news.image} alt={news.title} className={`w-full ${isHeadline ? 'h-104' : 'h-44'} object-cover`} />
+      <ImageComponent
+        className={`w-full ${isHeadline ? 'h-104' : 'h-44'} object-cover`}
+        src={"newsImages/"+news.image} 
+        alt={news.title} 
+      />
       <div className="p-4">
         <h2 className={`text-xl font-bold ${isHeadline ? 'text-2xl' : ''}`}>
           {news.category ? <span className="text-secondary">{news.category}:</span> : ''}

@@ -11,6 +11,7 @@
  * @requires emailjs-com
  * @requires ../components/Button
  * @requires ../analytics
+ * @requires ../components/ImageComponent
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://react-hot-toast.com/|React Hot Toast Documentation}
@@ -23,7 +24,7 @@
  * <Contact />
  * 
  * @created 2024-07-10
- * @updated 2024-07-11
+ * @updated 2024-07-14
  */
 
 import React, { useState } from 'react';
@@ -31,6 +32,7 @@ import { toast, Toaster } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
 import Button from '../components/Button';
 import { recordGAEvent } from '../analytics';
+import ImageComponent from '../components/ImageComponent';
 
 const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
 const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -177,7 +179,11 @@ function Contact() {
         </form>
       </div>
       <div className="w-full h-full flex items-center justify-center">
-        <img className="max-w-full h-auto rounded-xl" src={process.env.PUBLIC_URL + `/logos/Glass_Gecko_Games_Icon.png`} alt="contact page" />
+        <ImageComponent
+          className="max-w-full h-auto rounded-xl" 
+          src={process.env.PUBLIC_URL + `/logos/Glass_Gecko_Games_Icon.png`} 
+          alt="contact page"
+        />
       </div>
     </div>
   );

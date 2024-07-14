@@ -17,6 +17,7 @@
  * @requires framer-motion
  * @requires Button
  * @requires ../../analytics
+ * @requires ../ImageComponent
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://reactrouter.com/|React Router Documentation}
@@ -29,13 +30,14 @@
  * <GamePannel game={{ name: 'Game Name', id: 'game-id', img: 'image.jpg', description: 'Game Description', link: 'https://example.com' }} />
  * 
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-14
  */
 
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Button from '../Button';
 import { recordGAEvent } from '../../analytics';
+import ImageComponent from '../ImageComponent';
 
 /**
  * Renders a game panel component.
@@ -91,7 +93,11 @@ function GamePannel({ game }) {
 
   return (
     <li key={game.title} className="home-page-container pannel-size">
-      <img className="w-full h-full object-cover" src={process.env.PUBLIC_URL + `/gameMedia/${game.id}/${game.pannelImg}`} alt={game.title} />
+      <ImageComponent
+        className="w-full h-full object-cover"
+        src={process.env.PUBLIC_URL + `/gameMedia/${game.id}/${game.pannelImg}`}
+        alt={game.title}
+      />
       <div className="home-page-box">
        
         {/* Animate these elements slide in from the left with delay */}
