@@ -42,5 +42,5 @@ export const description = 'Making the world more enjoyable, one game at a time'
  */
 export const videoData = {
   src:process.env.PUBLIC_URL + '/videos/homeBackdropVideo.mp4',
-  blurHash:"qEE=7:%z00tR00MyDPH@4lV]xlbIxmoyt3obb%adaSj@jeogj^f9^ToLNEj[S0WXWBax57WV$*ayxZoLs.oL--ofRlf6RkaeWBWC"
+  blurHash:"YMDA[gw[5aOH$wWXR5nNvzt6M|S5t7WBWDfk4UWX=WslNzWBkXXTT}WC${n$RkaeofbI"
 }

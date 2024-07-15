@@ -34,7 +34,6 @@ function LogoLink() {
         className="w-12 md:w-16 object-contain" 
         src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
         alt="Logo" 
-        blurHash='L09*n%tPfQtPx?fQfQfQfQfQfQfQ'
       />
       <h1 className="text-xl">Glass Gecko Games</h1>
     </Link>
