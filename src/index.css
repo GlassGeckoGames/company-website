@@ -15,13 +15,15 @@
 
 
 @import url("https://fonts.googleapis.com/css2?family=Lexend");
+@import url("https://fonts.googleapis.com/css2?family=Lexend&family=Open+Sans&family=Roboto&family=Lato&family=Montserrat&family=Nunito");
+
 
 /* fonts */
 body{
-  @apply font-montserrat
+  @apply font-mageri
 }
-.titleFont{
-  @apply font-lato
+.titleFont {
+  @apply font-techead; /* If available */
 }
  
 body {
@@ -58,14 +60,21 @@ code {
   @apply h-72 md:h-104 lg:h-128 2xl:h-160;
 }
 
+.text-box{
+  @apply max-w-3xl
+}
+
 .home-page-title {
   @apply text-white text-2xl sm:text-4xl md:text-6xl 
-  font-bold text-outline-large titleFont
-  mb-4 pb-1
+  font-extrabold text-outline-large titleFont
+  mb-4 pb-1 px-1.5
+  text-box
   ;
 }
 .home-page-description {
-  @apply text-white text-base sm:text-lg md:text-xl max-w-2xl text-outline-small;
+  @apply text-white text-base sm:text-lg md:text-xl 
+  max-w-2xl text-outline-small
+  text-box;
 }
 .break-line-clamp {
   @apply line-clamp-3 break-words ;
@@ -89,6 +98,28 @@ code {
     -1px 1px 0 #000,
     1px 1px 0 #000; /* Black outline */
 }
+
+/* Media query for smaller screens text outline */
+@media (max-width: 760px) {
+  .text-outline-large {
+    text-shadow: 
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000; /* Black outline */
+  }
+  
+  .text-outline-small {
+    text-shadow: 
+      -0.5px -0.5px 0 #000,  
+      0.5px -0.5px 0 #000,
+      -0.5px 0.5px 0 #000,
+      0.5px 0.5px 0 #000; /* Black outline */
+  }
+}
+
+
+
 
 /* scrollbar styles */
 /* Style the scrollbar track */

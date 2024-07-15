@@ -35,7 +35,7 @@ export const games = [
     // info for the pannel on the home page
     pannelImg: "zeitghastBackdrop.png",
     pannelBlurHash: "q8E:x+2~*q4m4TMcKlreI88wrVQ,?]Tbn9ks3[zNIjv..7x@r#SvX-Q^yWN|ggRhQ:rrk;%4Z}HrtQX-M}NHKHjJxvnRnNf#sFSd",
-    pannelDescription: 'An epic adventure through time.',
+    pannelDescription: 'An epic adventure through time',
 
     // info for the main page 
     description: 'Zeitghast is a game that takes place in a world where time is a valuable resource. Players must navigate through the world and make decisions that affect the flow of time. The game features a unique time-travel mechanic that allows players to rewind time and make different choices. The goal of the game is to solve puzzles and uncover the mysteries of the world while managing the limited time available to the player.',
@@ -91,7 +91,7 @@ export const games = [
     // info for the pannel on the home page
     pannelImg: "princessGameBackdrop.png",
     pannelBlurHash: "qAEe*{IBDk~Bsq?aofM{owD*4:tQM{Ipt7n%0fkC_2tlR*IUt7of$%r?w]xaIVxat7S2xaWYV[WBWXs.s:RjI;E1ozSeM|xaM|WC",
-    pannelDescription: 'A puzzle game made for the GMTK Game Jam 2023 all about role reversal.',
+    pannelDescription: 'A puzzle game made for the GMTK Game Jam 2023 all about role reversal',
    
     // info for the main page
     description: 'In this whimsical adventure, you play as a misunderstood monster who has captured a princess, only to decide to save her from the clutches of your unpleasant boss dragon. Navigate through humorous challenges and puzzles as you try to rescue the princess without drawing the ire of the dragon.',

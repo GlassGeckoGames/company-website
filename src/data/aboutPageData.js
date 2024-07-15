@@ -1,11 +1,11 @@
 /**
  * @file aboutPageData.js
  * @module aboutData
- * @desc Data structures used in the application for the about page. The teamMembers is the most editable section as it can be changed to chang bios 
+ * @desc Data structures used in the application for the about page. The teamProfiles is the most editable section as it can be changed to chang bios 
  * 
  * @exports aboutTitle
  * @exports aboutDescription
- * @exports teamMembers
+ * @exports teamProfiles
  * 
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export|MDN Export Documentation}
  * 
@@ -38,7 +38,7 @@ export const aboutDescription = `We are a group of passionate individuals dedica
  * 
  * @type {Array<Object>}
  */
-export const teamMembers = [
+export const teamProfiles = [
   {
     name: 'Emmanuel Omari-Osei ',
     role: 'Code',
@@ -60,14 +60,15 @@ export const teamMembers = [
     ]
   },
   {
-    name: 'Henry',
-    role: 'Art',
-    image: '',
-    blurHash: 'qIIF6Z%QWagZ5jRD-UsD=j%4k=yCKOxv-VnmG*xY%znXkEx@RkR*VhyTwdD-n%XMI:tQ%2wzMyNr%LoOo#xuTBv-W?pEtQIWoKo1',
+    name: 'Heng Rui Xu',
+    role: 'Art and Design',
+    image: 'Serpexnessie-Profile-Picture-Brand-2.png',
+    blurHash: 'LRQk4^V[_Kt6vxoLxFay%Ks:RRWB',
     description: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
-    ]
+      "I am a 2D digital illustrator with a passion for games and anime.",
+      "I also enjoy storytelling and game design!"
+    ],
+    link: { description: "My Portfolio", url: "https://serpexnessie.com/" }
   },
   {
     name: 'Frank',
@@ -85,13 +86,10 @@ export const teamMembers = [
     image: 'chace_nielson.jpg',
     blurHash: 'qEDcL6Vau5F1Io%2ixxF.AIpD*xaxaogbvR*BrI:-B$jxaNGNaX8Dj-UoeT0T0NGwJwd.8n$%gS$NIr?r=WCTKNGVss:aexabbSh',
     description: [
-      "Hi, I'm Chace Nielson, a software engineer specializing in web development.",
-      "In my free time I love making Unity games. Aside from software development, I enjoy backpacking, rock climbing, swimming, and playing guitar."
+      "I'm a software engineer with a inclination for web development and game design.",
+      "In my free time, I enjoy playing backpacking, hiking, and playing guitar."
     ],
-    link: {
-      description: "Learn More About Me",
-      url: "https://chacenielson.com"
-    }
+    link: { description: "My Portfolio", url: "https://chacenielson.com" }
   },
   {
     name: 'Kelly',

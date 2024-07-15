@@ -102,13 +102,18 @@ module.exports = {
         'toast-out': 'toast-out 0.3s ease-in forwards',
       },
       fontFamily: {
-        'open-sans': ['Open Sans', 'sans'],
-        'roboto': ['Roboto', 'sans'],
-        'lato': ['Lato', 'sans'],
-        'montserrat': ['Montserrat', 'sans'],
-        'nunito': ['Nunito', 'sans'],
+        'open-sans': ['Open Sans', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'lato': ['Lato', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'nunito': ['Nunito', 'sans-serif'],
         'chalkduster': ['Chalkduster', 'cursive'],
-        'wingdings': ['Wingdings'], 
+        'wingdings': ['Wingdings', 'cursive'], 
+        'mangold': ['Mangold', 'sans-serif'], // If available
+        'techead': ['Techead', 'sans-serif'], // If available
+        'sharung': ['Sharung', 'sans-serif'], // If available
+        'baddest': ['Baddest', 'sans-serif'], // If available
+        'mageri': ['Mageri', 'sans-serif'], // If available
       },
     },
   },

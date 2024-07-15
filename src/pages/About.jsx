@@ -8,7 +8,7 @@
  * 
  * @requires react
  * @requires react-router-dom
- * @requires ../components/TeamMemberCard
+ * @requires ../components/ProfileCard
  * @requires ../components/AboutPageText
  * @requires ../data/aboutData
  * 
@@ -19,14 +19,14 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-15
  */
 
 import React from 'react';
-import TeamMemberCard from '../components/aboutPageComponents/TeamMemberCard';
+import ProfileCard from '../components/aboutPageComponents/ProfileCard';
 import AboutPageText from '../components/aboutPageComponents/AboutPageText';
 // page data
-import { teamMembers, aboutTitle, aboutDescription } from '../data/aboutPageData';
+import { teamProfiles, aboutTitle, aboutDescription } from '../data/aboutPageData';
 
 function About() {
 
@@ -36,8 +36,8 @@ function About() {
   return (
     <div className="mx-auto">
       <div className="grid lg:grid-cols-4">
-        {teamMembers.slice(0, positionOfTextBox).map((member, index) => (
-          <TeamMemberCard
+        {teamProfiles.slice(0, positionOfTextBox).map((member, index) => (
+          <ProfileCard
             key={index}
             name={member.name}
             role={member.role}
@@ -50,8 +50,8 @@ function About() {
 
         <AboutPageText aboutTitle={aboutTitle} aboutDescription={aboutDescription} />
 
-        {teamMembers.slice(positionOfTextBox).map((member, index) => (
-          <TeamMemberCard
+        {teamProfiles.slice(positionOfTextBox).map((member, index) => (
+          <ProfileCard
             key={index + positionOfTextBox} // ensure unique keys
             name={member.name}
             role={member.role}
