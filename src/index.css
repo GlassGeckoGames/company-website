@@ -61,23 +61,20 @@ body {
 
 }
 
-
-
-.text-box{
-  @apply max-w-2xl md:max-w-3xl lg:max-w-5xl 2xl:max-w-full
-}
-
+/* title and dscriptions + the line break for really ling text */
 .home-page-title {
-  @apply text-white text-4xl sm:text-5xl md:text-8xl 
+  @apply text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl 
   font-extrabold titleFont
-  text-box
+  container
   mb-1
   ;
 }
+
 .home-page-description {
-  @apply text-white text-base sm:text-xl md:text-4xl 
-  text-box;
+  @apply text-white text-base sm:text-xl md:text-3xl lg:text-4xl 
+  container;
 }
+
 .break-line-clamp {
   @apply line-clamp-3 break-words ;
 }
