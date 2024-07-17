@@ -51,12 +51,12 @@ function Navbar() {
           <NavbarItems textSize="text-lg" />
         </div>
 
-        <button onClick={toggleMenu} className="text-primary block md:hidden z-20">
+        <button onClick={toggleMenu} className="text-primary block md:hidden z-50 hover:text-accent">
           {isHamburgerNavOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
 
         {isHamburgerNavOpen && (
-          <div className={`fixed md:hidden top-0 left-0 z-10 w-full h-full bg-secondary bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
+          <div className={`fixed md:hidden top-0 left-0 z-40 w-full h-full bg-secondary bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
             <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
           </div>
         )}
