@@ -49,7 +49,7 @@ function ProfileCard({ name, role, image, description, link, blurHash }) {
             onError={handleImageError}
             blurHash={blurHash}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center">
+          <div className="absolute inset-0 bg-black bg-opacity-45 flex flex-col justify-center items-center">
             <div className=' h-10'> </div>
             <div className="text-white font-bold text-xl xl:text-2xl text-outline-large text-center">{name}</div>
             <div className="text-white text-base xl:text-lg text-outline-small">{role}</div>
