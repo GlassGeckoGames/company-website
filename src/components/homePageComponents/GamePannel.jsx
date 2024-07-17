@@ -30,7 +30,7 @@
  * <GamePannel game={{ name: 'Game Name', id: 'game-id', img: 'image.jpg', description: 'Game Description', link: 'https://example.com' }} />
  * 
  * @created 2024-07-10
- * @updated 2024-07-14
+ * @updated 2024-07-16
  */
 
 import React, { useRef, useState } from 'react';
@@ -52,7 +52,7 @@ import ImageComponent from '../ImageComponent';
  * 
  * @returns {JSX.Element} The game panel component.
  */
-function GamePannel({ game }) {
+function GamePannel({ game, index}) {
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
   const buttonsRef = useRef(null);
@@ -61,9 +61,9 @@ function GamePannel({ game }) {
   const [descriptionHasAnimated, setDescriptionHasAnimated] = useState(false);
   const [buttonsHaveAnimated, setButtonsHaveAnimated] = useState(false);
 
-  const titleInView = useInView(titleRef, { triggerOnce: true });
-  const descriptionInView = useInView(descriptionRef, { triggerOnce: true });
-  const buttonsInView = useInView(buttonsRef, { triggerOnce: true });
+  const titleInView = useInView(titleRef, { triggerOnce: true, margin: '0px 0px -40% 0px' });
+  const descriptionInView = useInView(descriptionRef, { triggerOnce: true, margin: '0px 0px -40% 0px' });
+  const buttonsInView = useInView(buttonsRef, { triggerOnce: true, margin: '0px 0px -40% 0px' });
 
   // Animation variants for the slide-in effect with delay
   const slideInLeft = {
@@ -92,7 +92,7 @@ function GamePannel({ game }) {
   };
 
   return (
-    <li key={game.title} className="home-page-container pannel-height">
+    <li id={`${index}`} key={game.title} className="home-page-container pannel-height">
       
       <ImageComponent
         className="w-full h-full object-cover"

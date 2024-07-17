@@ -28,8 +28,8 @@ function Home() {
     <div className="mx-auto">
       <IntroPannel />
       <ul>
-        {games.map(game => (
-          <GamePannel key={game.id} game={game} />
+        {games.map((game, index) => (
+          <GamePannel key={game.id} game={game} index={index} />
         ))}
       </ul>
     </div>
