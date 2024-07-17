@@ -7,7 +7,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-16
+ * @updated 2024-07-12
  */
 @tailwind base;
 @tailwind components;
@@ -43,10 +43,10 @@ body {
 
 /* heights of the intro and game pannels */
 .intro-height{
-  @apply h-120 md:h-144 lg:h-160 xl:h-176 2xl:h-208;
+  @apply h-120 md:h-144 lg:h-160 xl:h-176 2xl:h-2;
 }
 .pannel-height{
-  @apply h-96 md:h-144 2xl:h-160;
+  @apply h-120 md:h-120 lg:h-128 xl:h-144 2xl:h-160;
 }
 
 
@@ -81,8 +81,4 @@ body {
 
 
 
-.section-wrapper-height {
-  min-height: calc(100vh - 3rem );
-
-}
 
