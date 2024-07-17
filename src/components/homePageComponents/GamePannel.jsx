@@ -61,9 +61,9 @@ function GamePannel({ game, index}) {
   const [descriptionHasAnimated, setDescriptionHasAnimated] = useState(false);
   const [buttonsHaveAnimated, setButtonsHaveAnimated] = useState(false);
 
-  const titleInView = useInView(titleRef, { triggerOnce: true, margin: '0px 0px -40% 0px' });
-  const descriptionInView = useInView(descriptionRef, { triggerOnce: true, margin: '0px 0px -40% 0px' });
-  const buttonsInView = useInView(buttonsRef, { triggerOnce: true, margin: '0px 0px -40% 0px' });
+  const titleInView = useInView(titleRef, { triggerOnce: true, margin: '0px 0px -25% 0px' });
+  const descriptionInView = useInView(descriptionRef, { triggerOnce: true,  });
+  const buttonsInView = useInView(buttonsRef, { triggerOnce: true, });
 
   // Animation variants for the slide-in effect with delay
   const slideInLeft = {

@@ -46,7 +46,7 @@ body {
   @apply h-120 md:h-144 lg:h-160 xl:h-176 2xl:h-208;
 }
 .pannel-height{
-  @apply h-96 md:h-112 lg:h-128 xl:h-144 2xl:h-176;
+  @apply h-96 md:h-144 2xl:h-160;
 }
 
 
