@@ -34,8 +34,8 @@ function About() {
   // usuallt this will be 1 or 5 to stay in the center
 
   return (
-    <div className="mx-auto">
-      <div className="grid lg:grid-cols-4">
+    <div className="mx-auto container">
+      <div className="grid lg:grid-cols-4 gap-2 py-2">
         {teamProfiles.slice(0, positionOfTextBox).map((member, index) => (
           <ProfileCard
             key={index}

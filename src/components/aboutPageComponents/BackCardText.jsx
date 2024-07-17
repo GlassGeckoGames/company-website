@@ -18,13 +18,13 @@ import React from 'react';
 
 function BackCardText({ description, link }) {
   return (
-    <div className="flip-card-back absolute inset-0 flex flex-col justify-center items-center bg-secondary text-black p-1 pt-4 sm:p-4 md:p-6 overflow-auto transform rotate-y-180 border-2 border-primary rounded-lg shadow-lg">
-      <div className="text-xs sm:text-sm md:text-lg lg:text-base xl:text-lg text-primary space-y-2">
+    <div className="flip-card-back absolute inset-0 flex flex-col justify-center items-center bg-secondary text-black p-0.5 sm:p-1 md:p-2 overflow-auto transform rotate-y-180 border-2 border-primary rounded-lg shadow-lg">
+      <div className="text-xs sm:text-sm md:text-lg lg:text-base xl:text-lg text-primary space-y-2 ">
         {description[0] && (
-          <p className="py-1 text-center font-semibold text-primary-light">{description[0]}</p>
+          <p className="py-0.5 text-center font-semibold text-primary-light">{description[0]}</p>
         )}
         {description[1] && (
-          <p className="py-1 text-center text-primary-dark">{description[1]}</p>
+          <p className="py-1.5 text-center text-primary-dark">{description[1]}</p>
         )}
         {link && (
           <div className='text-center'>

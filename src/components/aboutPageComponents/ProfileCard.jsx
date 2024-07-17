@@ -41,9 +41,9 @@ function ProfileCard({ name, role, image, description, link, blurHash }) {
   return (
     <div className="flip-card w-full h-full">
       <div className="flip-card-inner relative w-full pb-full">
-        <div className="flip-card-front absolute inset-0 overflow-hidden">
+        <div className="flip-card-front absolute inset-0 overflow-hidden rounded-md">
           <ImageComponent 
-            className="absolute inset-0 w-full h-full object-cover" 
+            className="absolute inset-0 w-full h-full object-cover " 
             src={process.env.PUBLIC_URL + '/teamPhotos/' + image} 
             alt={name} 
             onError={handleImageError}
