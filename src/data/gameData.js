@@ -91,7 +91,7 @@ export const games = [
     // info for the pannel on the home page
     pannelImg: "princessGameBackdrop.png",
     pannelBlurHash: "qAEe*{IBDk~Bsq?aofM{owD*4:tQM{Ipt7n%0fkC_2tlR*IUt7of$%r?w]xaIVxat7S2xaWYV[WBWXs.s:RjI;E1ozSeM|xaM|WC",
-    pannelDescription: 'A puzzle game made for the GMTK Game Jam 2023 all about role reversal',
+    pannelDescription: 'A puzzle game about role reversal',
    
     // info for the main page
     description: 'In this whimsical adventure, you play as a misunderstood monster who has captured a princess, only to decide to save her from the clutches of your unpleasant boss dragon. Navigate through humorous challenges and puzzles as you try to rescue the princess without drawing the ire of the dragon.',
@@ -101,6 +101,8 @@ export const games = [
     },
     images: [
       'princessGame1.png',
+      'princessGame2.png',
+      'princessGame3.png',
       'princessGameBackdrop.png',
     ],
     genre: 'Adventure, Comedy, Puzzle',
@@ -108,11 +110,11 @@ export const games = [
     releaseDate: '2023',
     price: 'Free',
     features: [
-      'Humorous storyline',
+      "Don't expect much, it was made in 2 days",
       'Engaging puzzles and challenges',
-      'Unique day/night mechanic',
+      'Day/night mechanic',
       'Avoid drawing the dragon’s suspicion',
-      'Colorful, cartoon-style graphics'
+      "Colorful, cartoony graphics"
     ],
     systemRequirements: {
       minimum: {

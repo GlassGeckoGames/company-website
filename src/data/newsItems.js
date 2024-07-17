@@ -62,6 +62,7 @@ export const newsItems = [
     datePosted: 'Dec 15th, 2023',
     externalLinks: [
       { name: 'Play on Steam', url: 'https://store.steampowered.com/app/2593070/Zeitghast/' },
+      { name: 'Learn More', url: '/games/zeitghast' }, // internal link within react app
     ],
     featured: true
   },

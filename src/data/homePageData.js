@@ -1,11 +1,12 @@
 /**
  * @file homePageData.js
  * @module homePageData
- * @desc Contains information to be displayed on the homepage.
+ * @desc Contains information to be displayed on the homepage. also for the About Page
  * 
  * @exports title
  * @exports description
  * @exports videoData
+ * @exports contactBlurb
  * 
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export|MDN Export Documentation}
  * 
@@ -44,3 +45,9 @@ export const videoData = {
   src:process.env.PUBLIC_URL + '/videos/homeBackdropVideo.mp4',
   blurHash:"YMDA[gw[5aOH$wWXR5nNvzt6M|S5t7WBWDfk4UWX=WslNzWBkXXTT}WC${n$RkaeofbI"
 }
+
+/**
+ * The video data to be displayed on the Contact Page.
+ * @property {string} contactBlurb - The text to be displayed on the Contact Page below the contact form.
+ */
+export const contactBlurb = "We would love to hear from you! Your feedback helps us make our games better. Whether you have questions, suggestions, or ideas, please share them with us. We are committed to creating the best gaming experience possible and appreciate your input.";

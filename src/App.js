@@ -54,6 +54,8 @@ import { initializeGA, recordGAPage } from "./analytics";
 import emailjs from 'emailjs-com';
 import { AnimatePresence, motion } from 'framer-motion';
 
+import './styles/ScrollBar.css'
+
 // Initialize EmailJS with the user ID from environment variables
 emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 

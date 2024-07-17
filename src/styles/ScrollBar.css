@@ -1,0 +1,28 @@
+
+
+
+/* scrollbar styles */
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+  height: 12px; /* Adjust the height of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary;
+  border-radius: 6px; /* Make the scrollbar thumb rounded */
+  border: 3px solid transparent; /* Add some padding around the thumb */
+  background-clip: content-box; /* Ensure the background color is inside the border */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  @apply bg-primary
+}
+
+/* Apply styles to Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #556B2F #F5F5F5; /* thumb color, track color */
+}

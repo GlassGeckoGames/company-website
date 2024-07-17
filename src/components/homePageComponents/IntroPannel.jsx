@@ -46,12 +46,14 @@ function IntroPannel() {
   };
 
   return (
-    <div className="home-page-container intro-size" ref={ref}>
+    <div className="home-page-container intro-height" ref={ref}>
+
       <VideoComponent
         className="w-full h-full object-cover pointer-events-none"
         src={videoData.src}
         blurHash={videoData.blurHash}
       />
+      
       <div className="home-page-box ">
         <motion.h1
           className="home-page-title"

@@ -34,7 +34,7 @@ function GameReviews({ reviews }) {
     <div className="mb-6">
       {reviews && reviews.length > 0 ? (
         <>
-          <h2 className="text-3xl font-bold text-secondary mb-4">Reviews</h2>
+          <h2 className="text-3xl font-bold text-secondary mb-4">Accolades</h2>
           <div className="text-lg text-black">
             {reviews.map((review, index) => (
               <div key={index} className="mb-4">

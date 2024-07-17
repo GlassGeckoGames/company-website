@@ -114,6 +114,9 @@ module.exports = {
         'sharung': ['Sharung', 'sans-serif'], // If available
         'baddest': ['Baddest', 'sans-serif'], // If available
         'mageri': ['Mageri', 'sans-serif'], // If available
+        'poppins': ['Poppins', 'sans-serif'], // Added Poppins font
+        'bebas-neue': ['Bebas Neue', 'sans-serif'], // Added Bebas Neue font
+
       },
     },
   },

@@ -92,15 +92,16 @@ function GamePannel({ game }) {
   };
 
   return (
-    <li key={game.title} className="home-page-container pannel-size">
+    <li key={game.title} className="home-page-container pannel-height">
+      
       <ImageComponent
         className="w-full h-full object-cover"
         src={process.env.PUBLIC_URL + `/gameMedia/${game.id}/${game.pannelImg}`}
         alt={game.title}
         blurHash={game.pannelBlurHash}
       />
+
       <div className="home-page-box">
-       
         {/* Animate these elements slide in from the left with delay */}
         <motion.h2
           ref={titleRef}

@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 import Button from '../components/Button';
 import { recordGAEvent } from '../analytics';
 import ImageComponent from '../components/ImageComponent';
+import { contactBlurb } from '../data/homePageData';
 
 const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
 const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -146,7 +147,7 @@ function Contact() {
           <div>
             <Button type="accent" buttonType="submit">Submit Message</Button>
           </div>
-          <p className="mt-4">We'd love to hear from you! Your feedback helps us make our games better. Whether you have questions, suggestions, or ideas, please share them with us. We are committed to creating the best gaming experience possible and appreciate your input.</p>
+          <p className="mt-4">{contactBlurb}</p>
         </form>
       </div>
 

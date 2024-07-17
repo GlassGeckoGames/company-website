@@ -25,7 +25,7 @@ function MediaLinks() {
   return (
     <div className="flex justify-center space-x-4 ">
       <a
-        href="https://www.youtube.com/channel/UCltO0yRkVFmApfzuTGgKczg"
+        href="https://www.youtube.com/@GlassGeckoGames"
         className="text-white hover:text-accent "
         aria-label="YouTube"
         target="_blank"
