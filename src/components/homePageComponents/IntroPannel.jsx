@@ -43,7 +43,7 @@ function IntroPannel() {
   // Animation variants for the slide-in effect
   const slideInLeft = {
     hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.8 } }
+    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 } }
   };
 
   return (

@@ -43,10 +43,10 @@ body {
 
 /* heights of the intro and game pannels */
 .intro-height{
-  @apply h-120 md:h-144 lg:h-160 xl:h-176 2xl:h-2;
+  @apply h-128 md:h-144 lg:h-160 xl:h-176 2xl:h-208;
 }
 .pannel-height{
-  @apply h-120 md:h-120 lg:h-128 xl:h-144 2xl:h-160;
+  @apply h-128 md:h-120 lg:h-128 xl:h-144 2xl:h-176;
 }
 
 
@@ -72,7 +72,8 @@ body {
 
 .home-page-description {
   @apply text-white text-base sm:text-xl md:text-3xl lg:text-4xl 
-  container;
+  container
+  ;
 }
 
 .break-line-clamp {
