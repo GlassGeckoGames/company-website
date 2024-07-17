@@ -1,7 +1,6 @@
 /**
  * @file homePageData.js
- * @module homePageData
- * @desc Contains information to be displayed on the homepage. also for the About Page
+ * @desc Contains information to be displayed on the homepage
  * 
  * @exports title
  * @exports description
@@ -46,8 +45,3 @@ export const videoData = {
   blurHash:"YMDA[gw[5aOH$wWXR5nNvzt6M|S5t7WBWDfk4UWX=WslNzWBkXXTT}WC${n$RkaeofbI"
 }
 
-/**
- * The video data to be displayed on the Contact Page.
- * @property {string} contactBlurb - The text to be displayed on the Contact Page below the contact form.
- */
-export const contactBlurb = "We would love to hear from you! Your feedback helps us make our games better. Whether you have questions, suggestions, or ideas, please share them with us. We are committed to creating the best gaming experience possible and appreciate your input.";

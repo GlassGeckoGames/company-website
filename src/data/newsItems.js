@@ -1,6 +1,5 @@
 /**
  * @file newsData.js
- * @module newsData
  * @desc Contains the latest news items related to games and company updates.
  * 
  * @exports newsItems

@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 import Button from '../components/Button';
 import { recordGAEvent } from '../analytics';
 import ImageComponent from '../components/ImageComponent';
-import { contactBlurb } from '../data/homePageData';
+import { contactBlurb } from '../data/contactPageData';
 
 const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
 const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;

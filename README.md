@@ -1,70 +1,122 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Glass Gecko Games - Company Website
 
-## Available Scripts
+Welcome to the repository for the Glass Gecko Games company website. This site showcases our games, team, and latest news.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Running the Project](#running-the-project)
+- [Data Files](#data-files)
+  - [About Page Data](#about-page-data)
+  - [Contact Page Data](#contact-page-data)
+  - [Game Data](#game-data)
+  - [Home Page Data](#home-page-data)
+  - [News Data](#news-data)
+- [Public Folder Structure](#public-folder-structure)
+- [Pages](#pages)
+- [Components](#components)
+- [Development](#development)
+- [More Infomation](#more-information)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To install the necessary dependencies, run:
 
-### `npm test`
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Environment Variables
 
-### `npm run build`
+Create a `.env` file in the root directory with the following content:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```env
+REACT_APP_EMAILJS_SERVICE_ID=service_.......
+REACT_APP_EMAILJS_TEMPLATE_ID=template_.......
+REACT_APP_EMAILJS_USER_ID=.......
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+REACT_APP_GA_TRACKING_ID=G-........
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+REACT_APP_ENVIRONMENT=development // only for development environment
+```
 
-### `npm run eject`
+## Running the Project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run the local version of the project, run:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Data Files
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### About Page Data
 
-## Learn More
+The data for the About page is located in `src/data/aboutPageData.js`. This file includes:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- The title for the About section.
+- The description for the About section.
+- An array of team member profiles, each containing a name, role, image, blurHash, and description.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Contact Page Data
 
-### Code Splitting
+The data for the Contact page is located in `src/data/contactPageData.js`. This file includes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- A contact blurb that is displayed on the Contact Page below the contact form.
 
-### Analyzing the Bundle Size
+### Game Data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The data for the games is located in `src/data/gameData.js`. This file includes:
 
-### Making a Progressive Web App
+- A list of game data objects for each game, used on both the GamePage and the home page panels.
+- Each game object contains details such as id, title, description, images, genre, platforms, release date, features, system requirements, price, trailer, and reviews.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Home Page Data
 
-### Advanced Configuration
+The data for the Home page is located in `src/data/homePageData.js`. This file includes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- The title to be displayed on the homepage.
+- The description to be displayed on the homepage.
+- The video data to be displayed on the homepage, including the video source URL and a BlurHash string for the video placeholder.
 
-### Deployment
+### News Data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The data for the News page is located in `src/data/newsData.js`. This file includes:
 
-### `npm run build` fails to minify
+- An array of news items, each containing a title, description, date, category, optional tags, optional external links, optional image, featured flag, and author.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Public Folder Structure
+
+- `gameMedia`: Contains images for games, with folders named after the game IDs in the game data file.
+- `logos`: Contains logos for the games.
+- `newsImages`: Contains images related to the news page.
+- `teamPhotos`: Contains photos of each team member.
+- `videos`: Contains the video for the homepage.
+
+## Pages
+
+The site is broken up into the following pages:
+
+- **About**: About the team.
+- **Home**: Intro section and games list.
+- **Contact**: A contact form using EmailJS.
+- **News**: Latest updates.
+- **GamePage**: Displays detailed information about a game, routed by `Route path="/games/:gameId"`.
+
+## Components
+
+The components for the site are located in the `src/components` folder. Each component is documented and used throughout the site to build the UI.
+
+## Development
+
+The `TailwindBreakPoints.jsx` component shows the breakpoints during development. You can turn this off by changing the environment variable `REACT_APP_ENVIRONMENT` to something other than `development`.
+
+
+## More Information
+
+For more information, contact Chace Nielson:
+
+- Website: [chacenielson.com](https://chacenielson.com)
+- Email: [chacen@shaw.ca](mailto:chacen@shaw.ca)

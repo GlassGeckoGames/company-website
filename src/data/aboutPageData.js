@@ -1,6 +1,5 @@
 /**
  * @file aboutPageData.js
- * @module aboutData
  * @desc Data structures used in the application for the about page. The teamProfiles is the most editable section as it can be changed to chang bios 
  * 
  * @exports aboutTitle

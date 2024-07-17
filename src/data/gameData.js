@@ -1,6 +1,5 @@
 /**
  * @file gameData.js
- * @module gameData
  * @desc Contains the list of game data objects for the GamePage for each game.
  * this is also used for the game pannel data on the home page using the pannelImg, pannelDescription, and pannelLink specific information
  * 
