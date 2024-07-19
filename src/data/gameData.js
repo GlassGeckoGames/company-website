@@ -37,7 +37,7 @@ export const games = [
     pannelDescription: 'An epic adventure through time',
 
     // info for the main page 
-    description: 'Zeitghast is a game that takes place in a world where time is a valuable resource. Players must navigate through the world and make decisions that affect the flow of time. The game features a unique time-travel mechanic that allows players to rewind time and make different choices. The goal of the game is to solve puzzles and uncover the mysteries of the world while managing the limited time available to the player.',
+    description: 'Zeitghast is a fast-paced, action-packed sidescrolling Platformer-Shooter in which you navigate a technologically enhanced prehistoric world. Take on the role of a Zeitghast--A magical time spirit tasked with protecting the timeline, and stop the evil Dr. Antag O’Neste as he travels back in time to take credit for every invention that ever existed.',
     playLink: {
       name: 'Play on Steam',
       url: 'https://store.steampowered.com/app/2593070/Zeitghast/'
