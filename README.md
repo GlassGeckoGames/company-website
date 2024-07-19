@@ -41,6 +41,8 @@ REACT_APP_GA_TRACKING_ID=G-........
 
 REACT_APP_ENVIRONMENT=development // only for development environment
 ```
+- The file will not be tracked by git
+- Ask your admin for the specific infomation
 
 ## Running the Project
 
