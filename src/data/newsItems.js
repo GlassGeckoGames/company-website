@@ -54,7 +54,7 @@
 export const newsItems = [
   {
     title: 'Zeitghast',
-    description: 'We are pleased to anncounce the release of Zeitghast, a new game that will take you on an adventure through time.',
+    description: 'We are pleased to announce the release of Zeitghast, a new game that will take you on an adventure through time.',
     image: 'zeitghastRelease.png',
     blurHash: 'q8E:x+2~*q4m4TMcKlreI88wrVQ,?]Tbn9ks3[zNIjv..7x@r#SvX-Q^yWN|ggRhQ:rrk;%4Z}HrtQX-M}NHKHjJxvnRnNf#sFSd',
     category: 'Release',
@@ -66,12 +66,18 @@ export const newsItems = [
     featured: true
   },
   {
-    title: 'New Game Coming Soon',
-    description: 'We are excited to announce that we are developing a new multiplayer party game experience.',
-    image: 'monstorMashAnouncment.png',
+    title: 'Glass Gecko Games Social Media',
+    description: 'Check out our Glass Gecko Games social media accounts to keep up to date on our latest development information and releases.',
+    image: 'socialMediaAnnouncement.png',
     blurHash: 'qbLN0rs+PXIp?GWVxZxtpIxv-7WBIXjXNHRko}W@V[aeR*s*offP%0WBIpWBocxWt7Rm%KRjR-xYxVflM}fl%1RkNLxZjYWYR+fk',
     category: 'Announcement',
-    datePosted: 'July 14th, 2024',
+    datePosted: 'July 17th, 2024',
+    externalLinks: [
+      { name: 'YouTube', url: 'https://www.youtube.com/@GlassGeckoGames' },
+      { name: 'Instagram', url: 'https://www.instagram.com/glassgeckogames/' },
+      { name: 'TikTok', url: 'https://www.tiktok.com/@glassgeckogames' },
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/company/glass-gecko-games/' },
+    ],
     featured: false
   }, 
 ];
