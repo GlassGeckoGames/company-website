@@ -1,10 +1,44 @@
+/**
+ * @file Contact.jsx
+ * @module Contact
+ * @desc Renders a contact form component that allows users to send messages via email.
+ * 
+ * This component uses EmailJS to send messages and react-hot-toast for notifications.
+ * 
+ * @component Contact
+ * 
+ * @param {Object} props - The component props.
+ * 
+ * @requires react
+ * @requires react-hot-toast
+ * @requires emailjs-com
+ * @requires ../components/Button
+ * @requires ../analytics
+ * @requires ../components/ImageComponent
+ * @requires ../data/contactPageData
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * @see {@link https://react-hot-toast.com/docs|React Hot Toast Documentation}
+ * @see {@link https://www.emailjs.com/docs/|EmailJS Documentation}
+ * 
+ * @returns {JSX.Element} The contact form component.
+ * 
+ * @example
+ * // Example usage of Contact component
+ * <Contact />
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-12
+ * @updated 2024-07-19
+ */
+
 import React, { useState } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
 import Button from '../components/Button';
 import { recordGAEvent } from '../analytics';
 import ImageComponent from '../components/ImageComponent';
-import { contactBlurb } from '../data/contactPageData';
+import { contactBlurb, pageImages } from '../data/contactPageData';
 
 const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
 const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -151,13 +185,17 @@ function Contact() {
         </form>
       </div>
 
-      <div className='flex flex-col justify-center w-full min-h-full border-4 border-black rounded-lg overflow-hidden'>
-        <ImageComponent
-          className="rounded-" 
-          src={process.env.PUBLIC_URL + '/gameMedia/zeitghast/zeitghastBackdrop.png'} 
-          alt="contact page"
-          blurHash='q8E:x+2~*q4m4TMcKlreI88wrVQ,?]Tbn9ks3[zNIjv..7x@r#SvX-Q^yWN|ggRhQ:rrk;%4Z}HrtQX-M}NHKHjJxvnRnNf#sFSd'
-        />
+      <div className=' w-full min-h-full border-4 border-black rounded-lg overflow-hidden grid grid-cols-4 lg:grid-cols-2 lg:grid-rows-2'>
+        {/* loop through the list of images to display here - all similar  */}
+        {pageImages.map((image, index) => (
+          <ImageComponent
+            key={index}
+            className="border-4 border-black" 
+            src={process.env.PUBLIC_URL + image} 
+            alt="contact page"
+            blurHash='qANw7wDi71?b_MkVMet8uNyC%2xaIUDPRjf,OFnOVYE1WB%g%gxtx]tQt6IUV@-;jGR5nlV[tQoyIUn,kCM{-;WVIBjZx]kCo1of'
+          />
+        ))}
       </div>
     </div>
   );
