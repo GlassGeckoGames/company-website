@@ -185,16 +185,18 @@ function Contact() {
         </form>
       </div>
 
-      <div className=' w-full min-h-full border-4 border-black rounded-lg overflow-hidden grid grid-cols-4 lg:grid-cols-2 lg:grid-rows-2'>
+      <div className=' w-full  border-4 min-h-48 border-black rounded-lg overflow-hidden grid grid-cols-4 lg:grid-cols-2 lg:grid-rows-2'>
         {/* loop through the list of images to display here - all similar  */}
         {pageImages.map((image, index) => (
-          <ImageComponent
-            key={index}
-            className="border-4 border-black" 
-            src={process.env.PUBLIC_URL + image} 
-            alt="contact page"
-            blurHash='qANw7wDi71?b_MkVMet8uNyC%2xaIUDPRjf,OFnOVYE1WB%g%gxtx]tQt6IUV@-;jGR5nlV[tQoyIUn,kCM{-;WVIBjZx]kCo1of'
-          />
+          <div className='border-4 border-black'>
+              <ImageComponent
+              key={index}
+              className="" 
+              src={process.env.PUBLIC_URL + image} 
+              alt="contact page"
+              blurHash='qANw7wDi71?b_MkVMet8uNyC%2xaIUDPRjf,OFnOVYE1WB%g%gxtx]tQt6IUV@-;jGR5nlV[tQoyIUn,kCM{-;WVIBjZx]kCo1of'
+              />
+          </div>
         ))}
       </div>
     </div>

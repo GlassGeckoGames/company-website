@@ -42,7 +42,7 @@ export const teamProfiles = [
     name: 'Emmanuel Omari-Osei ',
     role: 'Code',
     image: 'emmanuel.jpg',
-    blurHash: 'qQJZfY~70xIpE0ENR6R.5KIu-VxrS|s+ozS20vElrgM}=zxZShxVxYxUk:f*v-N2VujdM}RP#?%1Xeo{t5X9-AkDR+V{IqWUSvoa',
+    blurHash: 'qXLgOu-p~pkDIUxaM|WB^*R*xuRjR*aeayt7S#Rj9Gxtt6kCxtRj-pt7ofRjWCWBoeozt7M|IUt7t7jsazWBn%xaozWBs:a}R*kC',
     description: [
       'I am a software engineer with great interest in software development and a passion for making games.',
       'I also enjoy playing games as much as I enjoy making them. 😁'
