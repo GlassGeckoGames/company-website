@@ -15,62 +15,38 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-19
  */
 
 import React from 'react';
-import { FaYoutube, FaInstagram, FaTiktok, FaLinkedin, FaSteam } from 'react-icons/fa';
+import { FaYoutube, FaInstagram, FaTiktok, FaTwitter, FaLinkedin, FaSteam } from 'react-icons/fa';
 
 function MediaLinks() {
+
+  const MediaLinks=[
+    {name:"tiktok" ,icon:FaTiktok, link:"https://www.tiktok.com/@glassgeckogames"},
+    {name:"youtube" ,icon:FaYoutube, link:"https://www.youtube.com/@GlassGeckoGames"},
+    {name:"instagram" ,icon:FaInstagram, link:"https://www.instagram.com/glassgeckogames/"},
+    {name:"x" ,icon:FaTwitter, link:"https://x.com/GlassGeckoGames"},
+    {name:"linkedin" ,icon:FaLinkedin, link:"https://www.linkedin.com/company/glass-gecko-games/"},
+    {name:"steam" ,icon:FaSteam, link:"https://store.steampowered.com/search/?developer=Glass%20Gecko%20Games"}
+  ]
+
   return (
     <div className="flex justify-center space-x-4 ">
-      <a
-        href="https://www.youtube.com/@GlassGeckoGames"
-        className="text-white hover:text-accent "
-        aria-label="YouTube"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaYoutube size={32} className='text-primary hover:text-accent' />
-      </a>
-      <a
-        href="https://www.instagram.com/glassgeckogames/"
-        className="text-white hover:text-accent className='text-primary' "
-        aria-label="Instagram"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaInstagram size={30} className='text-primary hover:text-accent' />
-      </a>
-      <a
-        href="https://www.tiktok.com/@glassgeckogames"
-        className="text-white hover:text-accent"
-        aria-label="TikTok"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaTiktok size={26} className='text-primary hover:text-accent' />
-      </a>
-      <a
-        href="https://www.linkedin.com/company/glass-gecko-games/"
-        className="text-white hover:text-accent"
-        aria-label="LinkedIn"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaLinkedin size={28} className='text-primary hover:text-accent' />
-      </a>
-      <a
-        href="https://store.steampowered.com/search/?developer=Glass%20Gecko%20Games"
-        className="text-white hover:text-accent"
-        aria-label="Steam"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaSteam size={28} className='text-primary hover:text-accent' />
-      </a>
+      {MediaLinks.map((link) => (
+        <a
+          href={link.link}
+          className="text-white hover:text-accent "
+          aria-label={link.name}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <link.icon size={28} className='text-primary hover:text-accent' />
+        </a>
+      ))}
     </div>
-  );
+  )
 }
 
 export default MediaLinks;
