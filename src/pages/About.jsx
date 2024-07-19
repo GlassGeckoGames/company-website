@@ -31,7 +31,7 @@ import { teamProfiles, aboutTitle, aboutDescription } from '../data/aboutPageDat
 function About() {
 
   const positionOfTextBox = 5; // determines the position of the text box in the grid formation in the large view 
-  // usuallt this will be 1 or 5 to stay in the center
+  // usually this will be 1 or 5 to stay in the center
 
   return (
     <div className="mx-auto container">

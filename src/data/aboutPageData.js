@@ -23,7 +23,7 @@ export const aboutTitle = 'The Glass Gecko Team';
  * The description for the about section.
  * @type {string}
  */
-export const aboutDescription = `We are a group of passionate individuals dedicated to bringing joy and creativity into the world through innovative game development. Learn more about each of our talented team members. We began as a group of friends with a shared passion for making games, and have since grown into a dedicated team committed to creating fun and engaging experiences for players of all ages.`;
+export const aboutDescription = `We are a group of passionate individuals dedicated to sharing fun and innovative experiences with the world through game development. We began as a group of friends with a shared passion for making games and have since grown into a team of committed creators, aiming to produce many engaging titles for you to enjoy. Learn more about our talented team members here.`;
 
 
 /**
@@ -41,12 +41,13 @@ export const teamProfiles = [
   {
     name: 'Emmanuel Omari-Osei ',
     role: 'Code',
-    image: 'emmanual.png',
+    image: 'emmanuel.jpg',
     blurHash: 'qQJZfY~70xIpE0ENR6R.5KIu-VxrS|s+ozS20vElrgM}=zxZShxVxYxUk:f*v-N2VujdM}RP#?%1Xeo{t5X9-AkDR+V{IqWUSvoa',
     description: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
-    ]
+      'I am a software engineer with great interest in software development and a passion for making games.',
+      'I also enjoy playing games as much as I enjoy making them. 😁'
+    ],
+    link: { description: "My Portfolio", url: "https://github.com/E-man248/emmanuel.omariosei-Portfolio/" }
   },
   {
     name: 'Toni',

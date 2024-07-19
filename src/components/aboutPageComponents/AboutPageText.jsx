@@ -83,7 +83,7 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
         variants={slideInLeft}
       >
         <Button onClickFunc={handleClick} type="accent" as="link" to="/contact">
-          Learn More About Us
+          Connect With Us
         </Button>
       </motion.div>
     </div>
