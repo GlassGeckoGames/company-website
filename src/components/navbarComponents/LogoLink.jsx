@@ -22,7 +22,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-14
+ * @updated 2024-07-19
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -30,12 +30,19 @@ import { Link } from 'react-router-dom';
 function LogoLink() {
   return (
     <Link to="/" className='flex gap-2 items-center text-primary'>
-      <img 
-        className="w-12 md:w-16 object-contain" 
-        src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
-        alt="Logo" 
-      />
-      <h1 className="text-xl">GLASS GECKO GAMES</h1>
+      <div 
+        className="max-w-12 max-h-12 min-md:max-w-16 md:max-h-16 w-full h-full flex-shrink-0" 
+        style={{ width: '48px', height: '48px' }} // Set a constant height and width for the logo container
+      >
+        <img 
+          className="w-full h-full object-contain" 
+          src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
+          alt="Logo" 
+          style={{ visibility: 'hidden' }} // Hide the image if it's not loaded yet
+          onLoad={(e) => e.target.style.visibility = 'visible'} // Make it visible once it's loaded
+        />
+      </div>
+      <h1 className="text-xl text-nowrap">GLASS GECKO GAMES</h1>
     </Link>
   )
 }
