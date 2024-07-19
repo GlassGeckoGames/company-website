@@ -51,6 +51,8 @@ const VideoComponent = ({ className, src, blurHash = 'L%O:@Sj[~qj[%Mj[offQt7fQIU
         muted
         playsInline
         controlsList="nodownload nofullscreen noremoteplayback"
+        style={{ filter: 'blur(2px)' }} // Initially hide the image and apply blur effect
+
       />
     </div>
   );

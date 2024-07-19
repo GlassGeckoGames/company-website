@@ -3,6 +3,8 @@
  * @module IntroPannel
  * @desc Renders the IntroPannel component. This component displays a video background with a title and description overlay.
  * 
+ * backgrouds here : https://www.cleanpng.com/png-scratch-vector-scratch-to-do-the-old-texture-free-97920/
+ * 
  * @component IntroPannel
  * 
  * @requires react
@@ -49,14 +51,24 @@ function IntroPannel() {
   return (
     <div className="home-page-container intro-height" ref={ref}>
 
+      {/* Video background */}
       <VideoComponent
         className="w-full h-full object-cover pointer-events-none"
         src={videoData.src}
         blurHash={videoData.blurHash}
       />
+
+      {/* Image overlay */}
+      <img 
+        src={process.env.PUBLIC_URL + '/art/LCD_background_1.png'} 
+        className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none opacity-15"
+        style={{ visibility: 'hidden' }} // Initially hide the image
+        onLoad={(e) => e.target.style.visibility = 'visible'} // Make it visible once it's loaded
+      />
+
       <ScrollWheel />
-      
-      <div className="home-page-box ">
+
+      <div className="home-page-box">
         <motion.h1
           className="home-page-title"
           initial="hidden"
@@ -66,14 +78,13 @@ function IntroPannel() {
           {title}
         </motion.h1>
         <motion.p
-          className="home-page-description "
+          className="home-page-description"
           initial="hidden"
           animate={hasAnimated ? 'visible' : 'hidden'}
           variants={slideInLeft}
         >
           {description}
         </motion.p>
-        
       </div>
     </div>
   );
