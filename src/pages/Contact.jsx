@@ -139,11 +139,11 @@ function Contact() {
     <div className="container mx-auto p-4 flex flex-col lg:flex-row gap-10">
       <Toaster />
       <div className="w-full">
-        <h1 className="text-3xl font-bold text-secondary titleFont">Contact Us</h1>
-        <p className="mt-4">Send us an email at <a href="mailto:glassgeckogames@gmail.com" className="text-accent">glassgeckogames@gmail.com</a></p>
+        <h1 className="text-3xl font-bold text-accent titleFont">Contact Us</h1>
+        <p className="mt-4 text-primary">Send us an email at <a href="mailto:glassgeckogames@gmail.com" className="text-accent">glassgeckogames@gmail.com</a></p>
         <form onSubmit={handleSubmit} className="mt-4 space-y-6">
           <div>
-            <label htmlFor="name" className="block text-base font-medium text-black">Name</label>
+            <label htmlFor="name" className="block text-base font-medium text-primary">Name</label>
             <input
               type="text"
               id="name"
@@ -155,7 +155,7 @@ function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-base font-medium text-black">Email</label>
+            <label htmlFor="email" className="block text-base font-medium text-primary">Email</label>
             <input
               type="email"
               id="email"
@@ -167,7 +167,7 @@ function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="message" className="block text-base font-medium text-black">Message</label>
+            <label htmlFor="message" className="block text-base font-medium text-primary">Message</label>
             <textarea
               id="message"
               name="message"
@@ -178,10 +178,10 @@ function Contact() {
               className="min-h-28 h-20 xl:h-40 2xl:h-64  mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
             />
           </div>
-          <div>
+          <div className='w-full flex justify-start'>
             <Button type="accent" buttonType="submit">Submit Message</Button>
           </div>
-          <p className="mt-4">{contactBlurb}</p>
+          <p className="mt-4 text-primary">{contactBlurb}</p>
         </form>
       </div>
 

@@ -22,7 +22,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-16
+ * @updated 2024-07-19
  */
 
 import React, { useRef, useState, useEffect } from 'react';
@@ -49,7 +49,7 @@ function IntroPannel() {
   };
 
   return (
-    <div className="home-page-container intro-height" ref={ref}>
+    <div className="home-page-container h-screen" ref={ref}>
 
       {/* Video background */}
       <VideoComponent

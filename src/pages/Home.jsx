@@ -14,7 +14,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-19
  */
 import React from 'react';
 import IntroPannel from '../components/homePageComponents/IntroPannel';
@@ -25,7 +25,7 @@ import { games } from '../data/gameData';
 
 function Home() {
   return (
-    <div className="mx-auto">
+    <div className="mx-auto -mt-16">
       <IntroPannel />
       <ul>
         {games.map((game, index) => (

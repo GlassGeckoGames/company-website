@@ -30,7 +30,7 @@
  * <GamePannel game={{ name: 'Game Name', id: 'game-id', img: 'image.jpg', description: 'Game Description', link: 'https://example.com' }} />
  * 
  * @created 2024-07-10
- * @updated 2024-07-16
+ * @updated 2024-07-19
  */
 
 import React, { useRef, useState } from 'react';
@@ -129,11 +129,11 @@ function GamePannel({ game, index}) {
           variants={slideInLeft}
         >
           {game.id && (
-            <Button onClickFunc={handleFindOutClick} type="secondary" as="link" to={`/games/${game.id}`}>Find Out</Button>
+            <Button onClickFunc={handleFindOutClick} type="accent" as="link" to={`/games/${game.id}`}>Find Out</Button>
           )}
 
           {game.playLink && game.playLink.url && (
-            <Button onClickFunc={handlePlayNowClick} type="accent" as="a" href={game.playLink.url}>Play Now</Button>
+            <Button onClickFunc={handlePlayNowClick} type="secondary" as="a" href={game.playLink.url}>Play Now</Button>
           )}
         </motion.div>
 

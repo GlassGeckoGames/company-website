@@ -22,7 +22,7 @@
  * 
  * @au
  * @created 2024-07-16
- * @updated 2024-07-16
+ * @updated 2024-07-19
  */
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -43,7 +43,7 @@ function ScrollWheel() {
   };
 
   return (
-    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-10 opacity-15 ">
+    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-10 opacity-20 ">
       <motion.div className="mb-4" {...bounceProps}>
         <ScrollLink
           className="hover:cursor-pointer"

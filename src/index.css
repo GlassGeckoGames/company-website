@@ -7,7 +7,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-19
  */
 @tailwind base;
 @tailwind components;
@@ -32,7 +32,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-primary;
+  @apply bg-secondary;
 
 }
 

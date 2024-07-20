@@ -14,7 +14,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-11
+ * @updated 2024-07-19
  */
 import React from 'react';
 import { newsItems } from '../data/newsItems';
@@ -24,7 +24,7 @@ function News() {
 
   return (
     <div className="container mx-auto p-4 h-full">
-      <h1 className="text-3xl font-bold text-secondary mb-4 titleFont">Latest Updates</h1>
+      <h1 className="text-3xl font-bold text-accent mb-4 titleFont">Latest Updates</h1>
 
       {/* Headline news item */}
       <div>
@@ -37,10 +37,10 @@ function News() {
       </div>
 
       {/* Separator line */}
-      <div className='h-2 bg-secondary my-4 rounded-lg'></div>
+      <div className='h-2 bg-primary my-4 rounded-lg'></div>
 
       {/* List of other news items */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         {newsItems.slice(1).map((news, index) => (
           <NewsCard
             key={index}

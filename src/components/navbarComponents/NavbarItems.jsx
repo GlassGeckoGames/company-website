@@ -26,7 +26,7 @@ import LinkItem from './LinkItem';
 
 const NavbarItems = ({ toggleMenu, textSize }) => {
   return (
-    <ul className={`text-primary ${textSize} space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
+    <ul className={`text-primary ${textSize} space-y-6 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
       <li>
         <LinkItem to="/" onClick={toggleMenu}>Home</LinkItem>
       </li>

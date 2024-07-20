@@ -22,7 +22,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-14
+ * @updated 2024-07-19
  */
 import React from 'react';
 import '../../styles/ProfileCard.css'; // Import the CSS file for 3D flip animation
@@ -41,7 +41,7 @@ function ProfileCard({ name, role, image, description, link, blurHash }) {
   return (
     <div className="flip-card w-full h-full">
       <div className="flip-card-inner relative w-full pb-full">
-        <div className="flip-card-front absolute inset-0 overflow-hidden rounded-md">
+        <div className="flip-card-front absolute inset-0 overflow-hidden rounded-xl">
           <ImageComponent 
             className="absolute inset-0 w-full h-full object-cover " 
             src={process.env.PUBLIC_URL + '/teamPhotos/' + image} 
