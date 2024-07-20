@@ -27,12 +27,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ImageComponent from '../ImageComponent';
+import '../../styles/LogoLink.css';
 
 function LogoLink() {
   return (
-    <Link to="/" className='flex gap-0 items-center text-primary'>
+    <Link to="/" className='logo-link flex gap-0 items-center text-primary'>
       <div 
-        className="max-w-12 max-h-12 min-md:max-w-16 md:max-h-16 w-full h-full flex-shrink-0" 
+        className="max-w-12 max-h-12 md:max-w-16 md:max-h-16 w-full h-full flex-shrink-0" 
         style={{ width: '48px', height: '48px' }} // Set a constant height and width for the logo container
       >
         <ImageComponent 
@@ -43,7 +44,7 @@ function LogoLink() {
           lowResSrc={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Logo_with_Cut_small.png'} 
         />
       </div>
-      <h1 className="text-4xl text-nowrap titleFont">GLASS GECKO GAMES</h1>
+      <h1 className="text-4xl text-nowrap titleFont underline-effect"> GLASS GECKO GAMES </h1>
     </Link>
   )
 }

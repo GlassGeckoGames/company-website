@@ -16,7 +16,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-10
+ * @updated 2024-07-19
  */
 
 import React from 'react';
@@ -26,7 +26,7 @@ import LogoLink from './navbarComponents/LogoLink';
 function Footer() {
   return (
     <footer className="bg-secondary p-4">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-primary">
+      <div className="container mx-auto flex flex-col md:flex-row md:flex-wrap items-center justify-between text-primary gap-2">
         <LogoLink />
         <MediaLinks small={true} />
         <p className="mt-4 md:mt-0">&copy; 2024 Glass Gecko Games</p>

@@ -45,7 +45,7 @@ function MediaLinks() {
   ];
 
   return (
-    <div className="flex justify-center space-x-4">
+    <div className="flex justify-center space-x-2">
       {mediaLinks.map((link) => (
         <a
           key={link.name}

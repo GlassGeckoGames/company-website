@@ -91,17 +91,17 @@ function NewsCard({ news, isHeadline, animate = false }) {
           {news.category ? <span className="text-accent">{news.category}:</span> : ''}
           {" " + news.title}
         </h2>
-        <p className="text-sm text-primary">{news.description}</p>
-        <p className="text-sm text-primary">Date: {news.datePosted}</p>
+        <p className="text-sm text-primary py-1">{news.description}</p>
+        <p className="text-sm text-primary">{news.datePosted}</p>
         {news.externalLinks && (
-          <div className="mt-2 w-fit flex flex-wrap space-x-2">
+          <div className="mt-2 w-fit flex flex-wrap gap-2">
             {news.externalLinks.map((link, linkIndex) => (
               <div key={linkIndex} className="flex items-center">
                 <a href={link.url} className="block text-sm text-accent hover:text-accent-dark hover:underline">
                   {link.name}
                 </a>
                 {linkIndex < news.externalLinks.length - 1 && (
-                  <div className="h-4 border-l-2 border-primary mx-2"></div>
+                  <div className="h-4 border-l-2 border-primary mx-1 ml-2"></div>
                 )}
               </div>
             ))}
