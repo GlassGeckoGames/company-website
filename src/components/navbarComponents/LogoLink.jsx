@@ -24,12 +24,20 @@
  * @created 2024-07-10
  * @updated 2024-07-19
  */
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import ImageComponent from '../ImageComponent';
 import '../../styles/LogoLink.css';
 
 function LogoLink() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
     <Link to="/" className='logo-link flex gap-0 items-center text-primary'>
       <div 
@@ -46,7 +54,8 @@ function LogoLink() {
       </div>
       <h1 className="text-4xl text-nowrap titleFont underline-effect"> GLASS GECKO GAMES </h1>
     </Link>
-  )
+  );
 }
 
 export default LogoLink;
+
