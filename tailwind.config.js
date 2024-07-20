@@ -48,7 +48,7 @@
  * @see {@link https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js|Tailwind Default Configuration}
  * 
  * @created 2024-07-10
- * @updated 2024-07-11
+ * @updated 2024-07-19
  * 
  * 
  * 
@@ -67,11 +67,16 @@ module.exports = {
         primary: '#F5F5F5', // soft white
         'primary-dark': '#E0E0E0', // a darker shade of white
 
-        secondary: '#556B2F', // olive - match logo
-        "secondary-dark":'#455825', // darker shade of olive
+        secondary: '#000', // slightly less than black 
+        "secondary-dark":'#222', // black
         
-        accent: '#FF4500',  // burnt orange for button 
-        'accent-dark': '#E03E00', // darker shade for hover effect over the burnt orage
+        'accent-light': '#49DE80', // light green
+        accent: '#0DA244',  // green 
+        'accent-dark': '#008E30', // darker shade of green
+      },
+      blur: {
+        xs: '2px', // Custom blur value smaller than 'sm'
+        xxs: '1px', // Even smaller custom blur value
       },
       height: {
         '104': '26rem', // h-104, equivalent to 416px
@@ -109,13 +114,13 @@ module.exports = {
         'nunito': ['Nunito', 'sans-serif'],
         'chalkduster': ['Chalkduster', 'cursive'],
         'wingdings': ['Wingdings', 'cursive'], 
-        'mangold': ['Mangold', 'sans-serif'], // If available
-        'techead': ['Techead', 'sans-serif'], // If available
-        'sharung': ['Sharung', 'sans-serif'], // If available
-        'baddest': ['Baddest', 'sans-serif'], // If available
-        'mageri': ['Mageri', 'sans-serif'], // If available
-        'poppins': ['Poppins', 'sans-serif'], // Added Poppins font
-        'bebas-neue': ['Bebas Neue', 'sans-serif'], // Added Bebas Neue font
+        'mangold': ['Mangold', 'sans-serif'], 
+        'techead': ['Techead', 'sans-serif'],
+        'sharung': ['Sharung', 'sans-serif'],
+        'baddest': ['Baddest', 'sans-serif'],
+        'mageri': ['Mageri', 'sans-serif'], 
+        'poppins': ['Poppins', 'sans-serif'], 
+        'bebas-neue': ['Bebas Neue', 'sans-serif'],
 
       },
     },

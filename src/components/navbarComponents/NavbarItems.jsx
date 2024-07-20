@@ -26,15 +26,15 @@ import LinkItem from './LinkItem';
 
 const NavbarItems = ({ toggleMenu, textSize }) => {
   return (
-    <ul className={`text-primary ${textSize} space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
+    <ul className={`text-primary ${textSize} space-y-8 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
       <li>
         <LinkItem to="/" onClick={toggleMenu}>Home</LinkItem>
       </li>
       <li>
-        <LinkItem to="/about" onClick={toggleMenu}>About Us</LinkItem>
+        <LinkItem to="/news" onClick={toggleMenu}>News</LinkItem>
       </li>
       <li>
-        <LinkItem to="/news" onClick={toggleMenu}>News</LinkItem>
+        <LinkItem to="/about" onClick={toggleMenu}>About</LinkItem>
       </li>
       <li>
         <LinkItem to="/contact" onClick={toggleMenu}>Contact Us</LinkItem>

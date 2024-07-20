@@ -1,17 +1,3 @@
-/**
- * @file ProfileCard.css
- * @module ProfileCard
- * @desc CSS styles for the ProfileCard component.
- * This CSS code defines the styles for the ProfileCard component, which is used to display information about a team member.
- * It includes styles for the card layout, image, name, and other details.
- * 
- * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms|MDN CSS Transforms Documentation}
- * 
- * @author Chace Nielson
- * @created 2024-07-10
- * @updated 2024-07-12
- */
-
 /* ProfileCard.css */
 
 .flip-card {
@@ -24,7 +10,6 @@
   height: 0;
   padding-bottom: 100%;
   transition: transform 0.6s;
-  transition-delay: 0.05s; /* Add a delay of 0.3 seconds */
   transform-style: preserve-3d;
 }
 
@@ -41,4 +26,17 @@
 
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+/* Disable hover effect and enable click-to-flip on small screens */
+@media (max-width: 640px) {
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+  .flip-card-clickable {
+    cursor: pointer;
+  }
+  .flip-card-clickable.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
 }

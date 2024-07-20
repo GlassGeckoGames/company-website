@@ -10,7 +10,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-19
  */
 
 /**
@@ -32,6 +32,7 @@ export const aboutDescription = `We are a group of passionate individuals dedica
  * The image key is the filename of the image in the public folder under "teamPhotos".
  * descriptions are split into paragraphs by the array (up to a max of 2 paragraphs can be used).
  * blurHash is a placeholder image for the image that is used as a placeholder until the image is loaded
+ * can also add a link object with a description and URL to link to a portfolio or other page
  * 
  * when making additions to this component, ensure that the image is added to the public/teamPhotos folder and use the image name here
  * 
@@ -40,7 +41,7 @@ export const aboutDescription = `We are a group of passionate individuals dedica
 export const teamProfiles = [
   {
     name: 'Emmanuel Omari-Osei ',
-    role: 'Code',
+    role: 'Software Engineer',
     image: 'emmanuel.jpg',
     blurHash: 'qXLgOu-p~pkDIUxaM|WB^*R*xuRjR*aeayt7S#Rj9Gxtt6kCxtRj-pt7ofRjWCWBoeozt7M|IUt7t7jsazWBn%xaozWBs:a}R*kC',
     description: [
@@ -48,16 +49,6 @@ export const teamProfiles = [
       'I also enjoy playing games as much as I enjoy making them. 😁'
     ],
     link: { description: "My Portfolio", url: "https://github.com/E-man248/emmanuel.omariosei-Portfolio/" }
-  },
-  {
-    name: 'Toni',
-    role: 'Code',
-    image: 'toni.png',
-    blurHash: 'qABfX~J800-V_3rXM{OXoZwJJWOX,;SeWCsp00of~VIVE1%2s:WBtTbvwHsnOERkWVWA9tr?xvt7v}Egogr?Z%J7xZv~JU%2oJSg',
-    description: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
-    ]
   },
   {
     name: 'Heng Rui Xu',
@@ -71,75 +62,55 @@ export const teamProfiles = [
     link: { description: "My Portfolio", url: "https://serpexnessie.com/" }
   },
   {
-    name: 'Frank',
-    role: 'Role',
-    image: '',
-    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
-    description: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
-    ]
-  },
-  {
     name: 'Chace Nielson',
-    role: 'Software Developer',
+    role: 'Software Engineer',
     image: 'chace_nielson.jpg',
     blurHash: 'qEDcL6Vau5F1Io%2ixxF.AIpD*xaxaogbvR*BrI:-B$jxaNGNaX8Dj-UoeT0T0NGwJwd.8n$%gS$NIr?r=WCTKNGVss:aexabbSh',
     description: [
       "I'm a software engineer with a inclination for web development and game design.",
-      "In my free time, I enjoy playing backpacking, hiking, and playing guitar."
+      "In my free time, I enjoy playing backpacking, climbing, snowboarding, and playing guitar."
     ],
     link: { description: "My Portfolio", url: "https://chacenielson.com" }
   },
+
+
+
+  // fake placeholder data for temp
   {
-    name: 'Kelly',
-    role: 'Art',
-    image: '',
-    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
+    name: 'Place Holder 1',
+    role: 'Role 1',
+    image: 'default.png',
+    blurHash: 'L5H2EC-:00WB~VadM{Rj0KkCj[j[',
     description: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
-    ]
+      "Description 1 a little bit longer",
+      "Description 2 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    link: { description: "Glass Gecko Games", url: "/" }
   },
+
   {
-    name: 'Michael',
-    role: 'Role',
-    image: '',
-    blurHash: 'qIIF6Z%QWagZ5jRD-UsD=j%4k=yCKOxv-VnmG*xY%znXkEx@RkR*VhyTwdD-n%XMI:tQ%2wzMyNr%LoOo#xuTBv-W?pEtQIWoKo1',
+    name: 'Place Holder 2',
+    role: 'Role 1',
+    image: 'default.png',
+    blurHash: 'L5H2EC-:00WB~VadM{Rj0KkCj[j[',
     description: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
-    ]
+      "Description 1 a little bit longer",
+      "Description 2 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    link: { description: "Glass Gecko Games", url: "/" }
   },
+
   {
-    name: 'Mason',
-    role: 'Role',
-    image: '',
-    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
+    name: 'Place Holder 3',
+    role: 'Role 1',
+    image: 'default.png',
+    blurHash: 'L5H2EC-:00WB~VadM{Rj0KkCj[j[',
     description: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
-    ]
+      "Description 1 a little bit longer",
+      "Description 2 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    ],
+    link: { description: "Glass Gecko Games", url: "/" }
   },
-  {
-    name: 'Theo',
-    role: 'Role',
-    image: '',
-    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
-    description: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
-    ]
-  },
-  {
-    name: 'Joshua',
-    role: 'Role',
-    image: '',
-    blurHash: 'q%O:@Sj[~qj[IUj[t7j[%Mj[offQM{fQWBfQt7fQIUayxuj[j[fQt7fQWBfQj[fQoffQ-;fQM{j[WBayj[fQIUayj[j[xufQWBfQ',
-    description: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      'Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio.'
-    ]
-  }
+ 
 ];
 

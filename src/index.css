@@ -7,7 +7,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-19
  */
 @tailwind base;
 @tailwind components;
@@ -20,11 +20,13 @@
 
 
 /* fonts */
-body{
-  @apply font-poppins
+body {
+  font-family: 'Poppins', sans-serif;
 }
+
 .titleFont {
-  @apply font-bebas-neue;
+  font-family: 'Bebas Neue', 'Impact', 'Arial', sans-serif;
+  text-transform: uppercase; /* Ensures all text is uppercase */
 }
  
 /* general body */
@@ -32,7 +34,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-primary;
+  @apply bg-secondary;
 
 }
 

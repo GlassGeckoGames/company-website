@@ -41,7 +41,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-11
- * @updated 2024-07-14
+ * @updated 2024-07-19
  */
 import React, { useRef, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
@@ -87,18 +87,23 @@ function NewsCard({ news, isHeadline, animate = false }) {
         />
       </div>
       <div className="p-4">
-        <h2 className={`text-xl font-bold ${isHeadline ? 'text-2xl' : ''}`}>
-          {news.category ? <span className="text-secondary">{news.category}:</span> : ''}
+        <h2 className={`text-xl font-bold text-primary  ${isHeadline ? 'text-2xl' : ''}`}>
+          {news.category ? <span className="text-accent">{news.category}:</span> : ''}
           {" " + news.title}
         </h2>
-        <p className="text-sm">{news.description}</p>
-        <p className="text-sm">Date: {news.datePosted}</p>
+        <p className="text-sm text-primary">{news.description}</p>
+        <p className="text-sm text-primary">Date: {news.datePosted}</p>
         {news.externalLinks && (
-          <div className="mt-2 w-fit">
+          <div className="mt-2 w-fit flex flex-wrap space-x-2">
             {news.externalLinks.map((link, linkIndex) => (
-              <a key={linkIndex} href={link.url} className="block text-sm text-accent hover:text-accent-dark hover:underline">
-                {link.name}
-              </a>
+              <div key={linkIndex} className="flex items-center">
+                <a href={link.url} className="block text-sm text-accent hover:text-accent-dark hover:underline">
+                  {link.name}
+                </a>
+                {linkIndex < news.externalLinks.length - 1 && (
+                  <div className="h-4 border-l-2 border-primary mx-2"></div>
+                )}
+              </div>
             ))}
           </div>
         )}

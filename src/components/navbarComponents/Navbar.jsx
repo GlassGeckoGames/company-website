@@ -21,7 +21,6 @@
  * @created 2024-07-10
  * @updated 2024-07-10
  */
-
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import LogoLink from './LogoLink';
@@ -43,7 +42,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary p-2 ">
+    <nav className="bg-secondary bg-opacity-20 p-2 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <LogoLink />
 
@@ -56,7 +55,7 @@ function Navbar() {
         </button>
 
         {isHamburgerNavOpen && (
-          <div className={`fixed md:hidden top-0 left-0 z-40 w-full h-full bg-secondary bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
+          <div className={`fixed md:hidden top-0 left-0 z-40 w-full h-full bg-secondary bg-opacity-85 flex  justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
             <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
           </div>
         )}

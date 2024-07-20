@@ -30,20 +30,20 @@ import ImageComponent from '../ImageComponent';
 
 function LogoLink() {
   return (
-    <Link to="/" className='flex gap-2 items-center text-primary'>
+    <Link to="/" className='flex gap-0 items-center text-primary'>
       <div 
         className="max-w-12 max-h-12 min-md:max-w-16 md:max-h-16 w-full h-full flex-shrink-0" 
         style={{ width: '48px', height: '48px' }} // Set a constant height and width for the logo container
       >
         <ImageComponent 
           className="w-full h-full object-contain" 
-          src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
+          src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Logo_with_Cut.png'} 
           alt="Logo" 
           style={{ visibility: 'hidden' }} // Hide the image if it's not loaded yet
-          lowResSrc={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear_small.png'} 
+          lowResSrc={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Logo_with_Cut_small.png'} 
         />
       </div>
-      <h1 className="text-xl text-nowrap">GLASS GECKO GAMES</h1>
+      <h1 className="text-4xl text-nowrap titleFont">GLASS GECKO GAMES</h1>
     </Link>
   )
 }

@@ -19,7 +19,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-15
+ * @updated 2024-07-19
  */
 
 import React from 'react';
@@ -30,40 +30,33 @@ import { teamProfiles, aboutTitle, aboutDescription } from '../data/aboutPageDat
 
 function About() {
 
-  const positionOfTextBox = 5; // determines the position of the text box in the grid formation in the large view 
-  // usually this will be 1 or 5 to stay in the center
+  // the position of the page about text section - will depend on the number of team members
+  const aboutTextPos = 5; 
 
-  return (
-    <div className="mx-auto container">
-      <div className="grid lg:grid-cols-4 gap-2 py-2">
-        {teamProfiles.slice(0, positionOfTextBox).map((member, index) => (
-          <ProfileCard
-            key={index}
-            name={member.name}
-            role={member.role}
-            image={member.image}
-            description={member.description}
-            blurHash={member.blurHash}
-            link={member.link}
-          />
-        ))}
-
+  return(
+    <div className="mx-auto container px-2">
+      {/* section for small screen hidden at large scren */}
+      <div className='lg:hidden'>
         <AboutPageText aboutTitle={aboutTitle} aboutDescription={aboutDescription} />
+      </div>
 
-        {teamProfiles.slice(positionOfTextBox).map((member, index) => (
-          <ProfileCard
-            key={index + positionOfTextBox} // ensure unique keys
-            name={member.name}
-            role={member.role}
-            image={member.image}
-            description={member.description}
-            blurHash={member.blurHash}
-            link={member.link}
-          />
+      <div className='grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        {teamProfiles.map((member, index) => (
+          <>
+            {index === aboutTextPos && ( // display the about text in the middle of the page depending on the abouTextPos
+              <div className='hidden lg:inline col-span-2'>
+                <AboutPageText aboutTitle={aboutTitle} aboutDescription={aboutDescription} />
+              </div>            
+            )}
+            <ProfileCard
+              key={index}
+              person={member}
+            />
+          </>
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default About;
