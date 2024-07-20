@@ -139,7 +139,7 @@ function Contact() {
     <div className="container mx-auto p-4 flex flex-col lg:flex-row gap-10">
       <Toaster />
       <div className="w-full">
-        <h1 className="text-3xl font-bold text-accent titleFont">Contact Us</h1>
+        <h1 className="text-3xl font-bold text-accent titleFont">Chat with Us</h1>
         <p className="mt-4 text-primary">Send us an email at <a href="mailto:glassgeckogames@gmail.com" className="text-accent">glassgeckogames@gmail.com</a></p>
         <form onSubmit={handleSubmit} className="mt-4 space-y-6">
           <div>
@@ -179,7 +179,7 @@ function Contact() {
             />
           </div>
           <div className='w-full flex justify-start'>
-            <Button type="accent" buttonType="submit">Submit Message</Button>
+            <Button type="accent" buttonType="submit">Send Message</Button>
           </div>
           <p className="mt-4 text-primary">{contactBlurb}</p>
         </form>
