@@ -40,7 +40,7 @@ function LogoLink() {
           src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Logo_with_Cut.png'} 
           alt="Logo" 
           style={{ visibility: 'hidden' }} // Hide the image if it's not loaded yet
-          lowResSrc={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear_small.png'} 
+          lowResSrc={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Logo_with_Cut_small.png'} 
         />
       </div>
       <h1 className="text-4xl text-nowrap titleFont">GLASS GECKO GAMES</h1>
