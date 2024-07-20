@@ -20,11 +20,13 @@
 
 
 /* fonts */
-body{
-  @apply font-poppins
+body {
+  font-family: 'Poppins', sans-serif;
 }
+
 .titleFont {
-  @apply font-bebas-neue;
+  font-family: 'Bebas Neue', 'Impact', 'Arial', sans-serif;
+  text-transform: uppercase; /* Ensures all text is uppercase */
 }
  
 /* general body */

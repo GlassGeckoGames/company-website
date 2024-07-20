@@ -30,7 +30,7 @@ import ImageComponent from '../ImageComponent';
 
 function LogoLink() {
   return (
-    <Link to="/" className='flex gap-1 items-center text-primary'>
+    <Link to="/" className='flex gap-0 items-center text-primary'>
       <div 
         className="max-w-12 max-h-12 min-md:max-w-16 md:max-h-16 w-full h-full flex-shrink-0" 
         style={{ width: '48px', height: '48px' }} // Set a constant height and width for the logo container
