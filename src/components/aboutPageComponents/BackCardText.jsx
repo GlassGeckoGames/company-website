@@ -12,22 +12,22 @@
  * @returns {JSX.Element} The rendered BackCardText component.
  * 
  * @created 2024-07-14
- * @updated 2024-07-14
+ * @updated 2024-07-19
  */
 import React from 'react';
 
 function BackCardText({ description, link }) {
   return (
-    <div className="flip-card-back absolute inset-0 flex flex-col justify-center items-center bg-secondary text-black p-0.5 sm:p-1 md:p-2 overflow-auto transform rotate-y-180 border-2 border-primary rounded-lg shadow-lg">
-      <div className="text-xs sm:text-sm md:text-lg lg:text-base xl:text-lg text-primary space-y-2 ">
+    <div className="flip-card-back absolute inset-0  bg-secondary text-black overflow-auto transform rotate-y-180 border-2 border-primary rounded-lg shadow-lg">
+      <div className="text-lg sm:text-base md:text-sm xl:text-base text-primary space-y-2 p-6 md:p-4 lg:p-2 ">
         {description[0] && (
-          <p className="py-0.5 text-center font-semibold text-primary-light">{description[0]}</p>
+          <p className="pt-0.5 text-left font-semibold text-primary-light">{description[0]}</p>
         )}
         {description[1] && (
-          <p className="py-1.5 text-center text-primary-dark">{description[1]}</p>
+          <p className="py-0.5 text-left text-primary-dark">{description[1]}</p>
         )}
         {link && (
-          <div className='text-center'>
+          <div className='text-left'>
             <a
               href={link.url}
               className="text-accent hover:text-accent-dark hover:underline"

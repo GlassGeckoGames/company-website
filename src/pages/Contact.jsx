@@ -139,7 +139,7 @@ function Contact() {
     <div className="container mx-auto p-4 flex flex-col lg:flex-row gap-10">
       <Toaster />
       <div className="w-full">
-        <h1 className="text-3xl font-bold text-accent titleFont">Chat with Us</h1>
+        <h1 className="text-3xl font-bold text-accent titleFont">Connect with Us</h1>
         <p className="mt-4 text-primary">Send us an email at <a href="mailto:glassgeckogames@gmail.com" className="text-accent">glassgeckogames@gmail.com</a></p>
         <form onSubmit={handleSubmit} className="mt-4 space-y-6">
           <div>

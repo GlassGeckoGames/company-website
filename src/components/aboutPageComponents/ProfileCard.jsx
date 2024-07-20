@@ -29,9 +29,16 @@ import '../../styles/ProfileCard.css'; // Import the CSS file for 3D flip animat
 import ImageComponent from '../ImageComponent';
 import BackCardText from './BackCardText';
 
-function ProfileCard({ name, role, image, description, link, blurHash }) {
+function ProfileCard({ person }) {
   // Set the default image path
   const defaultImage = process.env.PUBLIC_URL + '/teamPhotos/default.png';
+
+  const name = person.name
+  const role = person.role
+  const image = person.image
+  const description = person.description
+  const blurHash = person.blurHash
+  const link = person.link
 
   // Handler to set default image if the provided image doesn't exist
   const handleImageError = (e) => {
