@@ -25,7 +25,7 @@
  * The title to be displayed on the homepage.
  * @type {string}
  */
-export const title = "Welcome to Glass Gecko Games";
+export const title = <div>Welcome to <span className="text-green-400">Glass Gecko Games</span></div>
 
 /**
  * The description to be displayed on the homepage.
