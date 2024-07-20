@@ -73,6 +73,10 @@ module.exports = {
         accent: '#556B2F',  // Olive 
         'accent-dark': '#455825', // darker shade of olive
       },
+      blur: {
+        xs: '2px', // Custom blur value smaller than 'sm'
+        xxs: '1px', // Even smaller custom blur value
+      },
       height: {
         '104': '26rem', // h-104, equivalent to 416px
         '112': '28rem', // h-112, equivalent to 448px

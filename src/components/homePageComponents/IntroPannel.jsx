@@ -56,6 +56,7 @@ function IntroPannel() {
         className="w-full h-full object-cover pointer-events-none"
         src={videoData.src}
         blurHash={videoData.blurHash}
+        useBlurFade={true}
       />
 
       {/* Image overlay */}
