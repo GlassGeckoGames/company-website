@@ -70,9 +70,9 @@ module.exports = {
         secondary: '#000', // slightly less than black 
         "secondary-dark":'#222', // black
         
-        accent: '#556B2F',  // Olive 
-        'accent-dark': '#455825', // darker shade of olive
         'accent-light': '#49DE80', // light green
+        accent: '#0DA244',  // green 
+        'accent-dark': '#008E30', // darker shade of green
       },
       blur: {
         xs: '2px', // Custom blur value smaller than 'sm'
