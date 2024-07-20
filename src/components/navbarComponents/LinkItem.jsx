@@ -37,7 +37,7 @@ const LinkItem = ({ to, children, onClick }) => {
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `${isActive ? 'bg-primary text-secondary bg-opacity-90' : 
+        `${isActive ? 'bg-primary text-secondary bg-opacity-70 shadow-inner shadow-secondary' : 
         'hover:text-accent bg-secondary text-primary bg-opacity-30 duration-300'
         } 
          px-4 py-2 transition-all rounded-3xl shadow-inner shadow-primary`

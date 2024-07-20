@@ -31,10 +31,10 @@ const NavbarItems = ({ toggleMenu, textSize }) => {
         <LinkItem to="/" onClick={toggleMenu}>Home</LinkItem>
       </li>
       <li>
-        <LinkItem to="/about" onClick={toggleMenu}>About Us</LinkItem>
+        <LinkItem to="/news" onClick={toggleMenu}>News</LinkItem>
       </li>
       <li>
-        <LinkItem to="/news" onClick={toggleMenu}>News</LinkItem>
+        <LinkItem to="/about" onClick={toggleMenu}>About Us</LinkItem>
       </li>
       <li>
         <LinkItem to="/contact" onClick={toggleMenu}>Contact Us</LinkItem>
