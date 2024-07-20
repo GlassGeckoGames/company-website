@@ -61,6 +61,7 @@ function IntroPannel() {
       {/* Image overlay */}
       <img 
         src={process.env.PUBLIC_URL + '/art/LCD_background_1.png'} 
+        alt=''
         className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none opacity-15"
         style={{ visibility: 'hidden' }} // Initially hide the image
         onLoad={(e) => e.target.style.visibility = 'visible'} // Make it visible once it's loaded
