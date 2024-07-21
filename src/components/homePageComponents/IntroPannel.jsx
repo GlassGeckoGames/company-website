@@ -24,9 +24,8 @@
  * @created 2024-07-10
  * @updated 2024-07-19
  */
-
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { title, description, videoData } from '../../data/homePageData';
 import VideoComponent from '../VideoComponent';
 import ScrollWheel from './ScrollWheel';
@@ -35,6 +34,8 @@ function IntroPannel() {
   const ref = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
   const inView = useInView(ref, { triggerOnce: true });
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, 50]);
 
   useEffect(() => {
     if (inView && !hasAnimated) {
@@ -42,7 +43,6 @@ function IntroPannel() {
     }
   }, [inView, hasAnimated]);
 
-  // Animation variants for the slide-in effect
   const slideInLeft = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 } }
@@ -50,8 +50,6 @@ function IntroPannel() {
 
   return (
     <div className="home-page-container h-screen" ref={ref}>
-
-      {/* Video background */}
       <VideoComponent
         className="w-full h-full object-cover pointer-events-none"
         src={videoData.src}
@@ -59,7 +57,6 @@ function IntroPannel() {
         useBlurFade={true}
       />
 
-      {/* Image overlay */}
       <img 
         src={process.env.PUBLIC_URL + '/art/LCD_background_1.png'} 
         alt=''
@@ -70,7 +67,7 @@ function IntroPannel() {
 
       <ScrollWheel />
 
-      <div className="home-page-box">
+      <motion.div className="home-page-box" style={{ y }}>
         <motion.h1
           className="home-page-title"
           initial="hidden"
@@ -87,7 +84,7 @@ function IntroPannel() {
         >
           {description}
         </motion.p>
-      </div>
+      </motion.div>
     </div>
   );
 }
