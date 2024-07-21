@@ -43,13 +43,14 @@ function ScrollWheel() {
   };
 
   return (
-    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-10 opacity-40 ">
+    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-10">
       <motion.div className="mb-4" {...bounceProps}>
         <ScrollLink
-          className="hover:cursor-pointer"
+          className="hover:cursor-pointer opacity-40 hover:opacity-80 "
           to="0" // ID of the target element
           spy={true}
           smooth={true}
+          offset={-70}
           duration={1000} // Duration of the scroll in milliseconds
         >
           <ImageComponent

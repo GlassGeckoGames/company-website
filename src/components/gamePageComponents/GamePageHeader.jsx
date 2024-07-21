@@ -44,9 +44,9 @@ function GamePageHeader({ game }) {
 
   return (
     <div className='mb-6'>
-      <h1 className="text-4xl font-bold text-secondary mb-4 titleFont">{game.title}</h1>
+      <h1 className="text-4xl font-bold text-accent mb-4 titleFont">{game.title}</h1>
       <div className="mb-4">
-        <p className="text-lg text-black mb-2">{game.description}</p>
+        <p className="text-lg mb-2">{game.description}</p>
         {game.playLink && game.playLink.url && (
           <Button onClickFunc={handleClick} type="accent" as="a" href={game.playLink.url}>
             {game.playLink.name}

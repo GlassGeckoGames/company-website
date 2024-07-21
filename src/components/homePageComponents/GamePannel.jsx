@@ -68,7 +68,7 @@ function GamePannel({ game, index}) {
   // Animation variants for the slide-in effect with delay
   const slideInLeft = {
     hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 } }
+    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.5 } }
   };
 
   // Set hasAnimated to true when the elements come into view
