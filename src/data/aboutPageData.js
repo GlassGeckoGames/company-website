@@ -39,7 +39,7 @@ export const aboutDescription = `We are a group of passionate individuals dedica
  * @type {Array<Object>}
  */
 export const teamProfiles = [
-  {
+  { // Emmanuel Omari-Osei
     name: 'Emmanuel Omari-Osei ',
     role: 'Software Engineer',
     image: 'emmanuel.jpg',
@@ -50,7 +50,7 @@ export const teamProfiles = [
     ],
     link: { description: "My Portfolio", url: "https://github.com/E-man248/emmanuel.omariosei-Portfolio/" }
   },
-  {
+  { // Heng Rui Xu
     name: 'Heng Rui Xu',
     role: 'Art and Design',
     image: 'Serpexnessie-Profile-Picture-Brand-2.png',
@@ -61,56 +61,41 @@ export const teamProfiles = [
     ],
     link: { description: "My Portfolio", url: "https://serpexnessie.com/" }
   },
-  {
+  { // Toni Osho
+    name: 'Toni Osho',
+    role: 'Coding, Marketing, Sound',
+    description: [
+      "I am a programmer, sound designer and music producer.",
+      "Funnily enough, I love to do all three with any free time I have."   
+     ],
+  },
+  { // Kelly Sun
+    name: 'Kelly Sun',
+    role: 'Art',
+    image: 'Kelly-photo.png',
+    blurHash: 'L4D+Pj.70000xx9ZIS}[00S2^*tQ',
+    description: [
+      "Hi! I'm Kelly. I am a 2D artist deeply passionate about video games, specializing in fantasy and anime style concept art and illustration."
+    ],
+    link: { description: "My Portfolio", url: "https://pepocandii26.wixsite.com/pepocandiiart" }
+  },
+  { // Chace Nielson
     name: 'Chace Nielson',
     role: 'Software Engineer',
     image: 'chace_nielson.jpg',
     blurHash: 'qEDcL6Vau5F1Io%2ixxF.AIpD*xaxaogbvR*BrI:-B$jxaNGNaX8Dj-UoeT0T0NGwJwd.8n$%gS$NIr?r=WCTKNGVss:aexabbSh',
     description: [
-      "I'm a software engineer with a inclination for web development and game design.",
-      "In my free time, I enjoy playing backpacking, climbing, snowboarding, and playing guitar."
+      "I'm a software engineer with a passion for web development and game design.",
+      "When I'm not coding you'll find me in the mountains backpacking, climbing or snowboarding."
     ],
     link: { description: "My Portfolio", url: "https://chacenielson.com" }
   },
-
-
-
-  // fake placeholder data for temp
-  {
-    name: 'Place Holder 1',
-    role: 'Role 1',
-    image: 'default.png',
-    blurHash: 'L5H2EC-:00WB~VadM{Rj0KkCj[j[',
+  { // Mason Bernard
+    name: 'Mason Bernard',
+    role: 'Game Design',
     description: [
-      "Description 1 a little bit longer",
-      "Description 2 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "Carpenter by day, game breaker by night "
     ],
-    link: { description: "Glass Gecko Games", url: "/" }
   },
-
-  {
-    name: 'Place Holder 2',
-    role: 'Role 1',
-    image: 'default.png',
-    blurHash: 'L5H2EC-:00WB~VadM{Rj0KkCj[j[',
-    description: [
-      "Description 1 a little bit longer",
-      "Description 2 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    ],
-    link: { description: "Glass Gecko Games", url: "/" }
-  },
-
-  {
-    name: 'Place Holder 3',
-    role: 'Role 1',
-    image: 'default.png',
-    blurHash: 'L5H2EC-:00WB~VadM{Rj0KkCj[j[',
-    description: [
-      "Description 1 a little bit longer",
-      "Description 2 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    ],
-    link: { description: "Glass Gecko Games", url: "/" }
-  },
- 
 ];
 
