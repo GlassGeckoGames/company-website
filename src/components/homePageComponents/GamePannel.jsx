@@ -30,13 +30,12 @@
  * <GamePannel game={{ name: 'Game Name', id: 'game-id', img: 'image.jpg', description: 'Game Description', link: 'https://example.com' }} />
  * 
  * @created 2024-07-10
- * @updated 2024-07-19
+ * @updated 2024-07-23
  */
-
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Button from '../Button';
-import { recordGAEvent } from '../../analytics';
+import { recordGAEvent } from '../../googleAnalytics/analytics';
 import ImageComponent from '../ImageComponent';
 
 /**
@@ -52,7 +51,7 @@ import ImageComponent from '../ImageComponent';
  * 
  * @returns {JSX.Element} The game panel component.
  */
-function GamePannel({ game, index}) {
+function GamePannel({ game, index }) {
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
   const buttonsRef = useRef(null);
@@ -84,11 +83,19 @@ function GamePannel({ game, index}) {
 
   // Google Analytics event tracking for buttons
   const handleFindOutClick = () => {
-    recordGAEvent("Clicked 'Find Out' for " + game.title);
+    recordGAEvent({ 
+      category: 'Button', 
+      action: 'Click', 
+      label: `Find Out - ${game.title}` 
+    });
   };
 
   const handlePlayNowClick = () => {
-    recordGAEvent("Clicked 'Play Now' for " + game.title);
+    recordGAEvent({ 
+      category: 'Button', 
+      action: 'Click', 
+      label: `Play Now - ${game.title}` 
+    });
   };
 
   return (

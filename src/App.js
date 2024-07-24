@@ -33,13 +33,13 @@
  * <App />
  * 
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2024-07-23
  * 
  * @function
  * Initializes EmailJS with the user ID from environment variables.
  */
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -49,10 +49,18 @@ import GamePage from './pages/GamePage';
 import Navbar from './components/navbarComponents/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import TailwindBreakPoints from './testingComponents/TailwindBreakPoints'; // only for development
-import { initializeGA, recordGAPage } from "./analytics";
+
+// only for development
+import TailwindBreakPoints from './testingComponents/TailwindBreakPoints'; 
+
+// email js and google analytics compo
+import { initializeGA } from "./googleAnalytics/analytics";
+import AnalyticsTracker from './googleAnalytics/AnalyticsTracker';
 import emailjs from 'emailjs-com';
+
+// animation libary
 import { AnimatePresence, motion } from 'framer-motion';
+
 
 import './styles/ScrollBar.css'
 
@@ -68,22 +76,6 @@ const routeVariants = {
   final: { opacity: 1, transition: { duration: 0.5 } },
   exit: { opacity: 0, transition: { duration: 0.5 } }
 };
-
-// Component to track page views when the page changes after the first page load
-function AnalyticsTracker() {
-  const location = useLocation();
-  const isFirstLoad = useRef(true);
-
-  useEffect(() => {
-    if (isFirstLoad.current) {
-      isFirstLoad.current = false;
-    } else {
-      recordGAPage(location.pathname + location.search);
-    }
-  }, [location]);
-
-  return null;
-}
 
 // LocationProvider Component to wrap children with AnimatePresence
 function LocationProvider({ children }) {
@@ -124,6 +116,7 @@ function App() {
   return (
     <Router>
       <AnalyticsTracker />
+      <TailwindBreakPoints />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <ScrollToTop />
@@ -133,7 +126,6 @@ function App() {
           </LocationProvider>
         </div>
         <Footer />
-        <TailwindBreakPoints />
       </div>
     </Router>
   );

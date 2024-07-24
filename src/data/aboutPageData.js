@@ -10,7 +10,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-19
+ * @updated 2024-07-23
  */
 
 /**
@@ -52,12 +52,12 @@ export const teamProfiles = [
   },
   { // Heng Rui Xu
     name: 'Heng Rui Xu',
-    role: 'Art and Design',
+    role: 'Art and Game Design',
     image: 'Serpexnessie-Profile-Picture-Brand-2.png',
     blurHash: 'LRQk4^V[_Kt6vxoLxFay%Ks:RRWB',
     description: [
-      "I am a 2D digital illustrator with a passion for games and anime.",
-      "I also enjoy storytelling and game design!"
+      "I am a 2D digital illustrator and I love me some vidya games.",
+      "Some things I enjoy includes D&D, storytelling and game design. On the side, I occasionally make youtube videos. Also, I am (was) diamond in league."
     ],
     link: { description: "My Portfolio", url: "https://serpexnessie.com/" }
   },

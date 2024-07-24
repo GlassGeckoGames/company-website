@@ -25,10 +25,10 @@
  * <GamePage />
  * 
  * @created 2024-07-12
- * @updated 2024-07-12
+ * @updated 2024-07-23
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 
 import GamePageHeader from '../components/gamePageComponents/GamePageHeader';
@@ -41,13 +41,24 @@ import GameFeatures from '../components/gamePageComponents/GameFeatures';
 import GameRequirements from '../components/gamePageComponents/GameRequirements';
 import GameTrailer from '../components/gamePageComponents/GameTrailer';
 import GameReviews from '../components/gamePageComponents/GameReviews';
+import { useNavigate } from 'react-router-dom'; // Import useHistory from react-router-dom
 
 function GamePage() {
+  const navigate = useNavigate();
+
   const { gameId } = useParams();
   const game = games.find(g => g.id === gameId);
+  
+  // make sure the game exists and if not redirect to home
+  useEffect(() => {
+    if (!game) {
+      navigate('/');
+    }
+  }, [game, navigate]);
 
+  // prevent the html from rendering at all while waiting for the game to be found in the useEffect
   if (!game) {
-    return <div className="game-page">Game not found.</div>;
+    return null;
   }
 
   return (

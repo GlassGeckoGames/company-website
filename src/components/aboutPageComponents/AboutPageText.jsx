@@ -26,13 +26,13 @@
  * <AboutPageText aboutTitle="About Us" aboutDescription="This is the about section description." />
  * 
  * @created 2024-07-10
- * @updated 2024-07-19
+ * @updated 2024-07-23
  */
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../Button';
-import { recordGAEvent } from '../../analytics';
+import { recordGAEvent } from '../../googleAnalytics/analytics';
 
 /**
  * A functional React component that renders the text section for the About page.
@@ -48,7 +48,7 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
 
   //Handles the click event for the "Learn More" button.
   const handleClick = () => {
-    recordGAEvent('Click learn more on About Page');
+    recordGAEvent({ category: 'Button', action: 'Click', label: 'Connect With Us - About Page' });
   };
 
   // Animation variants for the title and description

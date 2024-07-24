@@ -31,15 +31,18 @@
  * @created 2024-07-12
  * @updated 2024-07-12
  */
-
 import React from 'react';
 import Button from '../Button';
-import { recordGAEvent } from '../../analytics';
+import { recordGAEvent } from '../../googleAnalytics/analytics';
 
 function GamePageHeader({ game }) {
 
   const handleClick = () => {
-    recordGAEvent(`Clicked Steam Link for ${game.title}`);
+    recordGAEvent({ 
+      category: 'Link', 
+      action: 'Click', 
+      label: `Play Game - ${game.title}` 
+    });
   };
 
   return (
@@ -58,3 +61,4 @@ function GamePageHeader({ game }) {
 }
 
 export default GamePageHeader;
+

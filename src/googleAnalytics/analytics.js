@@ -30,14 +30,21 @@
 
 import ReactGA from 'react-ga4';
 
-// the tracking ID value for Google Analytics
+// get info from .env file
 const TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
 /**
  * Initialization function for Google Analytics
  */
 export function initializeGA() {
+  try {
+    if (!TRACKING_ID) {
+      throw new Error('Google Analytics tracking ID is not set');
+    }
     ReactGA.initialize(TRACKING_ID);
+  } catch (error) {
+    console.error('Google Analytics initialization failed:', error.message);
+  }
 }
 
 /**
@@ -58,15 +65,17 @@ export function recordGAPage(path) {
  * @param {number} [value] - The value associated with the event.
  * @param {Object} [additionalParams] - Additional parameters to be included with the event.
  */
-export function recordGAEvent( name ) {
+export function recordGAEvent({ category, action, label, value, ...additionalParams }) {
   if (typeof category !== 'string' || typeof action !== 'string') {
-      console.error('Category and action must be strings');
-      return;
+    console.error('Category and action must be strings');
+    return;
   }
 
   ReactGA.event({
-    category: name,
-    action: name,
-    label: name,
+    category,
+    action,
+    label,
+    value,
+    ...additionalParams,
   });
 }
