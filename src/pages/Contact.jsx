@@ -53,11 +53,13 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // check if the emailjs configuration is set up correctly
     if (!EMAILJS_USER_ID || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
       toast.error('EmailJS configuration is missing or incorrect.');
       return;
     }
 
+    // create the email template parameters
     const templateParams = {
       from_name: name,
       from_email: email,
@@ -65,6 +67,7 @@ function Contact() {
       reply_to: email
     };
 
+    // use emailjs to send the email
     emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
@@ -101,9 +104,9 @@ function Contact() {
   };
 
   return (
-    <div className="container mx-auto p-4 flex flex-col lg:flex-row gap-10">
+    <div className="container mx-auto p-2 flex flex-col lg:flex-row gap-2 lg:gap-6">
       <Toaster />
-      <div className="w-full">
+      <div className="w-full bg-secondary p-2 bg-opacity-80 rounded-xl">
         <h1 className="text-3xl font-bold text-accent titleFont">Connect with Us</h1>
         <p className="mt-4 text-primary">Send us an email at <a href="mailto:glassgeckogames@gmail.com" className="text-accent">glassgeckogames@gmail.com</a></p>
         <form onSubmit={handleSubmit} className="mt-4 space-y-6">

@@ -34,9 +34,9 @@ function About() {
   const aboutTextPos = 5; 
 
   return(
-    <div className="mx-auto container px-2">
+    <div className="mx-auto container p-2">
       {/* section for small screen hidden at large scren */}
-      <div className='lg:hidden'>
+      <div className='lg:hidden pb-2'>
         <AboutPageText aboutTitle={aboutTitle} aboutDescription={aboutDescription} />
       </div>
 

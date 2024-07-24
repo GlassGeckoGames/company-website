@@ -86,7 +86,7 @@ function NewsCard({ news, isHeadline, animate = false }) {
           blurHash={news.blurHash}
         />
       </div>
-      <div className="p-4">
+      <div className="p-4 bg-secondary">
         <h2 className={`text-xl font-bold text-primary  ${isHeadline ? 'text-2xl' : ''}`}>
           {news.category ? <span className="text-accent">{news.category}:</span> : ''}
           {" " + news.title}
