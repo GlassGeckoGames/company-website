@@ -85,12 +85,12 @@ export const games = [
   },
   { // I am a Monster Saving the Princess I Captured While Trying Not to Let My Boss Dragon Notice Because They Are Unpleasant
     id:'iamamonstersavingtheprincessicapturedwhiletryingnottoletmybossdragonnnoticebecausetheyareunpleasant', // for routing !!!!
-    title: 'I am a Monster Saving the Princess I Captured While Trying Not to Let My Boss Dragon Notice Because They Are Unpleasant',
+    title: 'Monsters Saving the Princess',
     
     // info for the pannel on the home page
     pannelImg: "princessGameBackdrop.png",
     pannelBlurHash: "qAEe*{IBDk~Bsq?aofM{owD*4:tQM{Ipt7n%0fkC_2tlR*IUt7of$%r?w]xaIVxat7S2xaWYV[WBWXs.s:RjI;E1ozSeM|xaM|WC",
-    pannelDescription: 'A puzzle game about role reversal',
+    pannelDescription: 'A role reversing puzzle game',
    
     // info for the main page
     description: 'In this whimsical adventure, you play as a misunderstood monster who has captured a princess, only to decide to save her from the clutches of your unpleasant boss dragon. Navigate through humorous challenges and puzzles as you try to rescue the princess without drawing the ire of the dragon.',
