@@ -54,7 +54,7 @@
 export const newsItems = [
   {
     title: 'Zeitghast',
-    description: 'We are pleased to announce the release of Zeitghast, a new game that will take you on an adventure through time.',
+    description: 'We are pleased to announce the release of Zeitghast, a new game that will take you on an adventure through prehistoric time.',
     image: 'zeitghastRelease.png',
     blurHash: 'q8E:x+2~*q4m4TMcKlreI88wrVQ,?]Tbn9ks3[zNIjv..7x@r#SvX-Q^yWN|ggRhQ:rrk;%4Z}HrtQX-M}NHKHjJxvnRnNf#sFSd',
     category: 'Release',
