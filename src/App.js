@@ -121,7 +121,6 @@ function App() {
         className="flex flex-col min-h-screen"
         src={process.env.PUBLIC_URL + "/art/rainforest-bg.png"}
         lowResSrc={process.env.PUBLIC_URL + "/art/rainforest-bg-small.png"}
-        backgroundAttachment="scroll"
         scale={1}
         bgOpacity={60}
       >
