@@ -65,7 +65,7 @@ export const teamProfiles = [
     name: 'Toni Osho',
     role: 'Coding, Marketing, Sound',
     image: 'toni.jpg',
-    blurHash: 'qXLgOu-p~pkDIUxaM|WB^*R*xuRjR*aeayt7S#Rj9Gxtt6kCxtRj-pt7ofRjWCWBoeozt7M|IUt7t7jsazWBn%xaozWBs:a}R*kC',
+    blurHash: 'W7CZU}-;D$D%Q-wJ00IUI[kDkW%M^j4n~W?HODt79vtR9FRiRPM{',
     description: [
       "Hello! I'm a programmer, sound designer and music producer.",
       "Funnily enough, I love to do all three with any free time I have."   
