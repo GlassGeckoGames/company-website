@@ -34,10 +34,10 @@ export const games = [
     // info for the pannel on the home page
     pannelImg: "zeitghastBackdrop.png",
     pannelBlurHash: "q8E:x+2~*q4m4TMcKlreI88wrVQ,?]Tbn9ks3[zNIjv..7x@r#SvX-Q^yWN|ggRhQ:rrk;%4Z}HrtQX-M}NHKHjJxvnRnNf#sFSd",
-    pannelDescription: 'An epic adventure through time',
+    pannelDescription: 'An epic prehistoric adventure',
 
     // info for the main page 
-    description: 'Zeitghast is a fast-paced, action-packed sidescrolling Platformer-Shooter in which you navigate a technologically enhanced prehistoric world. Take on the role of a Zeitghast--A magical time spirit tasked with protecting the timeline, and stop the evil Dr. Antag O’Neste as he travels back in time to take credit for every invention that ever existed.',
+    description: 'Run, dash, shoot, and slash your way through a mechanized prehistoric world in this fast paced platformer-shooter. Keep your eye on the clock while trying to stop an evil mad scientist from disrupting the timeline!',
     playLink: {
       name: 'Play on Steam',
       url: 'https://store.steampowered.com/app/2593070/Zeitghast/'
