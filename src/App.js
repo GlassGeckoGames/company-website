@@ -33,7 +33,7 @@
  * <App />
  * 
  * @created 2024-07-10
- * @updated 2024-07-23
+ * @updated 2024-07-26
  * 
  * @function
  * Initializes EmailJS with the user ID from environment variables.
@@ -60,7 +60,7 @@ import emailjs from 'emailjs-com';
 
 // animation libary
 import { AnimatePresence, motion } from 'framer-motion';
-
+import BackgroundWrapper from './components/BackgroundWrapper';
 
 import './styles/ScrollBar.css'
 
@@ -117,7 +117,14 @@ function App() {
     <Router>
       <AnalyticsTracker />
       <TailwindBreakPoints />
-      <div className="flex flex-col min-h-screen">
+      <BackgroundWrapper 
+        className="flex flex-col min-h-screen"
+        src={process.env.PUBLIC_URL + "/art/rainforest-bg.png"}
+        lowResSrc={process.env.PUBLIC_URL + "/art/rainforest-bg-small.png"}
+        backgroundAttachment="scroll"
+        scale={1}
+        bgOpacity={60}
+      >
         <Navbar />
         <ScrollToTop />
         <div className="flex-grow">
@@ -126,7 +133,7 @@ function App() {
           </LocationProvider>
         </div>
         <Footer />
-      </div>
+      </BackgroundWrapper>
     </Router>
   );
 }
