@@ -26,7 +26,7 @@
  * <AboutPageText aboutTitle="About Us" aboutDescription="This is the about section description." />
  * 
  * @created 2024-07-10
- * @updated 2024-07-23
+ * @updated 2024-07-31
  */
 
 import React from 'react';
@@ -58,7 +58,7 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center text-primary bg-secondary bg-opacity-80 p-2 md:px-10 lg:px-2 xl:px-20 h-full text-center order-first lg:order-none rounded-xl">
+    <div className="flex flex-col justify-center items-center text-primary faint-bg p-2 md:px-10 lg:px-2 xl:px-20 h-full text-center order-first lg:order-none rounded-xl">
 
       <motion.h2
         className="text-2xl xl:text-4xl font-bold mb-2 text-accent titleFont container mx-auto"

@@ -52,6 +52,27 @@ body {
 }
 
 
+/* background blur and opacity animation for being */
+@keyframes fadeBlurIn {
+  0% {
+    backdrop-filter: blur(0);
+  }
+  100% {
+    backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+  }
+}
+
+@layer utilities {
+  .animate-blur {
+    animation: fadeBlurIn 2s ease-in-out forwards;
+  }
+}
+
+.faint-bg {
+  @apply bg-secondary bg-opacity-60 animate-blur;
+}
+
+
 
 /* box that houses the video and text */
 .home-page-box {

@@ -29,7 +29,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-12
- * @updated 2024-07-23
+ * @updated 2024-07-31
  */
 
 import React, { useState } from 'react';
@@ -106,7 +106,7 @@ function Contact() {
   return (
     <div className="container mx-auto p-2 flex flex-col lg:flex-row gap-2 lg:gap-6">
       <Toaster />
-      <div className="w-full bg-secondary p-2 bg-opacity-80 rounded-xl">
+      <div className="w-full  p-2 faint-bg rounded-xl">
         <h1 className="text-3xl font-bold text-accent titleFont">Connect with Us</h1>
         <p className="mt-4 text-primary">Send us an email at <a href="mailto:glassgeckogames@gmail.com" className="text-accent">glassgeckogames@gmail.com</a></p>
         <form onSubmit={handleSubmit} className="mt-4 space-y-6">

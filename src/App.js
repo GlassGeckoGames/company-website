@@ -33,7 +33,7 @@
  * <App />
  * 
  * @created 2024-07-10
- * @updated 2024-07-26
+ * @updated 2024-07-31
  * 
  * @function
  * Initializes EmailJS with the user ID from environment variables.
@@ -118,11 +118,11 @@ function App() {
       <AnalyticsTracker />
       <TailwindBreakPoints />
       <BackgroundWrapper 
-        className="flex flex-col min-h-screen"
+        className="flex flex-col min-h-screen bg-white bg-opacity-20"
         src={process.env.PUBLIC_URL + "/art/rainforest-bg.png"}
         lowResSrc={process.env.PUBLIC_URL + "/art/rainforest-bg-small.png"}
         scale={1}
-        bgOpacity={60}
+        bgOpacity={80}
       >
         <Navbar />
         <ScrollToTop />

@@ -41,12 +41,14 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-11
- * @updated 2024-07-19
+ * @updated 2024-07-31
  */
+
 import React, { useRef, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { motion, useInView } from 'framer-motion';
 import ImageComponent from './ImageComponent';
+
 
 function NewsCard({ news, isHeadline, animate = false }) {
   const ref = useRef(null);
@@ -68,36 +70,45 @@ function NewsCard({ news, isHeadline, animate = false }) {
     // Apply the motion.div to animate the card
     <motion.div
       ref={ref}
-      className={`relative border rounded-lg shadow-lg overflow-hidden ${isHeadline ? 'col-span-1 md:col-span-2 lg:col-span-3' : ''}`}
+      className={`py-6 px-4 md:px-10 faint-bg relative rounded-lg shadow-lg overflow-hidden h-full ${
+        isHeadline ? '' : 'lg:flex lg:items-center'
+      }`}
       initial="hidden"
       animate={animate && (inView || hasAnimated) ? 'visible' : 'hidden'}
       variants={animate ? slideInLeft : {}}
     >
       {news.featured && (
         <div className="absolute top-2 right-2 text-yellow-500">
-          <FaStar color='#FFD700' size={30}/>
+          <FaStar color="#FFD700" size={30} />
         </div>
       )}
-      <div className={`w-full ${isHeadline ? 'h-104' : 'h-44'}`}>
+      <div className={`w-full ${isHeadline ? 'h-52 md:h-96' : 'h-52 lg:h-auto lg:w-1/6'}`}>
         <ImageComponent
-          className="w-full h-full object-cover"
-          src={`newsImages/${news.image}`} 
-          alt={news.title} 
+          className="w-full h-full object-cover rounded-xl"
+          src={`newsImages/${news.image}`}
+          alt={news.title}
           blurHash={news.blurHash}
         />
       </div>
-      <div className="p-4 bg-secondary">
-        <h2 className={`text-xl font-bold text-primary  ${isHeadline ? 'text-2xl' : ''}`}>
-          {news.category ? <span className="text-accent">{news.category}:</span> : ''}
-          {" " + news.title}
-        </h2>
-        <p className="text-sm text-primary py-1">{news.description}</p>
-        <p className="text-sm text-primary">{news.datePosted}</p>
+      <div className={`flex flex-col justify-center self-start ${isHeadline ? 'py-4' : 'py-4 lg:p-0 lg:ml-4 lg:w-5/6'}`}>
+        <div >
+          <div className={`titleFont flex flex-col sm:flex-row justify-between text-xl sm:text-2xl md:text-4xl font-bold text-primary `}>
+            <h2>
+              {news.category ? <span className="text-accent-light">{news.category}:</span> : ''}
+              {" " + news.title}
+            </h2>
+            <h2 className=" text-accent-light whitespace-nowrap">{news.datePosted}</h2>
+          </div>
+          <p className="text-sm md:text-lg text-primary py-1">{news.description}</p>
+        </div>
         {news.externalLinks && (
           <div className="mt-2 w-fit flex flex-wrap gap-2">
             {news.externalLinks.map((link, linkIndex) => (
               <div key={linkIndex} className="flex items-center">
-                <a href={link.url} className="block text-sm text-accent hover:text-accent-dark hover:underline">
+                <a
+                  href={link.url}
+                  className="block text-sm md:text-base text-accent-light hover:text-accent-dark hover:underline"
+                >
                   {link.name}
                 </a>
                 {linkIndex < news.externalLinks.length - 1 && (
@@ -110,6 +121,6 @@ function NewsCard({ news, isHeadline, animate = false }) {
       </div>
     </motion.div>
   );
-};
+}
 
 export default NewsCard;
