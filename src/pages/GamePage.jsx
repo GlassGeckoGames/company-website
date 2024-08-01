@@ -42,6 +42,7 @@ import GameRequirements from '../components/gamePageComponents/GameRequirements'
 import GameTrailer from '../components/gamePageComponents/GameTrailer';
 import GameReviews from '../components/gamePageComponents/GameReviews';
 import { useNavigate } from 'react-router-dom'; // Import useHistory from react-router-dom
+import GameDescription from '../components/gamePageComponents/GameDescription';
 
 function GamePage() {
   const navigate = useNavigate();
@@ -66,17 +67,24 @@ function GamePage() {
 
       <GamePageHeader game={game} />
 
-      <ImageCarousel images={game.images} title={game.title} id={game.id} />
+      <GameTrailer trailer={game.trailer} title={game.title}/>
+
+      <GameDescription game={game} />
+
       <GameDetails game={game} />
+
+      <ImageCarousel images={game.images} title={game.title} id={game.id} />
 
       <div className="flex flex-col lg:flex-row pt-2 mb-6">
         <GameFeatures game={game} />
+      </div>
+
+      <GameReviews reviews={game.reviews} />
+
+      <div className="flex flex-col lg:flex-row pt-2 mb-6">
         <GameRequirements game={game} />
       </div>
 
-      <GameTrailer trailer={game.trailer} title={game.title} />
-
-      <GameReviews reviews={game.reviews} />
     </div>
   );
 }
