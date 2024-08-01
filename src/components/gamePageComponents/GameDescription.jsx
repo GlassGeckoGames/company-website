@@ -1,9 +1,9 @@
 /**
- * @file GamePageHeader.jsx
- * @module GamePageHeader
+ * @file GameDescription.jsx
+ * @module GameDescription
  * @desc Component to display the header information of a game page, including the title, description, and a link to play the game.
  * 
- * @component GamePageHeader
+ * @component GameDescription
  * 
  * @requires react
  * @requires ../Button
@@ -19,28 +19,44 @@
  * @returns {JSX.Element} The component displaying game page header information.
  * 
  * @example
- * // Example usage of GamePageHeader component
+ * // Example usage of GameDescription component
  * const game = {
  *   title: 'Game Title',
  *   description: 'This is a great game.',
  *   playLink: { url: 'http://example.com', name: 'Play Now' }
  * };
  * 
- * <GamePageHeader game={game} />
+ * <GameDescription game={game} />
  * 
  * @created 2024-07-12
  * @updated 2024-07-12
  */
 import React from 'react';
+import Button from '../Button';
+import { recordGAEvent } from '../../googleAnalytics/analytics';
 
-function GamePageHeader({ game }) {
+function GameDescription({ game }) {
+
+  const handleClick = () => {
+    recordGAEvent({ 
+      category: 'Link', 
+      action: 'Click', 
+      label: `Play Game - ${game.title}` 
+    });
+  };
 
   return (
     <div className='mb-6'>
-      <h1 className="text-4xl font-bold text-accent mb-4 titleFont">{game.title}</h1>
+      <div className="mb-4">
+        <p className="text-lg mb-2 pb-4">{game.description}</p>
+        {game.playLink && game.playLink.url && (
+          <Button onClickFunc={handleClick} type="accent" as="a" href={game.playLink.url}>
+            {game.playLink.name}
+          </Button>
+        )}
+      </div>
     </div>
   );
 }
 
-export default GamePageHeader;
-
+export default GameDescription;

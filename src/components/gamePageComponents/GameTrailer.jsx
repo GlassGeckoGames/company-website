@@ -38,7 +38,6 @@ function GameTrailer({ trailer, title }) {
 
   return (
     <div className="mb-6">
-      <h2 className="text-3xl font-bold text-secondary mb-4">Trailer</h2>
       <div className="aspect-w-16 aspect-h-9">
         <iframe
           src={getEmbedUrl(trailer)}
