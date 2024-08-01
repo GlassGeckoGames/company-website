@@ -66,17 +66,22 @@ function GamePage() {
 
       <GamePageHeader game={game} />
 
-      <ImageCarousel images={game.images} title={game.title} id={game.id} />
+      <GameTrailer trailer={game.trailer} title={game.title}/>
+
       <GameDetails game={game} />
+
+      <ImageCarousel images={game.images} title={game.title} id={game.id} />
 
       <div className="flex flex-col lg:flex-row pt-2 mb-6">
         <GameFeatures game={game} />
+      </div>
+
+      <GameReviews reviews={game.reviews} />
+
+      <div className="flex flex-col lg:flex-row pt-2 mb-6">
         <GameRequirements game={game} />
       </div>
 
-      <GameTrailer trailer={game.trailer} title={game.title} />
-
-      <GameReviews reviews={game.reviews} />
     </div>
   );
 }
