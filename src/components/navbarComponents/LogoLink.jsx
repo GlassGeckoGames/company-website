@@ -87,13 +87,13 @@ function LogoLink({ size = "large" }) {
       >
         <ImageComponent 
           className="w-full h-full object-contain" 
-          src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Logo_with_Cut.png'} 
+          src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
           alt="Logo" 
           style={{ visibility: 'hidden' }} // Hide the image if it's not loaded yet
-          lowResSrc={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Logo_with_Cut_small.png'} 
+          lowResSrc={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear_small.png'} 
         />
       </div>
-      <h1 className={`text-nowrap titleFont underline-effect ${currentSize.textClass}`}> GLASS GECKO GAMES </h1>
+      <h1 className={`text-nowrap titleFont underline-effect pl-1 ${currentSize.textClass}`}> GLASS GECKO GAMES </h1>
     </Link>
   );
 }
