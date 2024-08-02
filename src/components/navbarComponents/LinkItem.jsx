@@ -38,7 +38,7 @@ const LinkItem = ({ to, children, onClick }) => {
       to={to}
       className={({ isActive }) =>
         `${isActive ? 
-          'bg-primary text-secondary bg-opacity-70 shadow-inner shadow-secondary' 
+          'bg-primary text-secondary' 
           : 
           'hover:text-accent text-primary duration-300'
         } 
