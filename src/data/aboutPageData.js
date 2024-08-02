@@ -40,14 +40,15 @@ export const aboutDescription = `We are a group of passionate individuals dedica
  */
 export const teamProfiles = [
   { // Emmanuel Omari-Osei
-    name: 'Emmanuel Omari-Osei ',
+    name: 'Emmanuel Omari-Osei',
     role: 'Software Engineer',
     image: 'emmanuel.jpg',
     blurHash: 'qXLgOu-p~pkDIUxaM|WB^*R*xuRjR*aeayt7S#Rj9Gxtt6kCxtRj-pt7ofRjWCWBoeozt7M|IUt7t7jsazWBn%xaozWBs:a}R*kC',
     description: [
-      'I am a software engineer with great interest in software development and a passion for making games.',
-      'I also enjoy playing games as much as I enjoy making them. 😁'
+      "This software engineer was born and raised on Nintendo games and still plays to this day. 😁",
+      "Will probably get you to play a game from the series of a certain pink puffball if given the chance."
     ],
+    //link: { description: "My Profile", url: "https://www.linkedin.com/in/emmanuel-k-omari-osei-968721220" },
     link: { description: "My Portfolio", url: "https://github.com/E-man248/emmanuel.omariosei-Portfolio/" }
   },
   { // Heng Rui Xu
@@ -94,10 +95,18 @@ export const teamProfiles = [
   },
   { // Mason Bernard
     name: 'Mason Bernard',
-    role: 'Game Design',
+    role: 'Game Design and Quality Assurance',
     description: [
-      "Carpenter by day, game breaker by night "
+      "Carpenter by day, game breaker by night."
     ],
+  },
+  { // Joshua Law
+    name: 'Joshua Law',
+    role: 'Coding, Game Design, Marketing',
+    description: [
+      "I am a system analyst that does both admin and software development work."
+    ],
+    link: { description: "My Portfolio", url: "https://github.com/x4n6u?tab=repositories" }
   },
 ];
 
