@@ -86,7 +86,7 @@ function GamePannel({ game, index }) {
     recordGAEvent({ 
       category: 'Button', 
       action: 'Click', 
-      label: `Find Out - ${game.title}` 
+      label: `Learn More - ${game.title}` 
     });
   };
 
@@ -135,12 +135,12 @@ function GamePannel({ game, index }) {
           animate={(buttonsInView || buttonsHaveAnimated) ? 'visible' : 'hidden'}
           variants={slideInLeft}
         >
-          {game.id && (
-            <Button onClickFunc={handleFindOutClick} type="accent" as="link" to={`/games/${game.id}`}>Find Out</Button>
+          {game.playLink && game.playLink.url && (
+            <Button onClickFunc={handlePlayNowClick} type="accent" as="a" href={game.playLink.url}>Play Now</Button>
           )}
 
-          {game.playLink && game.playLink.url && (
-            <Button onClickFunc={handlePlayNowClick} type="secondary" as="a" href={game.playLink.url}>Play Now</Button>
+          {game.id && (
+            <Button onClickFunc={handleFindOutClick} type="secondary" as="link" to={`/games/${game.id}`}>Learn More</Button>
           )}
         </motion.div>
 

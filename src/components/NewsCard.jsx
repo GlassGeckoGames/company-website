@@ -94,7 +94,7 @@ function NewsCard({ news, isHeadline, animate = false }) {
         <div >
           <div className={`titleFont flex flex-col sm:flex-row justify-between text-xl sm:text-2xl md:text-4xl font-bold text-primary `}>
             <h2>
-              {news.category ? <span className="text-accent-light">{news.category}:</span> : ''}
+              {news.category ? <span className="text-accent">{news.category}:</span> : ''}
               {" " + news.title}
             </h2>
             <h2 className=" text-accent-light whitespace-nowrap">{news.datePosted}</h2>

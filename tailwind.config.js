@@ -64,14 +64,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#F5F5F5', // soft white
+        primary: '#FFFFFF', // soft white
         'primary-dark': '#E0E0E0', // a darker shade of white
 
         secondary: '#000', // slightly less than black 
         "secondary-dark":'#222', // black
         
-        'accent-light': '#49DE80', // light green
-        accent: '#0DA244',  // green 
+        'accent-light': '#54FF93', // light green
+        accent: '#24C067',  // green 
         'accent-dark': '#008E30', // darker shade of green
       },
       blur: {
