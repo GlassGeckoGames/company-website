@@ -84,7 +84,7 @@ export const games = [
     ],
   },
   { // I am a Monster Saving the Princess I Captured While Trying Not to Let My Boss Dragon Notice Because They Are Unpleasant
-    id:'iamamonstersavingtheprincessicapturedwhiletryingnottoletmybossdragonnnoticebecausetheyareunpleasant', // for routing !!!!
+    id:'monsterssavingtheprincess', // for routing !!!!
     title: 'Monsters Saving the Princess',
     
     // info for the pannel on the home page
