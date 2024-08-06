@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://glassgeckogames.netlify.app/sitemap.xml
+Sitemap: https://glassgeckogames.com/sitemap.xml
