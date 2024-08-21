@@ -39,7 +39,7 @@ function News() {
       <div className='h-2 faint-bg my-4 rounded-lg'></div>
 
       {/* List of other news items */}
-      <div className="">
+      <div className=" space-y-4">
         {newsItems.slice(1).map((news, index) => (
           <NewsCard
             key={index}

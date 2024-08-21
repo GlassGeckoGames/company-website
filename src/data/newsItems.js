@@ -53,6 +53,19 @@
  */
 export const newsItems = [
   {
+    title: 'Scale The Depths',
+    description: "We are excited to announce the release of 'Scale The Depths' for the GMTK 2024 game jam.",
+    image: 'scaleTheDepthsNewsArt.jpg',
+    blurHash: 'YaJuWDA0SdTLkXnhkDWXuPIUwbt8kXkCofozbuRPtSozNIWXWBWBKQNHRjo~f5t7niae',
+    category: 'Release',
+    datePosted: 'Aug 20th, 2024',
+    externalLinks: [
+      { name: 'Play on Itch.io', url: 'https://itch.io/jam/gmtk-2024/rate/2912112' },
+      { name: 'Learn More', url: '/games/scalethedepths' }, // internal link within react app
+    ],
+    featured: true
+  },
+  {
     title: 'Zeitghast',
     description: 'We are pleased to announce the release of Zeitghast, a new game that will take you on an adventure through prehistoric time.',
     image: 'zeitghastRelease.png',
@@ -63,7 +76,7 @@ export const newsItems = [
       { name: 'Play on Steam', url: 'https://store.steampowered.com/app/2593070/Zeitghast/' },
       { name: 'Learn More', url: '/games/zeitghast' }, // internal link within react app
     ],
-    featured: true
+    featured: false
   },
   {
     title: 'Glass Gecko Games Social Media',

@@ -54,9 +54,9 @@ function MediaLinks() {
 
   const mediaLinks = [
     { name: "TikTok", icon: FaTiktok, link: "https://www.tiktok.com/@glassgeckogames" },
-    { name: "YouTube", icon: FaYoutube, link: "https://www.youtube.com/@GlassGeckoGames" },
     { name: "Instagram", icon: FaInstagram, link: "https://www.instagram.com/glassgeckogames/" },
-    { name: "Twitter", icon: TwitterIcon, link: "https://x.com/GlassGeckoGames" }, // Custom handling for Twitter
+    { name: "YouTube", icon: FaYoutube, link: "https://www.youtube.com/@GlassGeckoGames" },
+    // { name: "Twitter", icon: TwitterIcon, link: "https://x.com/GlassGeckoGames" }, // Custom handling for Twitter
     { name: "LinkedIn", icon: FaLinkedin, link: "https://www.linkedin.com/company/glass-gecko-games/" },
     { name: "Steam", icon: FaSteam, link: "https://store.steampowered.com/search/?developer=Glass%20Gecko%20Games" },
   ];

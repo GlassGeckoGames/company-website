@@ -84,7 +84,7 @@ function NewsCard({ news, isHeadline, animate = false }) {
       )}
       <div className={`w-full ${isHeadline ? 'h-52 md:h-96' : 'h-52 lg:h-auto lg:w-1/6'}`}>
         <ImageComponent
-          className="w-full h-full object-cover rounded-xl"
+          className={`w-full h-full object-cover rounded-xl ${!isHeadline && "max-h-32"}`}
           src={`newsImages/${news.image}`}
           alt={news.title}
           blurHash={news.blurHash}
