@@ -22,7 +22,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-19
+ * @updated 2024-08-21
  */
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
@@ -44,7 +44,7 @@ function IntroPannel() {
   }, [inView, hasAnimated]);
 
   const slideInLeft = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0, x: -200 },
     visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1 } }
   };
 
@@ -69,7 +69,7 @@ function IntroPannel() {
 
       <motion.div className="home-page-box" style={{ y }}>
         <motion.h1
-          className="home-page-title"
+          className="home-page-title text-shadow"
           initial="hidden"
           animate={hasAnimated ? 'visible' : 'hidden'}
           variants={slideInLeft}
@@ -77,7 +77,7 @@ function IntroPannel() {
           {title}
         </motion.h1>
         <motion.p
-          className="home-page-description"
+          className="home-page-description text-shadow"
           initial="hidden"
           animate={hasAnimated ? 'visible' : 'hidden'}
           variants={slideInLeft}

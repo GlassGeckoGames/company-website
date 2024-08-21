@@ -1,6 +1,6 @@
 /* Base button style */
 .button-class {
-  @apply inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2;
+  @apply inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2  ;
 }
 
 .button-base, .button-secondary {
@@ -35,13 +35,15 @@
 .button-content {
   position: relative;
   z-index: 5;
-  @apply text-xs sm:text-base md:text-lg
+  @apply text-xs sm:text-base md:text-lg;
+  filter: drop-shadow(0 0 1px rgb(0, 0, 0));
+
 
 }
 
 /* Accent button variant */
 .button-accent {
-  @apply bg-accent focus:ring-accent;
+  @apply bg-accent focus:ring-accent border-secondary-dark border-opacity-50;
 }
 
 .button-accent::before {

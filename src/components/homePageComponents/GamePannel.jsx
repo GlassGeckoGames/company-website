@@ -30,7 +30,7 @@
  * <GamePannel game={{ name: 'Game Name', id: 'game-id', img: 'image.jpg', description: 'Game Description', link: 'https://example.com' }} />
  * 
  * @created 2024-07-10
- * @updated 2024-07-23
+ * @updated 2024-08-21
  */
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
@@ -66,8 +66,8 @@ function GamePannel({ game, index }) {
 
   // Animation variants for the slide-in effect with delay
   const slideInLeft = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.5 } }
+    hidden: { opacity: 0, x: -200 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.3 } }
   };
 
   // Set hasAnimated to true when the elements come into view
@@ -99,7 +99,7 @@ function GamePannel({ game, index }) {
   };
 
   return (
-    <li id={`${index}`} key={game.title} className="home-page-container pannel-height">
+    <li id={`${index}`} key={game.title} className="home-page-container pannel-height border border-secondary-dark">
       
       <ImageComponent
         className="w-full h-full object-cover"
@@ -112,7 +112,7 @@ function GamePannel({ game, index }) {
         {/* Animate these elements slide in from the left with delay */}
         <motion.h2
           ref={titleRef}
-          className="home-page-title break-line-clamp "
+          className="home-page-title break-line-clamp text-shadow"
           initial="hidden"
           animate={(titleInView || titleHasAnimated) ? 'visible' : 'hidden'}
           variants={slideInLeft}
@@ -121,7 +121,7 @@ function GamePannel({ game, index }) {
         </motion.h2>
         <motion.p
           ref={descriptionRef}
-          className="home-page-description break-line-clamp"
+          className="home-page-description break-line-clamp pb-1.5 text-shadow"
           initial="hidden"
           animate={(descriptionInView || descriptionHasAnimated) ? 'visible' : 'hidden'}
           variants={slideInLeft}

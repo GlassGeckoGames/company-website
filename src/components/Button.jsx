@@ -33,7 +33,7 @@
  * </div>
  * 
  * @created 2024-07-11
- * @updated 2024-07-11
+ * @updated 2024-08-21
  */
 
 import React from 'react';
@@ -56,7 +56,7 @@ import '../styles/Button.css';
  * @returns {JSX.Element} The customizable button component.
  */
 const Button = ({ onClickFunc = null, type = 'primary', as = 'button', buttonType = 'button', onClick, to, href, children }) => {
-  const buttonClass = `button-base button-${type}`;
+  const buttonClass = `min-w-36 button-base button-${type}`;
 
   /**
    * Handles the click event for the button.
@@ -82,7 +82,7 @@ const Button = ({ onClickFunc = null, type = 'primary', as = 'button', buttonTyp
   if (as === 'a') {
     return (
       <a href={href} className={buttonClass} onClick={handleClick} target="_blank" rel="noopener noreferrer">
-        <span className="button-content">{children}</span>
+        <span className="button-content ">{children}</span>
       </a>
     );
   }
