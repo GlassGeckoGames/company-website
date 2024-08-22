@@ -61,7 +61,7 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
     <div className="flex flex-col justify-center items-center text-primary faint-bg p-2 md:px-10 lg:px-2 xl:px-20 h-full text-center order-first lg:order-none rounded-xl">
 
       <motion.h2
-        className="text-2xl xl:text-4xl font-bold mb-2 text-accent titleFont container mx-auto"
+        className="text-2xl xl:text-4xl font-bold mb-2 text-accent titleFont container mx-auto text-shadow"
         initial="hidden"
         animate="visible"
         variants={slideInLeft}
@@ -69,7 +69,7 @@ function AboutPageText({ aboutTitle, aboutDescription }) {
         {aboutTitle}
       </motion.h2>
       <motion.p
-        className="text-base lg:text-sm xl:text-base pb-4"
+        className="text-base lg:text-sm xl:text-base pb-4 text-shadow"
         initial="hidden"
         animate="visible"
         variants={slideInLeft}

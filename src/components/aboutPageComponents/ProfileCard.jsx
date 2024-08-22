@@ -52,8 +52,8 @@ function ProfileCard({ person }) {
           />
           <div className="absolute inset-0 bg-black bg-opacity-45 flex flex-col justify-center items-center">
             <div className="h-10"></div>
-            <div className="text-white font-bold text-xl xl:text-2xl text-outline-large text-center">{name}</div>
-            <div className="text-white text-base xl:text-lg text-outline-small">{role}</div>
+            <div className="text-white font-bold text-xl xl:text-2xl text-outline-large text-center text-shadow">{name}</div>
+            <div className="text-white text-base xl:text-lg text-outline-small text-shadow">{role}</div>
           </div>
         </div>
         <BackCardText description={description} link={link} />

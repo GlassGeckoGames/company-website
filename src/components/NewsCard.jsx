@@ -70,7 +70,7 @@ function NewsCard({ news, isHeadline, animate = false }) {
     // Apply the motion.div to animate the card
     <motion.div
       ref={ref}
-      className={`py-6 px-4 md:px-10 faint-bg relative rounded-lg shadow-lg overflow-hidden h-full ${
+      className={`py-6 px-4 md:px-10 faint-bg relative rounded-lg shadow-lg overflow-hidden h-full  ${
         isHeadline ? '' : 'lg:flex lg:items-center'
       }`}
       initial="hidden"
@@ -90,7 +90,7 @@ function NewsCard({ news, isHeadline, animate = false }) {
           blurHash={news.blurHash}
         />
       </div>
-      <div className={`flex flex-col justify-center self-start ${isHeadline ? 'py-4' : 'py-4 lg:p-0 lg:ml-4 lg:w-5/6'}`}>
+      <div className={`text-shadow flex flex-col justify-center self-start ${isHeadline ? 'py-4' : 'py-4 lg:p-0 lg:ml-4 lg:w-5/6'}`}>
         <div >
           <div className={`titleFont flex flex-col sm:flex-row justify-between text-xl sm:text-2xl md:text-4xl font-bold text-primary `}>
             <h2>
