@@ -53,6 +53,20 @@
  */
 export const newsItems = [
   {
+    title: 'Scale the Depths Wins',
+    description: `We are thrilled to announce that "Scale the Depths"—our submission for the GMTK 2024 Game Jam—was selected as one of the winning entries! `,
+    image: 'gameJamWin.png',
+    blurHash: 'L9Du_NZN00*JL1EfQ--B00Xm?HVY',
+    category: 'Game Jam Highlights',
+    datePosted: 'Sep 25th, 2024',
+    externalLinks: [
+      { name: 'Play on Itch.io', url: 'https://itch.io/jam/gmtk-2024/rate/2912112' },
+      { name: 'The Game Jam Winners', url: 'https://www.youtube.com/watch?v=gqCAeFjB8Uo' }, 
+      { name: 'Our Dev Log', url: 'https://www.youtube.com/watch?v=4DYUQ1_EWiY' }, 
+    ],
+    featured: true
+  },
+  {
     title: 'Scale The Depths',
     description: "We are excited to announce the release of 'Scale The Depths' for the GMTK 2024 game jam.",
     image: 'scaleTheDepthsNewsArt.jpg',
