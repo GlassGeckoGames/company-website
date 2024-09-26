@@ -56,7 +56,7 @@ export const newsItems = [
     title: 'Scale the Depths Wins',
     description: `We are thrilled to announce that "Scale the Depths"—our submission for the GMTK 2024 Game Jam—was selected as one of the winning entries! `,
     image: 'gameJamWin.png',
-    blurHash: 'L9Du_NZN00*JL1EfQ--B00Xm?HVY',
+    blurHash: 'LSIjF:}q^,aKF}I9V?S$BXs9D*O[',
     category: 'Game Jam Highlights',
     datePosted: 'Sep 25th, 2024',
     externalLinks: [
