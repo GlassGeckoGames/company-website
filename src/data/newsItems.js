@@ -53,6 +53,20 @@
  */
 export const newsItems = [
   {
+    title: 'Zeitghast Quality of Life Update',
+    description: `We have released a new update for Zeitghast that includes quality of life improvements and bug fixes.`,
+    image: 'Zeitghast_QOL_update_news.png',
+    blurHash: 'Y59*f50200-mIU?]DSV:4b??xt8~D4no?@M#s{IDS8%ZkEg4aKou4exn%EIdx[tPRQRk',
+    category: 'Update',
+    datePosted: 'Jan 22nd, 2025',
+    externalLinks: [
+      { name: 'Play on Steam', url: 'https://store.steampowered.com/app/2593070/Zeitghast/' },
+      { name: 'Check out the Trailer', url: 'https://www.youtube.com/watch?v=xMLj4AYeiKw' }, 
+
+    ],
+    featured: true
+  },
+  {
     title: 'Scale the Depths Wins',
     description: `We are thrilled to announce that "Scale the Depths"—our submission for the GMTK 2024 Game Jam—was selected as one of the winning entries! `,
     image: 'gameJamWin.png',
@@ -64,7 +78,7 @@ export const newsItems = [
       { name: 'The Game Jam Winners', url: 'https://www.youtube.com/watch?v=gqCAeFjB8Uo' }, 
       { name: 'Our Dev Log', url: 'https://www.youtube.com/watch?v=4DYUQ1_EWiY' }, 
     ],
-    featured: true
+    featured: false
   },
   {
     title: 'Scale The Depths',
@@ -77,7 +91,7 @@ export const newsItems = [
       { name: 'Play on Itch.io', url: 'https://itch.io/jam/gmtk-2024/rate/2912112' },
       { name: 'Learn More', url: '/games/scalethedepths' }, // internal link within react app
     ],
-    featured: true
+    featured: false
   },
   {
     title: 'Zeitghast',
@@ -97,7 +111,7 @@ export const newsItems = [
     description: 'Check out our Glass Gecko Games social media accounts to keep up to date on our latest development information and releases.',
     image: 'socialMediaAnnouncement.png',
     blurHash: 'qbLN0rs+PXIp?GWVxZxtpIxv-7WBIXjXNHRko}W@V[aeR*s*offP%0WBIpWBocxWt7Rm%KRjR-xYxVflM}fl%1RkNLxZjYWYR+fk',
-    category: 'Announcement',
+    category: 'Update',
     datePosted: 'July 17th, 2024',
     externalLinks: [
       { name: 'YouTube', url: 'https://www.youtube.com/@GlassGeckoGames' },
