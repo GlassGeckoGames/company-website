@@ -86,7 +86,7 @@ const VideoComponent = ({ className, src, blurHash = 'L%O:@Sj[~qj[%Mj[offQt7fQIU
         muted
         playsInline
         controlsList="nodownload nofullscreen noremoteplayback"
-        style={{ filter: videoLoaded ? (useBlurFade ? 'blur(0)' : 'blur(0)') : 'blur(2px)' }} // Apply initial blur
+        style={{ filter: videoLoaded ? (useBlurFade ? 'blur(0)' : 'blur(0)') : 'blur(0.5px)' }} // Apply initial blur
       />
     </div>
   );
