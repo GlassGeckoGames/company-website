@@ -108,5 +108,16 @@ export const teamProfiles = [
     ],
     link: { description: "My Portfolio", url: "https://github.com/x4n6u?tab=repositories" }
   },
+  { // Annie Feng
+    name: 'Annie Feng',
+    role: 'Art',
+    image: 'annie_pfp.png',
+    blurHash: 'LhNBGuniyrR.Nyazs,oe*JbbVEs,',
+    description: [
+      "Hello! My name is Annie and I am a 2D artist who loves anything and everything games.",
+      "When not drawing, I can be found raving about Final Fantasy or playing games with friends."
+    ],
+    link: { description: "My Portfolio", url: "https://anniefeng.myportfolio.com/" }
+  },
 ];
 
