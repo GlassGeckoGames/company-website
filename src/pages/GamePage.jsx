@@ -63,26 +63,30 @@ function GamePage() {
   }
 
   return (
-    <div className="container mx-auto p-4 bg-primary">
+    <div className="p-4 bg-primary/60">
+      <div className='container mx-auto '>
 
-      <GamePageHeader game={game} />
 
-      <GameTrailer trailer={game.trailer} title={game.title}/>
+        <GamePageHeader game={game} />
 
-      <GameDescription game={game} />
+        <GameTrailer trailer={game.trailer} title={game.title}/>
 
-      <GameDetails game={game} />
+        <GameDescription game={game} />
 
-      <ImageCarousel images={game.images} title={game.title} id={game.id} />
+        <GameDetails game={game} />
 
-      <div className="flex flex-col lg:flex-row pt-2 mb-6">
-        <GameFeatures game={game} />
-      </div>
+        <ImageCarousel images={game.images} title={game.title} id={game.id} />
 
-      <GameReviews reviews={game.reviews} />
+        <div className="flex flex-col lg:flex-row pt-2 mb-6">
+          <GameFeatures game={game} />
+        </div>
 
-      <div className="flex flex-col lg:flex-row pt-2 mb-6">
-        <GameRequirements game={game} />
+        <GameReviews reviews={game.reviews} />
+
+        <div className="flex flex-col lg:flex-row pt-2 mb-6">
+          <GameRequirements game={game} />
+        </div>
+
       </div>
 
     </div>

@@ -52,8 +52,8 @@ export const scaleTheDepths = {
   },
   // trailer: '',
   reviews: [
-    { source: 'GMTK 2024 Game Jam', quote: "Seriously awesome. One of my favourite games so far." },
+    { source: 'Top Fishing game on Itch.io', quote: "Seriously awesome. One of my favourite games so far." },
     { source: 'GMTK 2024 Game Jam', quote: "This..... game..... I forgot I was playing a jam game - love it" },
-    { source: 'GMTK 2024 Game Jam', quote: "Amazing game! I was so addicted, I wanted to keep going even after getting all the upgrades." },
+    { source: 'Featured Game on Itch.io', quote: "Amazing game! I was so addicted, I wanted to keep going even after getting all the upgrades." },
   ],
 };

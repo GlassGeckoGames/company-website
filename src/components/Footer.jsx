@@ -25,7 +25,7 @@ import LogoLink from './navbarComponents/LogoLink';
 
 function Footer() {
   return (
-    <footer className="bg-secondary p-4">
+    <footer className="bg-secondary p-8">
       <div className="container mx-auto flex flex-col md:flex-row md:flex-wrap items-center justify-between text-primary gap-2">
         <div className="flex-1 flex justify-start ">
           <LogoLink size="small"/>

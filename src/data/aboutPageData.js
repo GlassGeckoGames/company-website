@@ -108,5 +108,12 @@ export const teamProfiles = [
     ],
     link: { description: "My Portfolio", url: "https://github.com/x4n6u?tab=repositories" }
   },
+  { // Joshua Law
+    name: 'Murtaza Mustafa',
+    role: 'Game Design',
+    description: [
+      "Programmer and Game Designer with an unlimited passion for games."
+    ],
+  },
 ];
 

@@ -21,6 +21,7 @@ import Contact from '../pages/Contact';
 import About from '../pages/About';
 import News from '../pages/News';
 import GamePage from '../pages/GamePage';
+import { useLayoutEffect } from 'react';
 
 const transitionDuration = 0.6;
 
@@ -35,7 +36,30 @@ const PageTransition = ({ children }) => {
     initialRenderRef.current = false;
   }, [pathname]);
 
+// Custom hook to detect mobile viewport
+
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < breakpoint);
+
+  useLayoutEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < breakpoint);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
+const isMobile = useIsMobile();
+
+  // ❌ Skip animation on mobile — just return the children
+  if (isMobile) return <>{children}</>;
+
+
   return (
+
     <>
       <motion.div
         key={pathname + "-overlay"}

@@ -58,7 +58,7 @@ function NewsCard({ news, isHeadline, animate = false }) {
   // Animation variants for the slide-in effect
   const slideInLeft = {
     hidden: { opacity: 0, x: -200 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } }
   };
 
   // Set hasAnimated to true when the element comes into view

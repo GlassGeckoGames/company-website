@@ -37,7 +37,7 @@ function GamePageHeader({ game }) {
 
   return (
     <div className='mb-6'>
-      <h1 className="text-4xl font-bold text-accent mb-4 titleFont">{game.title}</h1>
+      <h1 className="text-4xl md:text-6xl font-bold text-secondary-dark mb-4 titleFont">{game.title}</h1>
     </div>
   );
 }
