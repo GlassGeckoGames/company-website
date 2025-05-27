@@ -53,7 +53,7 @@ export const teamProfiles = [
   },
   { // Heng Rui Xu
     name: 'Heng Rui Xu',
-    role: 'Art and Game Design',
+    role: 'Art Lead',
     image: 'Serpexnessie-Profile-Picture-Brand-2.png',
     blurHash: 'LRQk4^V[_Kt6vxoLxFay%Ks:RRWB',
     description: [
