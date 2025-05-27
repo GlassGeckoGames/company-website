@@ -1,0 +1,40 @@
+/* =====================
+   Fade + Scale Exit Animation
+   ===================== */
+@keyframes blurFadeTransition {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(1.8);
+  }
+}
+
+.splash-exit {
+  animation: blurFadeTransition 0.8s ease-in-out forwards;
+  animation-delay: 0.2s;
+  pointer-events: none;
+}
+
+/* =====================
+   Idle Rotation Animation
+   ===================== */
+@keyframes rotateIdle {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.logo-idle {
+  animation: rotateIdle 2.5s ease-in-out infinite;
+}
