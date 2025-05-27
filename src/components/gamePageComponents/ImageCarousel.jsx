@@ -29,35 +29,30 @@
  * @created 2024-07-12
  * @updated 2024-07-12
  */
-
-import React from 'react';
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
-// import styles
 import '../../styles/ImageCarousel.css';
 
 function ImageCarousel({ images, id, title }) {
-
-  // set up image objects for carousel component/libary
   const carouselImages = images.map((image) => ({
-    src: process.env.PUBLIC_URL + "/gameMedia/" + id + "/" + image,
+    src: `${process.env.PUBLIC_URL}/gameMedia/${id}/${image}`,
     alt: `${title} screenshot`,
   }));
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 mb-6">
-      {carouselImages.length > 0 ? (
-        <Carousel
-          images={carouselImages}
-          isAutoPlaying={true}
-          hasThumbnails={true}
-          hasIndexBoard={false}
-          className="carousel-container"
-          objectFit="contain"
-        />
-      ) : (
-        null
-      )}
+    <div className="flex justify-center mb-6">
+      <div className="w-full max-w-4xl aspect-[16/9]">
+        {carouselImages.length > 0 && (
+          <Carousel
+            images={carouselImages}
+            isAutoPlaying={true}
+            hasThumbnails={true}
+            hasIndexBoard={false}
+            className="carousel-container rounded-2xl shadow-lg"
+            objectFit="contain"
+          />
+        )}
+      </div>
     </div>
   );
 }

@@ -108,7 +108,7 @@ export const teamProfiles = [
     ],
     link: { description: "My Portfolio", url: "https://github.com/x4n6u?tab=repositories" }
   },
-  { // Annie Feng
+    { // Annie Feng
     name: 'Annie Feng',
     role: 'Art',
     image: 'annie_pfp.png',
@@ -118,6 +118,13 @@ export const teamProfiles = [
       "When not drawing, I can be found raving about Final Fantasy or playing games with friends."
     ],
     link: { description: "My Portfolio", url: "https://anniefeng.myportfolio.com/" }
+  },
+  { // Joshua Law
+    name: 'Murtaza Mustafa',
+    role: 'Game Design',
+    description: [
+      "Programmer and Game Designer with an unlimited passion for games."
+    ],
   },
 ];
 

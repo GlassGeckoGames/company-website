@@ -32,75 +32,61 @@
  * @created 2024-07-10
  * @updated 2024-08-21
  */
-import React, { useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useRef } from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
+
 import Button from '../Button';
 import { recordGAEvent } from '../../googleAnalytics/analytics';
 import ImageComponent from '../ImageComponent';
 
-/**
- * Renders a game panel component.
- * 
- * @param {Object} props - The component props.
- * @param {Object} props.game - The game object containing game details.
- * @param {string} props.game.name - The name of the game.
- * @param {string} props.game.id - The ID of the game.
- * @param {string} props.game.img - The image URL of the game.
- * @param {string} props.game.description - The description of the game.
- * @param {string} props.game.link - The external link to play the game.
- * 
- * @returns {JSX.Element} The game panel component.
- */
 function GamePannel({ game, index }) {
-  const titleRef = useRef(null);
-  const descriptionRef = useRef(null);
-  const buttonsRef = useRef(null);
+  const sectionRef = useRef(null);
 
-  const [titleHasAnimated, setTitleHasAnimated] = useState(false);
-  const [descriptionHasAnimated, setDescriptionHasAnimated] = useState(false);
-  const [buttonsHaveAnimated, setButtonsHaveAnimated] = useState(false);
+  // Track scroll relative to this component
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'], // top hits bottom, bottom hits top
+  });
 
-  const titleInView = useInView(titleRef, { triggerOnce: true, margin: '0px 0px -15% 0px' });
-  const descriptionInView = useInView(descriptionRef, { triggerOnce: true, margin: '0px 0px -15% 0px' });
-  const buttonsInView = useInView(buttonsRef, { triggerOnce: true, margin: '0px 0px -15% 0px' });
+  const centeredScroll = useTransform(scrollYProgress, [0, 0.5, 1], [-1, 0, 1]);
 
-  // Animation variants for the slide-in effect with delay
-  const slideInLeft = {
-    hidden: { opacity: 0, x: -200 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.3 } }
-  };
+  // Scroll thresholds
+  const enterDis = -0.3;
+  const exitDis = 0.4;
 
-  // Set hasAnimated to true when the elements come into view
-  if (titleInView && !titleHasAnimated) {
-    setTitleHasAnimated(true);
-  }
-  if (descriptionInView && !descriptionHasAnimated) {
-    setDescriptionHasAnimated(true);
-  }
-  if (buttonsInView && !buttonsHaveAnimated) {
-    setButtonsHaveAnimated(true);
-  }
+  // Transform styles for each animated layer
+  const titleX = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['-100%', '0%', '0%', '0%', '100%']);
+  const titleOpacity = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], [0, 1, 1, 1, 0]);
 
-  // Google Analytics event tracking for buttons
+  const descX = useTransform(centeredScroll, [-1, enterDis+0.05, 0, exitDis+0.05, 1], ['-100%', '0%', '0%', '0%', '100%']);
+  const descOpacity = useTransform(centeredScroll, [-1, enterDis+0.05, 0, exitDis+0.05, 1], [0, 1, 1, 1, 0]);
+
+  const buttonsX = useTransform(centeredScroll, [-1, enterDis+0.1, 0, exitDis+0.1, 1], ['-100%', '0%', '0%', '0%', '100%']);
+  const buttonsOpacity = useTransform(centeredScroll, [-1, enterDis+0.1, 0, exitDis+0.1, 1], [0, 1, 1, 1, 0]);
+
+  // Google Analytics event tracking
   const handleFindOutClick = () => {
-    recordGAEvent({ 
-      category: 'Button', 
-      action: 'Click', 
-      label: `Learn More - ${game.title}` 
+    recordGAEvent({
+      category: 'Button',
+      action: 'Click',
+      label: `Learn More - ${game.title}`
     });
   };
 
   const handlePlayNowClick = () => {
-    recordGAEvent({ 
-      category: 'Button', 
-      action: 'Click', 
-      label: `Play Now - ${game.title}` 
+    recordGAEvent({
+      category: 'Button',
+      action: 'Click',
+      label: `Play Now - ${game.title}`
     });
   };
 
   return (
-    <li id={`${index}`} key={game.title} className="home-page-container pannel-height border border-secondary-dark">
-      
+    <li
+      ref={sectionRef}
+      id={`${index}`}
+      className="home-page-container pannel-height  border-secondary-dark border-t-4"
+    >
       <ImageComponent
         className="w-full h-full object-cover"
         src={process.env.PUBLIC_URL + `/gameMedia/${game.id}/${game.pannelImg}`}
@@ -109,41 +95,36 @@ function GamePannel({ game, index }) {
       />
 
       <div className="home-page-box">
-        {/* Animate these elements slide in from the left with delay */}
         <motion.h2
-          ref={titleRef}
           className="home-page-title break-line-clamp text-shadow"
-          initial="hidden"
-          animate={(titleInView || titleHasAnimated) ? 'visible' : 'hidden'}
-          variants={slideInLeft}
+          style={{ x: titleX,  opacity: titleOpacity }}
         >
           {game.title}
         </motion.h2>
+
         <motion.p
-          ref={descriptionRef}
-          className="home-page-description break-line-clamp pb-1.5 text-shadow"
-          initial="hidden"
-          animate={(descriptionInView || descriptionHasAnimated) ? 'visible' : 'hidden'}
-          variants={slideInLeft}
+          className="home-page-description  break-line-clamp pb-1.5 text-shadow"
+          style={{ x: descX, opacity: descOpacity }}
         >
           {game.pannelDescription}
         </motion.p>
+
         <motion.div
-          ref={buttonsRef}
-          className='flex gap-4 pt-4'
-          initial="hidden"
-          animate={(buttonsInView || buttonsHaveAnimated) ? 'visible' : 'hidden'}
-          variants={slideInLeft}
+          className="flex gap-4 pt-4 container px-4 justify-center"
+          style={{ x: buttonsX,  opacity: buttonsOpacity }}
         >
-          {game.playLink && game.playLink.url && (
-            <Button onClickFunc={handlePlayNowClick} type="accent" as="a" href={game.playLink.url}>Play Now</Button>
+          {game.playLink?.url && (
+            <Button onClickFunc={handlePlayNowClick} type="accent" as="a" href={game.playLink.url}>
+              Play Now
+            </Button>
           )}
 
           {game.id && (
-            <Button onClickFunc={handleFindOutClick} type="secondary" as="link" to={`/games/${game.id}`}>Learn More</Button>
+            <Button onClickFunc={handleFindOutClick} type="secondary" as="link" to={`/games/${game.id}`}>
+              Learn More
+            </Button>
           )}
         </motion.div>
-
       </div>
     </li>
   );

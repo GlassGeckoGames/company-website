@@ -38,6 +38,12 @@ body {
 
 }
 
+/* Global CSS (e.g., index.css or tailwind base layer) */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 /* for the home page setup the container for intro and game pannels */
 .home-page-container {
   @apply relative w-full overflow-hidden;

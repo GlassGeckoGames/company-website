@@ -37,17 +37,18 @@ function GameTrailer({ trailer, title }) {
   };
 
   return (
-    <div className="mb-6">
-      <div className="aspect-w-16 aspect-h-9">
-        <iframe
-          src={getEmbedUrl(trailer)}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title={`${title} Trailer`}
-          className="w-full h-full rounded-2xl shadow-lg"
-        ></iframe>
-      </div>
-    </div>
+<div className="mb-6 flex justify-center">
+  <div className="w-full max-w-3xl aspect-[16/9]">
+    <iframe
+      src={getEmbedUrl(trailer)}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title={`${title} Trailer`}
+      className="w-full h-full rounded-2xl shadow-lg"
+    ></iframe>
+  </div>
+</div>
+
   );
 }
 

@@ -30,7 +30,7 @@ import { scaleTheDepths } from './games/scaleTheDepths';
 import { monstersSavingThePrincess } from './games/monstersSavingThePrincess';
 
 export const games = [
-  zeitghast,
   scaleTheDepths,
+  zeitghast,
   monstersSavingThePrincess,
 ];
