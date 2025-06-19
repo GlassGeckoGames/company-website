@@ -31,8 +31,8 @@ export default function SplashScreen({ transitionOut = false, noAnimation=false 
           width={350}
           height={350}
           alt="Logo"
-          className={!noAnimation && "logo-idle"}
-          />
+          className={noAnimation ? undefined : 'logo-idle'}
+        />
       </div>
     </div>
   );
