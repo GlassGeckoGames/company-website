@@ -99,7 +99,7 @@ function GamePannel({ game, index }) {
       alt=""
       className={`
         absolute top-0 left-0 w-full h-full object-cover pointer-events-none 
-        transition-opacity duration-[2000ms] z-45 opacity-10
+        transition-opacity duration-[2000ms] z-45 opacity-5
       `}
     />
 

@@ -56,6 +56,31 @@ function IntroPannel() {
     }
   };
 
+  const slideUp = {
+  hidden: { opacity: 0, y: 300 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 3,
+      delay: 3.5,
+      ease: 'easeOut'
+    }
+  }
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 2,
+      ease: 'easeOut'
+    }
+  }
+};
+
   return (
     <div className="home-page-container h-screen" ref={ref}>
       <VideoComponent
@@ -67,21 +92,22 @@ function IntroPannel() {
 
       <ScrollWheel />
 
-      <motion.div className="home-page-box z-50" >
+      <motion.div
+        className="home-page-box z-50"
+        initial="hidden"
+        animate={hasAnimated ? 'visible' : 'hidden'}
+        variants={slideUp}
+      >
         <motion.h1
           className="home-page-title text-shadow-lg"
-          initial="hidden"
-          animate={hasAnimated ? 'visible' : 'hidden'}
-          variants={slideInLeft}
+          variants={fadeIn}
         >
           <span className="text-accent-light">{title}</span>
-          
         </motion.h1>
+
         <motion.p
           className="home-page-description text-shadow"
-          initial="hidden"
-          animate={hasAnimated ? 'visible' : 'hidden'}
-          variants={slideInLeft}
+          variants={fadeIn}
         >
           {description}
         </motion.p>
