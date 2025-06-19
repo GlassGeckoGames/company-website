@@ -25,7 +25,7 @@
  * @updated 2024-08-21
  */
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useInView} from 'framer-motion';
 import { title, description, videoData } from '../../data/homePageData';
 import VideoComponent from '../VideoComponent';
 import ScrollWheel from './ScrollWheel';
@@ -42,19 +42,6 @@ function IntroPannel() {
     }
   }, [inView, hasAnimated]);
 
-  const slideInLeft = {
-    hidden: { opacity: 0, y:300 }, // smaller offset
-    visible: {
-      opacity: 1,
-     
-      y: 0,
-      transition: {
-        duration: 3,
-        delay: 3.5,
-        ease: [0.25, 0.1, 0.25, 1] // easeInOut
-      }
-    }
-  };
 
   const slideUp = {
   hidden: { opacity: 0, y: 300 },
