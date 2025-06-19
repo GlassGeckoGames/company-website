@@ -84,7 +84,7 @@ export const teamProfiles = [
   },
   { // Chace Nielson
     name: 'Chace Nielson',
-    role: 'Software Engineer',
+    role: 'Software Engineer and Game Design',
     image: 'chace_nielson.jpg',
     blurHash: 'qEDcL6Vau5F1Io%2ixxF.AIpD*xaxaogbvR*BrI:-B$jxaNGNaX8Dj-UoeT0T0NGwJwd.8n$%gS$NIr?r=WCTKNGVss:aexabbSh',
     description: [
@@ -121,7 +121,7 @@ export const teamProfiles = [
   },
   { // Joshua Law
     name: 'Murtaza Mustafa',
-    role: 'Game Design',
+    role: 'Game Design Lead',
     description: [
       "Programmer and Game Designer with an unlimited passion for games."
     ],
