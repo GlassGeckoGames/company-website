@@ -42,7 +42,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary bg-opacity-20 p-2 sticky top-0 z-50">
+    <nav className="bg-secondary bg-opacity-20 p-2 sticky top-0 z-[100]">
       <div className="container mx-auto flex justify-between items-center">
         <LogoLink />
 
