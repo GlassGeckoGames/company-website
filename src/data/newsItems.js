@@ -58,7 +58,7 @@ export const newsItems = [
     image: 'Scale_The_Depths_Demo_Event_Header.png',
     blurHash: 'LhHy,iRjI:V@?wRQR+V@Iqi{f8WU',
     category: 'Update',
-    datePosted: 'Jun 17th, 2025',
+    datePosted: 'Jun 19th, 2025',
     externalLinks: [
       { name: 'Play on Steam', url: 'https://store.steampowered.com/app/3198890/Scale_the_Depths/' },
       { name: 'Check out the Trailer', url: 'https://youtu.be/OOywPGm2zCw' }, 
