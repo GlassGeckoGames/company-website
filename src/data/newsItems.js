@@ -44,7 +44,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-12
+ * @updated 2025-06-17
  */
 
 /**
@@ -52,6 +52,20 @@
  * @type {NewsItem[]}
  */
 export const newsItems = [
+  {
+    title: 'New Scale the Depths Demo',
+    description: `We’re excited to announce that we’ve released a brand new demo for the full release of Scale the Depths!`,
+    image: 'Scale_The_Depths_Demo_Event_Header.png',
+    blurHash: 'LhHy,iRjI:V@?wRQR+V@Iqi{f8WU',
+    category: 'Update',
+    datePosted: 'Jun 19th, 2025',
+    externalLinks: [
+      { name: 'Play on Steam', url: 'https://store.steampowered.com/app/3198890/Scale_the_Depths/' },
+      { name: 'Check out the Trailer', url: 'https://youtu.be/OOywPGm2zCw' }, 
+
+    ],
+    featured: true
+  },
   {
     title: 'Zeitghast Quality of Life Update',
     description: `We have released a new update for Zeitghast that includes quality of life improvements and bug fixes.`,
@@ -64,7 +78,7 @@ export const newsItems = [
       { name: 'Check out the Trailer', url: 'https://www.youtube.com/watch?v=xMLj4AYeiKw' }, 
 
     ],
-    featured: true
+    featured: false
   },
   {
     title: 'Scale the Depths Wins',
