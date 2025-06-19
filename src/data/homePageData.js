@@ -31,7 +31,7 @@ export const title = <div>Glass Gecko Games</div>
  * The description to be displayed on the homepage.
  * @type {string}
  */
-export const description = 'Turning our collective passion into meaningful games';
+export const description = 'Turning collective passion into meaningful games';
 
 
 /**
