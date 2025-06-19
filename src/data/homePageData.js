@@ -25,13 +25,13 @@
  * The title to be displayed on the homepage.
  * @type {string}
  */
-export const title = <div><span className="text-accent-light">Glass Gecko Games</span></div>
+export const title = <div>Glass Gecko Games</div>
 
 /**
  * The description to be displayed on the homepage.
  * @type {string}
  */
-export const description = 'Making the world more enjoyable, one game at a time';
+export const description = 'Turning our collective passion into meaningful games';
 
 
 /**
@@ -41,7 +41,7 @@ export const description = 'Making the world more enjoyable, one game at a time'
  * @property {string} blurHash - The Blurhash string for the video placeholder.
  */
 export const videoData = {
-  src:process.env.PUBLIC_URL + '/videos/homeBackdropVideo.mp4',
+  src:process.env.PUBLIC_URL + '/videos/backdropVid.mp4',
   blurHash:"YMDA[gw[5aOH$wWXR5nNvzt6M|S5t7WBWDfk4UWX=WslNzWBkXXTT}WC${n$RkaeofbI"
 }
 

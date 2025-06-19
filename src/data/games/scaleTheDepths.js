@@ -15,23 +15,34 @@ export const scaleTheDepths = {
   title: 'Scale the Depths',
   
   // info for the pannel on the home page
-  pannelImg: "scaleTheDepths5.jpg",
-  pannelBlurHash: "LbIjuDIpX9={u6X9Iqs9D$kCI;Rk", // Placeholder for the blurhash you'll provide
+  pannelImg: "pannelImg.jpg",
+  pannelBlurHash: "LtH3{iWXkCX8_4bIaybHRQbcaejG", // Placeholder for the blurhash you'll provide
   pannelDescription: 'A relaxing fishing simulation',
   
+  trailer: 'https://www.youtube.com/watch?v=OOywPGm2zCw',
+
+
   // info for the main page
-  description: 'A game made for the 2024 GMTK Game Jam. You are a robot built to feed hungry aquatic "customers"! Scale the depths with your trusty fishing rod, then scale the depths again, but in the sense of scaling fish.',
-  playLink: {
-    name: 'Play on Itch.io',
-    url: 'https://serpexnessie.itch.io/scale-the-depths',
-  },
+  description: 'Originally made for the 2024 GMTK Game Jam, Scale the Depths is now a full relaxing fishing simulation. Catch fish, scale them for hungry customers, and upgrade your gear — all set in a hand-crafted pixel world with a chill, atmospheric vibe.',
+  playLinks:[
+    {
+      name:"Play Demo on Steam",
+      url: 'https://store.steampowered.com/app/3198890/Scale_the_Depths/'
+    },
+    {
+      name: 'Play Game Jam Version on Itch.io',
+      url: 'https://serpexnessie.itch.io/scale-the-depths',
+    }
+  ],
   images: [
-    'scaleTheDepths1.jpg',
-    'scaleTheDepths2.jpg',
-    'scaleTheDepths3.jpg',
-    'scaleTheDepths4.jpg',
-    'scaleTheDepths5.jpg',
-    'scaleTheDepths6.jpg',
+    'Screenshot-7.jpg',
+    'Screenshot-8.jpg',
+    'Screenshot-9.jpg',
+    'Screenshot-10.jpg',
+    'Screenshot-11.jpg',
+    'Screenshot-12.jpg',
+    'Screenshot-13.jpg',
+    'Screenshot-14.jpg',
   ],
   genre: 'Chill, Simulation, Casual',
   platforms: ['PC'],
@@ -47,7 +58,7 @@ export const scaleTheDepths = {
   ],
   systemRequirements: {
     minimum: {
-      OS: 'Windows',
+      OS: 'Windows or play game jam version in browser',
     }
   },
   // trailer: '',

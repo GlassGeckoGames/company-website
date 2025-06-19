@@ -43,7 +43,7 @@ function ScrollWheel() {
   };
 
   return (
-    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-10">
+    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-[60]">
       <motion.div className="mb-4" {...bounceProps}>
         <ScrollLink
           className="hover:cursor-pointer opacity-40 hover:opacity-80 "

@@ -37,7 +37,7 @@ const NavbarItems = ({ toggleMenu, textSize }) => {
         <LinkItem to="/about" onClick={toggleMenu}>About</LinkItem>
       </li>
       <li>
-        <LinkItem to="/contact" onClick={toggleMenu}>Contact Us</LinkItem>
+        <LinkItem to="/contact" onClick={toggleMenu}>Contact</LinkItem>
       </li>
     </ul>
   );

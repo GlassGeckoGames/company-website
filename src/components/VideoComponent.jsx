@@ -49,18 +49,20 @@
  */
 import React, { useState, useEffect } from 'react';
 import { Blurhash } from 'react-blurhash';
-import '../styles/VideoComponent.css';
 
 const VideoComponent = ({ className, src, blurHash = 'L%O:@Sj[~qj[%Mj[offQt7fQIUay', useBlurFade = false }) => {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [startBlurAnimation, setStartBlurAnimation] = useState(false);
+  
+  const fadeDelay = 4500; // Duration of the fade animation in milliseconds
 
   useEffect(() => {
     if (videoLoaded && useBlurFade) {
       const timer = setTimeout(() => {
         setStartBlurAnimation(true);
-      }, 1000); // 1 second delay
-      return () => clearTimeout(timer); // Cleanup the timer on component unmount
+      }, fadeDelay); // Delay before blur + img overlay
+
+      return () => clearTimeout(timer);
     }
   }, [videoLoaded, useBlurFade]);
 
@@ -77,16 +79,33 @@ const VideoComponent = ({ className, src, blurHash = 'L%O:@Sj[~qj[%Mj[offQt7fQIU
           className="absolute top-0 left-0 w-full h-full"
         />
       )}
+
+    <img 
+      src={process.env.PUBLIC_URL + '/art/LCD_background_1.png'} 
+      alt=""
+      className={`
+        absolute top-0 left-0 w-full h-full object-contain pointer-events-none 
+        transition-opacity duration-[2000ms] z-50 
+        ${startBlurAnimation ? 'opacity-15' : 'opacity-0'}
+      `}
+    />
+
+    <div className='bg-black absolute top-0 left-0 w-full h-full z-0 pointer-events-none'/>
+
       <video
         onCanPlay={() => setVideoLoaded(true)}
-        className={`${className} ${videoLoaded ? 'opacity-100' : 'opacity-0'} ${startBlurAnimation ? 'blur-animation' : ''} transition-opacity duration-500 w-full h-full object-cover`}
+        className={`
+          ${className}
+           w-full h-full object-cover z-40 
+          transition-all duration-[3000ms] ease-in-out 
+          ${startBlurAnimation ? 'blur-[1px] opacity-80' : 'blur-none opacity-100'}
+        `}
         src={src}
         autoPlay
         loop
         muted
         playsInline
         controlsList="nodownload nofullscreen noremoteplayback"
-        style={{ filter: videoLoaded ? (useBlurFade ? 'blur(0)' : 'blur(0)') : 'blur(0.5px)' }} // Apply initial blur
       />
     </div>
   );

@@ -34,8 +34,7 @@ function IntroPannel() {
   const ref = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
   const inView = useInView(ref, { triggerOnce: true });
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], [0, 50]);
+
 
   useEffect(() => {
     if (inView && !hasAnimated) {
@@ -44,8 +43,17 @@ function IntroPannel() {
   }, [inView, hasAnimated]);
 
   const slideInLeft = {
-    hidden: { opacity: 0, x: -200 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 1.5 } }
+    hidden: { opacity: 0, y:300 }, // smaller offset
+    visible: {
+      opacity: 1,
+     
+      y: 0,
+      transition: {
+        duration: 3,
+        delay: 3.5,
+        ease: [0.25, 0.1, 0.25, 1] // easeInOut
+      }
+    }
   };
 
   return (
@@ -57,24 +65,17 @@ function IntroPannel() {
         useBlurFade={true}
       />
 
-      <img 
-        src={process.env.PUBLIC_URL + '/art/LCD_background_1.png'} 
-        alt=''
-        className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none opacity-15"
-        style={{ visibility: 'hidden' }} // Initially hide the image
-        onLoad={(e) => e.target.style.visibility = 'visible'} // Make it visible once it's loaded
-      />
-
       <ScrollWheel />
 
-      <motion.div className="home-page-box" style={{ y }}>
+      <motion.div className="home-page-box z-50" >
         <motion.h1
-          className="home-page-title text-shadow"
+          className="home-page-title text-shadow-lg"
           initial="hidden"
           animate={hasAnimated ? 'visible' : 'hidden'}
           variants={slideInLeft}
         >
-          {title}
+          <span className="text-accent-light">{title}</span>
+          
         </motion.h1>
         <motion.p
           className="home-page-description text-shadow"

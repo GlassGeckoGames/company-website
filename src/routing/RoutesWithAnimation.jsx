@@ -64,7 +64,7 @@ const isMobile = useIsMobile();
       <motion.div
         key={pathname + "-overlay"}
         initial={{ opacity: 0.5 }}
-        animate={{ opacity: fadeOut ? 0 : 0.5 }}
+        animate={{ opacity: fadeOut ? 0 : 0.4 }}
         exit={{ opacity: 0.5 }}
         transition={{
           opacity: { duration: fadeOut ? 0.4 : 0, delay: fadeOut ? 0 : 0.2, ease: "easeInOut" }

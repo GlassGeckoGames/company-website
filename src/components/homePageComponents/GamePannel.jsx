@@ -88,15 +88,24 @@ function GamePannel({ game, index }) {
       className="home-page-container pannel-height  border-secondary-dark border-t-4"
     >
       <ImageComponent
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover brightness-90"
         src={process.env.PUBLIC_URL + `/gameMedia/${game.id}/${game.pannelImg}`}
         alt={game.title}
         blurHash={game.pannelBlurHash}
       />
 
+          <img 
+      src={process.env.PUBLIC_URL + '/art/LCD_background_1.png'} 
+      alt=""
+      className={`
+        absolute top-0 left-0 w-full h-full object-cover pointer-events-none 
+        transition-opacity duration-[2000ms] z-45 opacity-10
+      `}
+    />
+
       <div className="home-page-box">
         <motion.h2
-          className="home-page-title break-line-clamp text-shadow"
+          className="home-page-title break-line-clamp text-shadow-lg"
           style={{ x: titleX,  opacity: titleOpacity }}
         >
           {game.title}
@@ -113,8 +122,13 @@ function GamePannel({ game, index }) {
           className="flex gap-4 pt-4 container px-4 justify-center"
           style={{ x: buttonsX,  opacity: buttonsOpacity }}
         >
-          {game.playLink?.url && (
-            <Button onClickFunc={handlePlayNowClick} type="accent" as="a" href={game.playLink.url}>
+          {game.playLinks?.[0]?.url && (
+            <Button
+              onClickFunc={() => handlePlayNowClick(game.playLinks[0].name)}
+              type="accent"
+              as="a"
+              href={game.playLinks[0].url}
+            >
               Play Now
             </Button>
           )}

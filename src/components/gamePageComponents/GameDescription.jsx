@@ -49,11 +49,21 @@ function GameDescription({ game }) {
     <div className='mb-6'>
       <div className="mb-4">
         <p className="text-lg mb-2 pb-4">{game.description}</p>
-        {game.playLink && game.playLink.url && (
-          <Button onClickFunc={handleClick} type="accent" as="a" href={game.playLink.url}>
-            {game.playLink.name}
-          </Button>
-        )}
+          {Array.isArray(game.playLinks) && game.playLinks.length > 0 && (
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4">
+              {game.playLinks.map((link, index) => (
+                <Button
+                  key={index}
+                  onClickFunc={() => handleClick(link.name)}
+                  type="accent"
+                  as="a"
+                  href={link.url}
+                >
+                  {link.name}
+                </Button>
+              ))}
+            </div>
+          )}
       </div>
     </div>
   );

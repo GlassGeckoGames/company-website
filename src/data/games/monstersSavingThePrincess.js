@@ -21,10 +21,12 @@ export const monstersSavingThePrincess = {
   
   // info for the main page
   description: 'In this whimsical adventure, you play as a misunderstood monster who has captured a princess, only to decide to save her from the clutches of your unpleasant boss dragon. Navigate through humorous challenges and puzzles as you try to rescue the princess without drawing the ire of the dragon.',
-  playLink: {
-    name: 'Play on Itch.io',
-    url: 'https://serpexnessie.itch.io/this-time-the-monsters-save-the-princess',
-  },
+  playLinks: [
+    {
+      name: 'Play on Itch.io',
+      url: 'https://serpexnessie.itch.io/this-time-the-monsters-save-the-princess',
+    }
+  ],
   images: [
     'princessGame1.png',
     'princessGame2.png',

@@ -21,10 +21,12 @@ export const zeitghast = {
 
   // info for the main page 
   description: 'Run, dash, shoot, and slash your way through a mechanized prehistoric world in this fast paced platformer-shooter. Keep your eye on the clock while trying to stop an evil mad scientist from disrupting the timeline!',
-  playLink: {
-    name: 'Play on Steam',
-    url: 'https://store.steampowered.com/app/2593070/Zeitghast/'
-  },
+  playLinks:[
+    {
+      name: 'Play on Steam',
+      url: 'https://store.steampowered.com/app/2593070/Zeitghast/'
+    }
+  ], 
   images: [
     "zeitghast1.jpg",
     "zeitghast2.jpg",

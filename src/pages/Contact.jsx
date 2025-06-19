@@ -108,7 +108,9 @@ function Contact() {
       <Toaster />
       <div className="w-full  p-3 faint-bg rounded-xl ">
         <h1 className="text-3xl font-bold text-accent titleFont">Connect with Us</h1>
-        <p className="mt-4 text-primary">Send us an email at <a href="mailto:glassgeckogames@gmail.com" className="text-accent">glassgeckogames@gmail.com</a></p>
+        <p className="mt-4 text-primary">Using our collective experience to make games that impact players and create fun experiences.</p>
+
+        <p className="mt-1 text-primary">Send us an email at <a href="mailto:glassgeckogames@gmail.com" className="text-accent">glassgeckogames@gmail.com</a></p>
         <form onSubmit={handleSubmit} className="mt-4 space-y-6">
           <div>
             <label htmlFor="name" className="block text-base font-medium text-primary">Name</label>
@@ -143,7 +145,7 @@ function Contact() {
               onChange={(e) => setMessage(e.target.value)}
               required
               maxLength="800"
-              className="min-h-28 h-20 xl:h-40 2xl:h-64  mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
+              className="min-h-20 max-h-64 h-20 xl:h-36 2xl:h-40  mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent focus:border-accent sm:text-sm"
             />
           </div>
           <div className='w-full flex justify-start'>
