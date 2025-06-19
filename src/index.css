@@ -79,7 +79,7 @@ body {
 }
 
 .text-shadow{
-  filter: drop-shadow(3px 2px 0.5px rgb(0, 0, 0));
+  filter: drop-shadow(2.5px 1px 0.5px rgb(0, 0, 0));
 }
 .text-shadow-lg{
   filter: drop-shadow(4px 3px 0.5px rgb(0, 0, 0));
