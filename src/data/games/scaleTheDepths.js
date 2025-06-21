@@ -45,9 +45,9 @@ export const scaleTheDepths = {
     'Screenshot-14.jpg',
   ],
   genre: 'Chill, Simulation, Casual',
-  platforms: ['PC'],
-  releaseDate: '2024',
-  price: 'Free',
+  platforms: ['PC', "Mobile"],
+  releaseDate: '2026',
+  price: 'TBD',
   features: [
     'Relaxing and immersive gameplay',
     'Beautiful, hand-crafted pixel environments',
