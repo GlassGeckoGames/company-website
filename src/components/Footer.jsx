@@ -34,7 +34,7 @@ function Footer() {
           <MediaLinks small={true} />
         </div>
         <div className="flex-1 flex justify-end text-center md:text-right mt-1 md:mt-0">
-          <p>&copy; 2024 Glass Gecko Games</p>
+          <p>&copy; {new Date().getFullYear()} Glass Gecko Games</p>
         </div>
       </div>
     </footer>
