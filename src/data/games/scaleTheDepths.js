@@ -30,6 +30,10 @@ export const scaleTheDepths = {
       url: 'https://store.steampowered.com/app/3198890/Scale_the_Depths/'
     },
     {
+      name: 'Join the Discord!',
+      url: 'https://discord.gg/x2qCKpTp',
+    },
+    {
       name: 'Play Game Jam Version on Itch.io',
       url: 'https://serpexnessie.itch.io/scale-the-depths',
     }
