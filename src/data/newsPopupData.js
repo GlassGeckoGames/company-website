@@ -6,7 +6,6 @@
  * @created 2025-10-22
  * @updated 2025-10-22
  */
-import { Blurhash } from "react-blurhash";
 import { FaSteam, FaDiscord } from "react-icons/fa";
 
 export const newsItems = [
