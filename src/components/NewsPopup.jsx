@@ -14,11 +14,10 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { FaTimes } from "react-icons/fa";
 import { newsItems } from "../data/newsPopupData";
-
+import ImageComponent from "./ImageComponent";
+import { recordGAEvent } from "../googleAnalytics/analytics";
 
 function AnimatedToastContent({ children, visible }) {
-
-
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -53,14 +52,17 @@ export default function NewsPopup() {
           toast.custom((t) => (
             <AnimatedToastContent visible={t.visible}>
               <div className={
-                `relative flex flex-col md:flex-row items-center bg-accent bg-opacity-95 border border-secondary rounded-lg shadow-lg px-5 py-4 text-secondary max-w-xl min-w-md w-full `
+                `relative flex flex-col md:flex-row items-center bg-accent bg-opacity-95 border border-secondary rounded shadow-lg px-5 py-4 text-secondary max-w-xl min-w-md w-full `
               }>
-    
-                
                 {/* Image */}
                 {item.image && (
-                  <div className="flex-shrink-0 mr-3 mt-1">
-                    <img src={item.image} alt={item.title} className="w-56 h-40 rounded object-cover border-2 border-accent shadow" />
+                  <div className="flex-shrink-0 mr-3 mt-1 w-56 h-40">
+                    <ImageComponent 
+                      src={item.image} 
+                      alt={item.title} 
+                      className="w-full h-full object-cover border-2 border-accent shadow rounded-lg" 
+                      blurHash={item.blurhash}
+                    />
                   </div>
                 )}
                 {/* Content */}
@@ -79,7 +81,14 @@ export default function NewsPopup() {
                             `inline-flex items-center px-3 py-1.5 text-sm font-semibold rounded transition-colors shadow ` +
                             (link.type === 'steam' ? 'bg-accent-dark hover:bg-secondary-dark text-white' : link.type === 'discord' ? 'bg-accent-light hover:bg-accent-dark text-secondary' : 'bg-primary hover:bg-primary-dark text-secondary')
                           }
-                          onClick={() => toast.dismiss(t.id)}
+                          onClick={() => {
+                            recordGAEvent({
+                              category: 'Popup',
+                              action: 'Click',
+                              label: `${link.label} - ${item.title}`
+                            });
+                            toast.dismiss(t.id);
+                          }}
                         >
                           <span className="flex items-center whitespace-nowrap">{link.icon && <span className="mr-1">{link.icon}</span>}{link.label}</span>
                         </a>
