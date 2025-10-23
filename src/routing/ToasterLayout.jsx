@@ -29,7 +29,7 @@ export default function ToasterLayout() {
 
   return (
     <Toaster
-      position={isSm ? "bottom-left" : "bottom-center"}
+      position={isSm ? "bottom-right" : "bottom-center"}
       reverseOrder={true}
       toastOptions={{
         style: {
