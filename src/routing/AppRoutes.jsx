@@ -10,7 +10,7 @@
  * 
  * @author Chace Nielson
  * @created Jul 10, 2024
- * @updated May 27, 2025
+ * @updated Oct 22, 2025 by Chace Nielson - added NewsPopup component and ToasterLayout component
  */
 // src/routing/AppRoutes.jsx
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -21,12 +21,16 @@ import Navbar from '../components/navbarComponents/Navbar';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import RoutesWithAnimation from './RoutesWithAnimation';
+import NewsPopup from '../components/NewsPopup';
+import ToasterLayout from './ToasterLayout';
 
 export default function AppRoutes() {
   return (
     <Router>
       <AnalyticsTracker />
       <TailwindBreakPoints />
+      <ToasterLayout />
+      <NewsPopup />
       <BackgroundWrapper 
         className="flex flex-col min-h-screen bg-white bg-opacity-20 overflow-hidden"
         src={process.env.PUBLIC_URL + "/art/rainforest-bg.png"}
@@ -38,6 +42,7 @@ export default function AppRoutes() {
         <Navbar />
         <ScrollToTop />
         <div className="flex-grow">
+
           <RoutesWithAnimation />
         </div>
         <Footer />
