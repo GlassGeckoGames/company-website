@@ -52,9 +52,9 @@ export const teamProfiles = [
     link: { description: "My Portfolio", url: "https://github.com/E-man248/emmanuel.omariosei-Portfolio/" }
   },
   { // Heng Rui Xu
-    name: 'Heng Rui Xu',
+    name: 'Hazel',
     role: 'Art Lead',
-    image: 'Serpexnessie-Profile-Picture-Brand-2.png',
+    image: 'HazelImg.png',
     blurHash: 'LRQk4^V[_Kt6vxoLxFay%Ks:RRWB',
     description: [
       "I am a 2D digital illustrator and I love me some vidya games.",
@@ -84,7 +84,7 @@ export const teamProfiles = [
   },
   { // Chace Nielson
     name: 'Chace Nielson',
-    role: 'Software Engineer and Game Design',
+    role: 'Software Engineer, Narrative Design',
     image: 'chace_nielson.jpg',
     blurHash: 'qEDcL6Vau5F1Io%2ixxF.AIpD*xaxaogbvR*BrI:-B$jxaNGNaX8Dj-UoeT0T0NGwJwd.8n$%gS$NIr?r=WCTKNGVss:aexabbSh',
     description: [
