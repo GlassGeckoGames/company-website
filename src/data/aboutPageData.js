@@ -52,7 +52,7 @@ export const teamProfiles = [
     link: { description: "My Portfolio", url: "https://github.com/E-man248/emmanuel.omariosei-Portfolio/" }
   },
   { // Heng Rui Xu
-    name: 'Hazel',
+    name: 'Hazel Xu',
     role: 'Art Lead',
     image: 'HazelImg.png',
     blurHash: 'LRQk4^V[_Kt6vxoLxFay%Ks:RRWB',
