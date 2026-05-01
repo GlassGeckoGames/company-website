@@ -119,12 +119,23 @@ export const teamProfiles = [
     ],
     link: { description: "My Portfolio", url: "https://anniefeng.myportfolio.com/" }
   },
-  { // Joshua Law
+  { // Murtaza Mustafa
     name: 'Murtaza Mustafa',
     role: 'Game Design Lead',
     description: [
       "Programmer and Game Designer with an unlimited passion for games."
     ],
+  },
+  { // Carey Wang
+    name: 'Carey Wang',
+    role: 'Art',
+    image: 'carey_pfp.png',
+    blurHash: 'LENt^EBS3qv#49J-v#[;8G3Wd?+H',
+    description: [
+      "Hi! I'm Carey, an illustrator who loves a creative challenge.",
+      "My interest in games started when I was still a kid and naturally grew into a love for interactive storytelling and design. Outside of work, I like playing games and listening to soundtracks which inspires me to create something I love."
+    ],
+    link: { description: "My Portfolio", url: "https://careywangillust.com" }
   },
 ];
 
