@@ -129,7 +129,7 @@ export const teamProfiles = [
   { // Carey Wang
     name: 'Carey Wang',
     role: 'Art',
-    image: 'carey_pfp.png',
+    image: 'carey_pfp.jpg',
     blurHash: 'LENt^EBS3qv#49J-v#[;8G3Wd?+H',
     description: [
       "Hi! I'm Carey, an illustrator who loves a creative challenge.",
