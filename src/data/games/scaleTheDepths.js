@@ -39,6 +39,7 @@ export const scaleTheDepths = {
     }
   ],
   images: [
+    'Steam event_cover.png',
     'Steam Screenshot-1.jpg',
     'Steam Screenshot-2.jpg',
     'Steam Screenshot-3.jpg',
