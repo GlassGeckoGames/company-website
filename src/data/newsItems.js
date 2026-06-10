@@ -53,6 +53,20 @@
  */
 export const newsItems = [
   {
+    title: 'Scale The Depths',
+    description: `We are excited to announce the release of Scale The Depths, a chill fishing adventure where you catch, scale, and feed fish in an addictive feedback loop.`,
+    image: 'Steam event_header Thin.png',
+    blurHash: 'LhHy,iRjI:V@?wRQR+V@Iqi{f8WU',
+    category: 'Release',
+    datePosted: 'May 28th, 2026',
+    externalLinks: [
+      { name: 'Play on Steam', url: 'https://store.steampowered.com/app/3198890/Scale_the_Depths/' },
+      { name: 'Play on GOG', url: 'https://www.gog.com/' },
+      { name: 'Check out the Trailer', url: 'https://www.youtube.com/watch?v=UjbuLv1dTh8' }, 
+    ],
+    featured: true
+  },
+  {
     title: 'New Scale the Depths Demo',
     description: `We’re excited to announce that we’ve released a brand new demo for the full release of Scale the Depths!`,
     image: 'Scale_The_Depths_Demo_Event_Header.png',
@@ -62,9 +76,8 @@ export const newsItems = [
     externalLinks: [
       { name: 'Play on Steam', url: 'https://store.steampowered.com/app/3198890/Scale_the_Depths/' },
       { name: 'Check out the Trailer', url: 'https://youtu.be/OOywPGm2zCw' }, 
-
     ],
-    featured: true
+    featured: false
   },
   {
     title: 'Zeitghast Quality of Life Update',

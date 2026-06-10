@@ -11,20 +11,20 @@ import { FaSteam, FaDiscord } from "react-icons/fa";
 export const newsItems = [
   {
     // Optional image (relative to public folder)
-    image: process.env.PUBLIC_URL + "/gameMedia/scalethedepths/Screenshot-7.jpg",
+    image: process.env.PUBLIC_URL + "/gameMedia/scalethedepths/Steam Screenshot-1.jpg",
     blurhash: "LaF%l4o#M{t4~qWFM|ocnRM|aLoI",
-    title: "Scale the Depths - Coming Soon",
-    description: "Play the demo or join our Discord to follow development!",
+    title: "Scale the Depths - Out Now",
+    description: "Play the game now or join our Discord for updates.",
     links: [
       {
-        label: "Play Demo",
+        label: "Play Now",
         url: "https://store.steampowered.com/app/3198890/Scale_the_Depths/",
         icon: <FaSteam />,
         type: "steam",
       },
       {
         label: "Join Our Discord",
-        url: "https://discord.gg/x2qCKpTp",
+        url: "https://discord.gg/swvZQy5bAv",
         icon: <FaDiscord />,
         type: "discord",
       },
