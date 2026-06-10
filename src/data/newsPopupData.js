@@ -24,7 +24,7 @@ export const newsItems = [
       },
       {
         label: "Join Our Discord",
-        url: "https://discord.gg/x2qCKpTp",
+        url: "https://discord.gg/swvZQy5bAv",
         icon: <FaDiscord />,
         type: "discord",
       },

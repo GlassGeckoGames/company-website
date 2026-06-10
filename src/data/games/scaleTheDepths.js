@@ -31,7 +31,7 @@ export const scaleTheDepths = {
     },
     {
       name: 'Join the Discord!',
-      url: 'https://discord.gg/x2qCKpTp',
+      url: 'https://discord.gg/swvZQy5bAv',
     },
     {
       name: 'Play Game Jam Version on Itch.io',
